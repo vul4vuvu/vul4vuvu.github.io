@@ -1,0 +1,51 @@
+hr{
+	width: 120px; 
+	border-width: 2px; 
+	border-color: #F7CAC9;
+}
+
+
+.label-title {
+	text-align: center;
+}
+.class-heading{
+	text-align: center;
+}
+
+.section-normal{}
+	.section-normal>h2{text-align: center;}
+
+.news{
+	text-align: center;
+	background-color: #f2f2f2;
+}
+
+
+.button-style{
+	background-color: #F7CAC9;
+
+}
+.readMore{
+	color: #92A8D1;
+	cursor: pointer;
+}
+	.readMore:hover{
+		color: #4b70b4;
+	}
+.hr-news{
+	width: 80px; 
+	border-width: 1px; 
+	border-color: black;
+}
+.about_me{
+	background-color: #92A8D1;
+}
+.chiabow-nav{
+	background-color: pink;
+}
+.aboutMe-content{
+	text-align: center;
+}
+
+
+
