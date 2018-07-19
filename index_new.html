@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>嘉寶的繆思課</title>
+
+    <!-- CSS -->
+    <link href="css/chiabow.css" rel="stylesheet">
+    <!-- ICON CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!-- 
+	RWD 
+
+1200px 以上 固定
+
+500px~1200px 之間 1欄
+
+500px 以下 1欄
+
+
+--->
+
+
+
+<body>
+
+<!-- 手機 & 平板 導航狀態列 -->
+<nav class = "phoneNav" id = "nav">
+  <div id = "menuBackground" class = "phoneNav-background"></div>
+  <div id = menuBar class = "phoneNav-content">
+    <div id = "menuList" class = "phoneNav-menuList">
+      <div class = "menu-title">
+        嘉寶的繆思課
+      </div>
+      <div class = "menu-content">
+        <div class = "menu-list-memberCenter" id="membersButton">
+          最新消息
+        </div>
+        <div class = "menu-list" id = "loginButton">
+          關於嘉寶
+        </div>
+        <div class = "menu-list" id = "registerButton">
+          課程一覽
+        </div>
+        <div class = "menu-list">
+          我們的成果
+        </div>
+        <div class = "menu-list">
+          聯絡教室
+        </div>
+        
+      </div>
+    </div> 
+  </div>
+  
+</nav>
+<div id = "navButton" class = "phoneNav-button">
+  <i id ="navButtonIcon" class="fa fa-sliders"></i>
+</div>
+
+
+<!-- 電腦版 導航狀態列 -->
+<nav class="nav-frame">
+	<div class = "nav-background"></div>
+	<div class = "nav-opacity"></div>
+	<div class = "nav-section">
+		<main class="nav-content">
+			<div class = "navbar-left">
+				嘉寶的繆思課
+			</div>
+			<div class="navbar-right">
+				<div class="list-div">
+					最新消息
+				</div>
+				<div class="list-div">
+					關於嘉寶
+				</div>
+				<div class="list-div">
+					課程一覽
+				</div>
+				<div class="list-div">
+					聯絡教室
+				</div>
+			</div>
+		</main>
+	</div>
+</nav>
+
+<!-- 主題視覺Header -->
+<!-- ==== Header網頁框架底層 ==== -->
+<header class = "header-frame">
+  <!-- ==== Header背景框架層 ==== -->
+	<div id = "slide">
+		<div class = "header-background" id = "bgHeaderImg1"></div>
+	  <!-- 輪播第二層背景 -->
+		<div class = "header-background-2" id = "bgHeaderImg2"></div>
+	  <!-- 輪播第三層背景 -->
+		<div class = "header-background-3" id = "bgHeaderImg3"></div>
+	</div>
+  <!-- ==== Header背景度調整 ==== -->
+  <div class = "header-opacity"></div>
+  <!-- ==== Header最上層框架 ==== -->
+  <div class = "header-section">
+    <main class = "header-content">
+    	<div>
+    		<h1>ChiaBow's Music</h1>
+    	</div>
+    </main>
+    
+  </div>
+</header>
+
+<!-- 最新消息 -->
+<section class="news-frame">
+	<main class="section-title">
+		<div>
+			<h2>
+				最新消息
+				<hr>
+			</h2>
+		</div>
+	</main>
+	<main class="news-content"> <!-- 容器 -->
+		<div>
+			<!-- 最新消息 1 -->
+			<div>
+				<h3>7/11 停課一日</h3>
+				<p>因應7/11 瑪莉亞颱風來襲，本教室停課一日。</p>
+				<span class = "readMore" id = "readMoreButton1">Read more</span>
+				<!-- 彈出視窗 -->
+				<div class="news-window" id = "newsWindow1">
+					<div class="news-turnOff-button" id = newsOffButton1 onclick="showTheNEWSWindow();"> 
+						<i class="fa fa-times"></i>
+					</div>
+				</div>
+				<!-- 彈出視窗結束 -->
+			</div>
+
+			<!-- 最新消息 2 -->
+			<div>
+				<h3>7/03 停課一日</h3>
+				<p>因應本教室水電維修，停課一日。</p>
+				<span class = "readMore" id = "readMoreButton2">Read more</span>
+				<!-- 彈出視窗 -->
+				<div class="news-window" id = "newsWindow2">
+					<div class="news-turnOff-button" id = newsOffButton2 onclick="showTheNEWSWindow();"> 
+						<i class="fa fa-times"></i>
+					</div>
+				</div>
+				<!-- 彈出視窗結束 -->
+			</div>
+
+			<!-- 最新消息 3 -->
+			<div>
+				<h3>本教室開始招生</h3>
+				<p>本教室即日起開始招收2018年7月份新生！</p>
+				<span class = "readMore" id = "readMoreButton3">Read more</span>
+				<!-- 彈出視窗 -->
+				<div class="news-window" id = "newsWindow3">
+					<div class="news-turnOff-button" id = newsOffButton3 onclick="showTheNEWSWindow();"> 
+						<i class="fa fa-times"></i>
+					</div>
+				</div>
+				<!-- 彈出視窗結束 -->
+			</div>
+		</div>
+		
+		
+	</main>
+</section>
+
+<!-- 關於我 -->
+<section class="aboutMe-frame">
+	<main class="section-title">
+		<div>
+			<h2>
+				關於我
+				<hr>
+			</h2>
+		</div>
+	</main>
+	<main class="aboutMe-content"> <!-- 容器 -->
+		<div>
+			<img src="img/teacher.jpg" class="teacher-photo">
+		</div>
+		<div>
+			<h3>關於嘉寶老師</h3>
+			<p>
+				Chia是我 Bow是小提琴的弓。 <br>
+				我是用弓在提琴上演奏音樂，讓孩子感受謬思課的嘉寶。 <br>
+				<br>
+				MuSic mUsiC MusiC  <br>
+				我們都是你的寶貝 <br>
+				從媽媽肚子裡就開始感受你 <br>
+				你帶給我平靜也讓我澎湃 <br>
+				雖然無法擁你 也無法成為你 <br>
+				但我能夠享受你 創造你 <br>
+				讓你成為我探索世界的勇氣。繆思課。 <br>
+				 <br>
+				— 嘉寶ChiaBow<br>
+			</p>
+		</div>
+	</main>
+</section>
+
+<!-- 課程一覽 -->
+<section class = "classInformation-frame">
+	<main class="section-title">
+		<div>
+			<h2>
+				我們的課程
+				<hr>
+			</h2>
+		</div>
+	</main>
+
+	<!-- TYPE 1 -->
+
+	<main class="class-typeTitle">
+			<h4>
+				Orff奧福音樂遊戲課
+			</h4>
+	</main>
+	<main class = "classInformation-content">
+		
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					寶寶的親子遊戲班（0-2歲）
+				</h5>
+				<p>
+					透過音樂感受，增進孩子視聽動感覺統合，刺激多元能力發展。
+				</p>
+			</div>
+			<div>
+				
+			</div>
+		</div>
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					小寶貝的音樂啟蒙班（2-3歲）
+				</h5>
+				<p>
+					由民謠、古典、爵士等多元曲風，透過歌唱、樂器合奏和律動的遊戲中，累積音樂經驗和感受力。
+				</p>
+			</div>
+			
+		</div>
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					大寶貝的樂器預備班（4-6歲）
+				</h5>
+				<p>
+					透過進階的樂器合奏和音樂遊戲，累積音樂基礎能力和樂理知識，預備鋼琴和小提琴的學前能力。
+				</p>
+			</div>	
+		</div>
+	</main>
+	<!-- TYPE 2 -->
+	<main class="class-typeTitle">
+			<h4>
+				ChiaBow嘉寶樂器課
+			</h4>
+	</main>
+	<main class = "classInformation-content">
+		
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					鋼琴 個別課
+				</h5>
+				<p>
+					透過音樂感受，增進孩子視聽動感覺統合，刺激多元能力發展。
+				</p>
+			</div>
+			<div>
+				
+			</div>
+		</div>
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					小提琴 團體課
+				</h5>
+				<p>
+					由民謠、古典、爵士等多元曲風，透過歌唱、樂器合奏和律動的遊戲中，累積音樂經驗和感受力。
+				</p>
+			</div>
+			
+		</div>
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					小提琴 個別課
+				</h5>
+				<p>
+					透過進階的樂器合奏和音樂遊戲，累積音樂基礎能力和樂理知識，預備鋼琴和小提琴的學前能力。
+				</p>
+			</div>
+		</div>
+	</main>
+
+	<!-- TYPE 3 -->
+	<main class="class-typeTitle">
+			<h4>
+				成果發表
+			</h4>
+	</main>
+	<main class = "classInformation-content">
+		
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					寶寶的親子遊戲班（0-2歲）
+				</h5>
+				<p>
+					透過音樂感受，增進孩子視聽動感覺統合，刺激多元能力發展。
+				</p>
+			</div>
+			<div>
+				
+			</div>
+		</div>
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					小寶貝的音樂啟蒙班（2-3歲）
+				</h5>
+				<p>
+					由民謠、古典、爵士等多元曲風，透過歌唱、樂器合奏和律動的遊戲中，累積音樂經驗和感受力。
+				</p>
+			</div>
+			
+		</div>
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					大寶貝的樂器預備班（4-6歲）
+				</h5>
+				<p>
+					透過進階的樂器合奏和音樂遊戲，累積音樂基礎能力和樂理知識，預備鋼琴和小提琴的學前能力。
+				</p>
+			</div>
+		</div>
+	</main>
+</section>
+
+<!-- 聯絡我 -->
+
+<section class = "contact-frame">
+	<main class="section-title">
+		<div>
+			<h2>
+				聯絡我們
+				<hr>
+			</h2>
+		</div>
+	</main>
+	<main class = "contact-content">
+		<div class = "contact-style">
+			<form action="https://formspree.io/cd12631@gmail.com"method="POST">
+	              <label> 姓名 </label> <br>
+	              <input type="text" name="name" class="input-style"> <br>
+	              <label> 年齡 </label> <br>
+	              <input type="numer" name="name" class="input-style"> <br>
+	              <label> 性別 </label> <br>
+	              <input type="text" name="gender" class="input-style"> <br>
+	              <label> 電話 </label> <br>
+	              <input type="number" name="phone" class="input-style"> <br>
+	              <label> 電子郵件地址 </label> <br>
+	              <input type="email" name="_replyto" class="input-style">
+	              <br>
+	              <!-- Submit -->
+	              <input type="submit" value="送出" class="button-style">
+        	</form>
+        	<div style = "height:50px;"></div>
+		</div>
+		<div> 
+			<!-- 圖片-->
+			<img src="img/631229.jpg" class="contact-photo">
+		</div>
+		
+	</main>
+	<div style = "height:100px;"><!-- 我只是用來分隔--></div>
+</section>
+
+<!-- Footer -->
+<footer class = "footer-frame">
+	<main class = "footer-content">
+		<div class="uper-0">
+			<ul class="none-0">
+				<li>
+					最新消息
+				</li>
+				<li>
+					關於我們
+				</li>
+				<li>
+					課程一覽
+				</li>	
+				<li>
+					聯絡我們
+				</li>
+			</ul>
+		</div>
+		<div class="uper">
+			
+			<ul class="none">
+				<li>
+					Orff奧福音樂遊戲課
+				</li>
+				<li>
+					寶寶的親子遊戲班
+				</li>
+				<li>
+					小寶貝的音樂啟蒙班
+				</li>
+				<li>
+					大寶貝的樂器預備班
+				</li>	
+				
+			</ul>
+		</div>
+		<div class="uper">
+			
+			<ul class="none">
+				<li>
+					ChiaBow嘉寶樂器課
+				</li>
+				<li>
+					鋼琴 個別課
+				</li>
+				<li>
+					小提琴 團體課
+				</li>
+				<li>
+					小提琴 個別課
+				</li>	
+				
+			</ul>
+		</div>
+	</main>
+	<main class="footer-content">
+		<div class = down>
+			<div class="footer-icon-size">
+	         	<i class="fa fa-facebook-official"></i>
+	        </div>
+	        <div class = "footer-icon-size">
+	         	<i class="fa fa-instagram"></i>
+	        </div>
+	        <div class="footer-icon-size">
+	         	<i class="fa fa-twitter-square"></i>
+	        </div>
+	        <div class="footer-icon-size">
+	         	<i class="fa fa-youtube-play"></i>
+	        </div>
+		</div>
+		
+	</main>
+	<main class="footer-content">
+		
+		<div class = down>
+			© 2018 ChiaBow.com . All rights reserved. No part of this site may be reproduced without our written permission. <br>
+			© 2018 ChiaBow.com . 嘉寶的繆思課，版權所有。
+		</div>
+	</main>
+	<main class="footer-content">
+		
+		<div class = down>
+			本網站由YiChun Sung 維護製作。
+		</div>
+	</main>
+</footer>
+
+<script type="text/javascript" src="js/ycsChiabow.js"></script>
+</body>
+
+
+</html>

@@ -1,50 +1,690 @@
+body{
+	margin: 0;
+}
 hr{
-	width: 120px; 
-	border-width: 2px; 
-	border-color: #F7CAC9;
+		width: 120px; 
+		border-width: 1px; 
+		border-color: #F7CAC9;
+	}
+
+/* 通用設定 */
+	.section-title{ /* 容器 */
+		display: flex;
+		justify-content: center;
+
+	}
+		.section-title>div{
+			flex: none;
+			text-align: center;
+
+		}
+	
+/*
+______________________________________
+
+	導航列CSS
+______________________________________
+*/
+
+/* 手機 & 平板 導航狀態列 */
+.phoneNav{
+	display: none;
+	position: fixed; 
+	top: 5px; 
+	right: 15px; 
+	float: right; 
+	width: 50px; 
+	height: 50px; 
+	/*background-color: black; */
+	z-index: 20; 
+	overflow: hidden;
+	transition: width 1s, height 0.8s;
 }
-
-
-.label-title {
+.phoneNav-button{
+	position: fixed;
+	top: 5px;
+	right: 15px;
+	float: right;
+	width: 50px;
+	height: 50px;
+	color: #ffffff;
+	font-size: 32px;
+	margin: auto;
+	margin-top:auto; 
 	text-align: center;
+	z-index: 23;
+	overflow: hidden;
+	opacity: 1;
+	cursor: pointer;
+	display: none;
+
 }
-.class-heading{
+	.phoneNav-button:hover{
+		background-color: black;
+	}
+
+.phoneNav-background{
+	position: relative;
+	z-index: 21;
+	width: 200px;
+	height: 500px;
+	float: right;
+	background-color: black;
+	opacity: 0.5;
+	top: 0;
+	
+	overflow: hidden;
+	
+}
+.phoneNav-content{
+	position: relative; 
+	z-index: 22; 
+	float: right;
+	width: 200px; 
+	height: 500px; 
+	top:-100%;
+	
+}
+.phoneNav-menuList{
+	display: none;
+	color:#ffffff;
+	font-size: 20px;
+
+}
+.menu-title{
+	width: 100%; height: 50px; 
+	font-size:26px;  padding: 10px 0;
+	cursor: pointer;
+}
+.menu-content{
+	width: 100%;
+	
+}
+.menu-list{
+	width: 100%;
+	color:#fffff1;
+	margin-left:5px;
+	cursor: pointer; 
+}
+	.menu-list:hover{
+		background-color: black;
+	}
+.menu-list-memberCenter{
+	width: 100%;
+	color:#fffff1;
+	margin-left:5px;
+	cursor: pointer; 
+	display:none;
+}
+	.menu-list-memberCenter:hover{
+		background-color: black;
+	}
+
+
+
+/* 
+	電腦版 背景設定
+ */
+
+.nav-frame{
+	position: fixed;
+	z-index: 100;
+	display: block;
+	height: 5vh;
+	width: 100vw;
+	overflow: hidden;
+}
+.nav-background{
+	float: left;
+	position: relative;
+	z-index: 1;
+	height: 5vh;
+	width: 100%;
+	background-color: #333;
+	background-size: cover;
+	top: 0;
+}
+.nav-opacity{
+	float: left;
+	z-index: 2;
+	position: relative;
+	top: 0vh;
+	height: 5vh;
+	width: 100%;
+	border: solid 0px black;
+	background-color: #333;
+	opacity: 0.2;
+	top:-5vh;
+}
+.nav-section{
+	float: left;
+	z-index: 3;
+	position: relative;
+	top: 0vh;
+	height: 5vh;
+	width: 100%;
+	/*background-color: #333;*/
+	opacity: 1;
+	top:-10vh;
+	color: #ffffff;
+	overflow: hidden;
+	
+}
+
+/* 導航列 flexbox  */
+.nav-content{
+	
+	display: flex;
+	justify-content: flex-start;
+	overflow: hidden;
+}
+	.nav-content>div.navbar-left{
+		
+		flex: none;
+		width: 45%;
+		color: #ffffff;
+		font-size: 26px;
+		margin-left: 10px;
+		cursor: pointer;
+
+	}
+		.nav-content>div.navbar-left:hover{
+			color: pink;
+		}
+
+	.nav-content>div.navbar-right{
+		display: flex;
+		justify-content: flex-end;
+		align-items: center; 
+		flex: none;
+		width: 45%;
+		color: #ffffff;
+		font-size: 26px;
+		margin-left: 10px;
+		
+	}
+
+.list-div{
+	flex: none;
+	width: 100px;
+	color: #ffffff;
+	font-size: 20px;
 	text-align: center;
+	cursor: pointer;
+}
+	.list-div:hover{
+		color: #92A8D1;
+	}
+
+/* 
+
+          _______________________________
+          |                             |
+          |           Header            |
+          |                             |
+          ===============================
+
+
+			# Header 頁面背景: 
+				1. page-frame: 底層框架 
+				2. page-background: 底層背景 
+				3. page-opacity: 底層透明度設定
+
+ */
+.header-frame{
+	z-index: -10;
+	display: block;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+.header-background{
+	float: left;
+	position: relative;
+	z-index: 1;
+	height: 100vh;
+	width: 100%;
+	background-image: url("../img/5.jpg");
+	background-size: cover;
+	top: 0;
+	display: block;
+	transition: background-image 1s;
+	
+
+}
+.header-background-2{
+	float: left;
+	position: relative;
+	z-index: 1;
+	height: 100vh;
+	width: 100%;
+	background-image: url("../img/4.jpg");
+	background-size: cover;
+	top: 0;
+	display: none;
+	opacity: 1;
+	transition: background-image 1s,
+	
+
+}
+.header-background-3{
+	float: left;
+	position: relative;
+	z-index: 1;
+	height: 100vh;
+	width: 100%;
+	background-image: url("../img/header.jpg");
+	background-size: cover;
+	top: 0;
+	display: none;
+
+}
+.header-opacity{
+	float: left;
+	z-index: 2;
+	position: relative;
+	top: 0vh;
+	height: 100vh;
+	width: 100%;
+	border: solid 0px black;
+	background-color: #333;
+	opacity: 0.5;
+	top:-100vh;
+}
+.header-section{
+	float: left;
+	z-index: 3;
+	position: relative;
+	top: 0vh;
+	height: 100vh;
+	width: 100%;
+	/*background-color: #333;*/
+	opacity: 1;
+	top:-200vh;
+	color: #ffffff;
+	
 }
 
-.section-normal{}
-	.section-normal>h2{text-align: center;}
-
-.news{
-	text-align: center;
-	background-color: #f2f2f2;
+/* flex box  */
+.header-content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
+	.header-content>div{
+		flex: none;
+		text-align: center;
+		font-size: 40px;
+		color: #ffffff;
+	}
 
+/* ================最新消息================ */
 
-.button-style{
-	background-color: #F7CAC9;
-
+/* news-content */
+.news-content{
+	display: flex;
+	justify-content: center;
 }
+	.news-content>div{
+		flex: none;
+		width: 45%;
+		margin: 2%;
+		text-align: center;
+	}
+
 .readMore{
-	color: #92A8D1;
+	color: #99ccff;
 	cursor: pointer;
 }
 	.readMore:hover{
-		color: #4b70b4;
+		color: #1a8cff;
 	}
-.hr-news{
-	width: 80px; 
-	border-width: 1px; 
-	border-color: black;
+
+/* 最新消息彈出視窗 */
+.news-window{
+	width:1000px; height:95vh; 
+	background-color: #edf1f7; 
+	display: none; 
+	position: fixed; 
+	top: 30px; left: 200px; z-index: 101;
 }
-.about_me{
-	background-color: #92A8D1;
-}
-.chiabow-nav{
-	background-color: pink;
-}
-.aboutMe-content{
+.news-turnOff-button{
+	position: relative;
+	float: left;
+	margin-left: 5px;
+	font-size: 40px;
 	text-align: center;
+	cursor: pointer;
+}
+
+/* ================關於老師================ */
+
+/* about me content */
+.aboutMe-content{
+	display: flex; flex-wrap: wrap;
+	justify-content: center;
+}
+	.aboutMe-content>div{
+		flex: none;
+		width: 45%;
+		margin: 2%;
+		text-align: center;
+	}
+.teacher-photo{
+	width: 500px; height: 500px;
+}
+
+
+
+/* ================課程資訊================ */
+
+/* classInformation-content */
+.class-typeTitle{
+		width: 100%;
+		text-align: center;
+	}
+.classInformation-content{
+	display: flex; 
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+	.classInformation-content>.class-card{
+		flex: none;
+		width: 30%;
+		height: 500px;
+		border: 1px solid;
+		margin: 1%;
+		text-align: center;
+	}
+		.class-cardPhoto{
+			margin: 5%;
+			width: 90%;
+			height: 250px;
+			background-color: grey;
+		}
+		.class-cardTxt{
+			text-align: left;
+		}
+
+
+/* ================聯絡我們================ */
+
+/* classInformation-content */
+.contact-content{
+
+	display: flex; flex-wrap: wrap;
+	justify-content: center;
+}
+	.contact-content>div{
+		flex: none;
+		width: 40%;
+	}
+
+
+.contact-style{
+	
+}
+	label{
+		font-size: 18px;
+		text-shadow:0px 0px 0 #444;
+		
+	}
+.input-style{
+	padding:8px;
+	display:block;
+	border:none;
+	border-bottom:1px solid #ccc;
+	width:350px;
+}
+.button-style{
+	width: 150px;
+	font-size: 18px;
+	border: none;
+	color:#fff;
+	background-color:#92A8D1;
+	margin-left: 100px;
+	cursor: pointer;
+
+}
+	.button-style:hover{
+		background-color:#5d7ebb; 
+		color: #fff;
+	}
+
+.contact-photo{
+	width: 388px; height:517px; margin-left: 100px; 
+}
+
+/* ================ Footer ================ */
+
+.footer-frame{
+	background-color: #F7CAC9; 
+	color: #333;
+}
+
+.footer-content{
+	display: flex; flex-wrap: wrap;
+	justify-content: center;
+}
+	.footer-content>div.uper-0{
+		flex: none;
+		width: 30%;
+		text-align: left;
+	}
+	.footer-content>div.uper{
+		flex: none;
+		width: 30%;
+		text-align: left;
+	}
+	.footer-content>div.down{
+		flex: none;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-left: 0%;
+		text-align: center;
+	}
+ul.none-0 {
+    list-style-type: none;
+    text-align: center;
+}
+
+ul.none {
+    list-style-type: none;
+    text-align: center;
+}
+
+/* Icon setting */
+.footer-icon-size{
+	margin: auto;
+	flex: none;
+	margin: 10px;
+	font-size:64px;
+	color:#92A8D1;
+	cursor: pointer;
+}
+	.footer-icon-size:hover{
+		color:#5d7ebb;
+	}
+
+/*
+=================================================
+
+						RWD
+
+=================================================
+*/
+
+@media (max-width: 1200px){
+/* ================最新消息================ */
+	.news-window{
+		width:700px; height:95vh; 
+		background-color: #edf1f7; 
+		display: none; 
+		position: fixed; 
+		top: 30px; left: 38px; z-index: 101;
+	}
+
+/* ================關於老師================ */
+	.teacher-photo{
+		width: 500px; height: 500px;
+	}
+	.aboutMe-content>div{
+			flex: none;
+			width: 80%;
+			margin: 2%;
+			text-align: center;
+	}
+/* ================課程資訊================ */
+
+	.classInformation-content > .class-card{
+		flex: none;
+		width: 90%;
+		height: 500px;
+		border: 1px solid;
+		margin: 2px;
+		text-align: center;
+	}
+/* ================聯絡我們================ */
+	.contact-content>div{
+		flex: none;
+		width: 90%;
+
+	}
+	label{
+		font-size: 18px;
+		text-shadow:0px 0px 0 #444;
+		text-align:center;
+		
+	}
+	.input-style{
+		padding:8px;
+		display:block;
+		border:none;
+		border-bottom:1px solid #ccc;
+		width:80%;
+		text-align: center;
+	}
+	.button-style{
+		width: 150px;
+		font-size: 18px;
+		border: none;
+		color:#fff;
+		background-color:#607d8b;
+		text-align: center;
+	}
+	.contact-photo{
+		width: 698.4px; height:930px; margin-left: 2px; 
+	}
+
+/* ================ Footer ================ */
+	.footer-content>div.uper-0{
+		flex: none;
+		width: 90%;
+		margin: 4%;
+		text-align: center;
+	}
+	.footer-content>div.uper{
+		flex: none;
+		width: 45%;
+		text-align: left;
+	}
+
+}
+
+
+@media (max-width: 500px){
+	/* 導航列 */
+	.phoneNav{ display: inline-block; }
+	.phoneNav-button{display: block;}
+	.nav-frame{display: none;}
+
+/* ================最新消息================ */
+	.news-window{
+		width:300px; height:95vh; 
+		background-color: #edf1f7; 
+		display: none; 
+		position: fixed; 
+		top: 30px; left: 30px; z-index: 101;
+	}
+
+/* ================關於老師================ */
+	.teacher-photo{
+	width: 300px; height: 300px;
+	}
+	.aboutMe-content>div{
+		flex: none;
+		width: 80%;
+		margin: 2%;
+		text-align: center;
+	}
+/* ================課程資訊================ */
+	.classInformation-content .class-card{
+		flex: none;
+		width: 90%;
+		height: 500px;
+		border: 1px solid;
+		margin: 2px;
+		text-align: center;
+	}
+/* ================聯絡我們================ */
+
+	.contact-content>div{
+		flex: none;
+		width: 90%;
+	}
+	label{
+		font-size: 18px;
+		text-shadow:0px 0px 0 #444;
+		text-align:center;
+		
+	}
+	.input-style{
+		padding:8px;
+		display:block;
+		border:none;
+		border-bottom:1px solid #ccc;
+		width:80%;
+		text-align: center;
+	}
+	.button-style{
+		width: 150px;
+		font-size: 18px;
+		border: none;
+		color:#fff;
+		background-color:#607d8b;
+		text-align: center;
+		margin-left: auto;
+	}
+	.contact-photo{
+		width: 271.6px; height:361.9px; margin: auto; 
+
+	}
+
+/* ================ Footer ================ */
+	.footer-content>div.uper-0{
+		flex: none;
+		width: 90%;
+		margin: 4%;
+		text-align: center;
+		
+	}
+	ul.none-0 {
+    	list-style-type: none;
+    	margin: auto;
+    	text-align: center;
+    	display: inline;
+	}
+	ul.none-0 > li{
+		display: inline;
+	}
+	.footer-content>div.uper{
+		flex: none;
+		width: 50%;
+		text-align: left;
+	}
 }
 
 
