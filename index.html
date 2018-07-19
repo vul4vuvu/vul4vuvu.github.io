@@ -1,388 +1,514 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
+<html>
+<head>
+	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <title>嘉寶的繆思課</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet">
+    <!-- CSS -->
     <link href="css/chiabow.css" rel="stylesheet">
-  </head>
+    <!-- ICON CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-  <body>
+<!-- 
+	RWD 
 
-    <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top" style = "width: 100%">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">嘉寶的繆思課</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">最新消息</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">關於嘉寶</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Orff奧福音樂遊戲課
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="portfolio-1-col.html">寶寶的親子遊戲班（0-2歲）</a>
-                <a class="dropdown-item" href="portfolio-2-col.html">小寶貝的音樂啟蒙班（2-3歲）</a>
-                <a class="dropdown-item" href="portfolio-3-col.html">大寶貝的樂器預備班（4-6歲）</a>
-                
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                第二種音樂課
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="portfolio-1-col.html">第一種</a>
-                <a class="dropdown-item" href="portfolio-2-col.html">第二種</a>
-                <a class="dropdown-item" href="portfolio-3-col.html">第三種</a>
-                
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                第三種音樂課
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="portfolio-1-col.html">寶寶的親子遊戲班（0-2歲）</a>
-                <a class="dropdown-item" href="portfolio-2-col.html">小寶貝的音樂啟蒙班（2-3歲）</a>
-                <a class="dropdown-item" href="portfolio-3-col.html">大寶貝的樂器預備班（4-6歲）</a>
-                
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">聯絡我們</a>
-            </li>
-            
-            
-          </ul>
-        </div>
+1200px 以上 固定
+
+500px~1200px 之間 1欄
+
+500px 以下 1欄
+
+
+--->
+
+
+
+<body>
+
+<!-- 手機 & 平板 導航狀態列 -->
+<nav class = "phoneNav" id = "nav">
+  <div id = "menuBackground" class = "phoneNav-background"></div>
+  <div id = menuBar class = "phoneNav-content">
+    <div id = "menuList" class = "phoneNav-menuList">
+      <div class = "menu-title">
+        嘉寶的繆思課
       </div>
-    </nav>
-    
+      <div class = "menu-content">
+        <div class = "menu-list-memberCenter" id="membersButton">
+          最新消息
+        </div>
+        <div class = "menu-list" id = "loginButton">
+          關於嘉寶
+        </div>
+        <div class = "menu-list" id = "registerButton">
+          課程一覽
+        </div>
+        <div class = "menu-list">
+          我們的成果
+        </div>
+        <div class = "menu-list">
+          聯絡教室
+        </div>
+        
+      </div>
+    </div> 
+  </div>
+  
+</nav>
+<div id = "navButton" class = "phoneNav-button">
+  <i id ="navButtonIcon" class="fa fa-sliders"></i>
+</div>
+
+
+<!-- 電腦版 導航狀態列 -->
+<nav class="nav-frame">
+	<div class = "nav-background"></div>
+	<div class = "nav-opacity"></div>
+	<div class = "nav-section">
+		<main class="nav-content">
+			<div class = "navbar-left">
+				嘉寶的繆思課
+			</div>
+			<div class="navbar-right">
+				<div class="list-div">
+					最新消息
+				</div>
+				<div class="list-div">
+					關於嘉寶
+				</div>
+				<div class="list-div">
+					課程一覽
+				</div>
+				<div class="list-div">
+					聯絡教室
+				</div>
+			</div>
+		</main>
+	</div>
+</nav>
+
+<!-- 主題視覺Header -->
 <!-- ==== Header網頁框架底層 ==== -->
 <header class = "header-frame">
   <!-- ==== Header背景框架層 ==== -->
-  <div class = "header-background" id = "bgHeaderImg"></div>
+	<div id = "slide">
+		<div class = "header-background" id = "bgHeaderImg1"></div>
+	  <!-- 輪播第二層背景 -->
+		<div class = "header-background-2" id = "bgHeaderImg2"></div>
+	  <!-- 輪播第三層背景 -->
+		<div class = "header-background-3" id = "bgHeaderImg3"></div>
+	</div>
   <!-- ==== Header背景度調整 ==== -->
   <div class = "header-opacity"></div>
   <!-- ==== Header最上層框架 ==== -->
   <div class = "header-section">
-    <!--
-
-      Web view:
-
-      | section-left | section-center | section-right |
-      
-    -->
-    <!-- Section left -->
-    <div class = "block-col-25" name = "left">
-      <span>嘉寶的繆思課</span>
-      
-    </div>
-    <!-- Section center -->
-    <div class = "block-col-25" name ="center" id = "pageH1">
-    <!--
-    <span>台北</span><br>
-    <span>Taipei</span>
-    -->
-    </div>
-    <!-- Section right -->
-    <div class = "block-col-50" name = "right">
-        <div class="block-row-25">
-          
-        </div>
-        <div class="block-row-25">
-          
-        </div>
-        <div class="block-row-25">
-          
-        </div>
-        <div class="block-row-25">
-          
-        </div>
-    </div>
+    <main class = "header-content">
+    	<div>
+    		<h1>ChiaBow's Music</h1>
+    	</div>
+    </main>
     
   </div>
-</header>  
+</header>
 
+<!-- 最新消息 -->
+<section class="news-frame">
+	<main class="section-title">
+		<div>
+			<h2>
+				最新消息
+				<hr>
+			</h2>
+		</div>
+	</main>
+	<main class="news-content"> <!-- 容器 -->
+		<div>
+			<!-- 最新消息 1 -->
+			<div>
+				<h3>7/11 停課一日</h3>
+				<p>因應7/11 瑪莉亞颱風來襲，本教室停課一日。</p>
+				<span class = "readMore" id = "readMoreButton1">Read more</span>
+				<!-- 彈出視窗 -->
+				<div class="news-window" id = "newsWindow1">
+					<div class="news-turnOff-button" id = newsOffButton1 onclick="showTheNEWSWindow();"> 
+						<i class="fa fa-times"></i>
+					</div>
+				</div>
+				<!-- 彈出視窗結束 -->
+			</div>
 
-    <!-- 最新消息 -->
-    <section class = "news section-normal">
-      <h2>最新消息</h2>
-      <hr>
-      <div class = "row">
-        <div class = "col-lg-12">
-          <!-- 最新消息 共五欄 -->
-            <!-- 第一篇 -->
-          <div class = "col-lg-12" id = "newsSec1">
-            <h4> 嘉寶的教室開課了！</h4>
-          </div>
-          <div class = "col-lg-12">
-            <p>
-              點擊後跳出彈跳式視窗，Hen麻煩
-            </p>
-            <div class = "readMore">Read more</div>
-            <hr class="hr-news">
-          </div>
-            <!-- 第二篇 -->
-          <div class = "col-lg-12" id = "newsSec2">
-            <h4> 7/11因颱風停課一天</h4>
-          </div>
-          <div class = "col-lg-12">
-            <p>
-              因應瑪莉亞颱風來襲，本班停課一日。
-            </p>
-            <div class = "readMore">Read more</div>
-            <hr class="hr-news">
-          </div> 
-            <!-- 第三篇 -->
-          <div class = "col-lg-12" id = "newsSec3">
-            <h4>第206期招生簡章</h4>
-          </div>
-          <div class = "col-lg-12">
-            <p>
-              第206期招生即日起開放報名。
-            </p>
-            <div class = "readMore">Read more</div>
-            <hr class="hr-news">
-          </div> 
-            <!-- 第四篇 -->
-          <div class = "col-lg-12" id = "newsSec4">
-            <h4> 端午節停課一日</h4>
-          </div>
-          <div class = "col-lg-12">
-            <p>
-              因應端午連續假期，本班停課一日。
-            </p>
-            <div class = "readMore">Read more</div>
-            <hr class="hr-news">
-          </div> 
-            <!-- 第五篇 -->
-          <div class = "col-lg-12" id = "newsSec5">
-            <h4>第205期招生簡章</h4>
-          </div>
-          <div class = "col-lg-12">
-            <p>
-              第206期招生即日起開放報名。
-            </p>
-            <div class = "readMore">Read more</div>
-            <hr class="hr-news">
-          </div> 
-        </div>
-      </div>
-    </section>
+			<!-- 最新消息 2 -->
+			<div>
+				<h3>7/03 停課一日</h3>
+				<p>因應本教室水電維修，停課一日。</p>
+				<span class = "readMore" id = "readMoreButton2">Read more</span>
+				<!-- 彈出視窗 -->
+				<div class="news-window" id = "newsWindow2">
+					<div class="news-turnOff-button" id = newsOffButton2 onclick="showTheNEWSWindow();"> 
+						<i class="fa fa-times"></i>
+					</div>
+				</div>
+				<!-- 彈出視窗結束 -->
+			</div>
 
+			<!-- 最新消息 3 -->
+			<div>
+				<h3>本教室開始招生</h3>
+				<p>本教室即日起開始招收2018年7月份新生！</p>
+				<span class = "readMore" id = "readMoreButton3">Read more</span>
+				<!-- 彈出視窗 -->
+				<div class="news-window" id = "newsWindow3">
+					<div class="news-turnOff-button" id = newsOffButton3 onclick="showTheNEWSWindow();"> 
+						<i class="fa fa-times"></i>
+					</div>
+				</div>
+				<!-- 彈出視窗結束 -->
+			</div>
+		</div>
+		
+		
+	</main>
+</section>
 
-    <!-- 關於我 -->
-    <section class = "about_me section-normal">
-      <h2> 關於嘉寶</h2>
-      <hr>
-      <div class="row">
-        
-        <div class="col-lg-6">
-          <div style="background-size: cover; margin: auto; width: 400px; height: 500px; background-image: url('img/teacher.jpg');"></div>
-        </div>
-        <div class="col-lg-6 aboutMe-content">
-          <h3>
-            我是老師！
-          </h3>
-          <p>
-            我是介紹音樂老師的區塊，哈哈哈。
-          </p>
-        </div>
-        <div class = "col-lg-12">
-          <hr class="hr-news">
-        </div>
-      </div>
-    </section>
+<!-- 關於我 -->
+<section class="aboutMe-frame">
+	<main class="section-title">
+		<div>
+			<h2>
+				關於我
+				<hr>
+			</h2>
+		</div>
+	</main>
+	<main class="aboutMe-content"> <!-- 容器 -->
+		<div>
+			<img src="img/teacher.jpg" class="teacher-photo">
+		</div>
+		<div>
+			<h3>關於嘉寶老師</h3>
+			<p>
+				Chia是我 Bow是小提琴的弓。 <br>
+				我是用弓在提琴上演奏音樂，讓孩子感受謬思課的嘉寶。 <br>
+				<br>
+				MuSic mUsiC MusiC  <br>
+				我們都是你的寶貝 <br>
+				從媽媽肚子裡就開始感受你 <br>
+				你帶給我平靜也讓我澎湃 <br>
+				雖然無法擁你 也無法成為你 <br>
+				但我能夠享受你 創造你 <br>
+				讓你成為我探索世界的勇氣。繆思課。 <br>
+				 <br>
+				— 嘉寶ChiaBow<br>
+			</p>
+		</div>
+	</main>
+</section>
 
-    <!-- 課程一覽 -->
-    <section class = "class_information section-normal">
-      <!-- Portfolio Section -->
-      <h2>課程一覽</h2>
-      <hr>
-      <div class="row">
+<!-- 課程一覽 -->
+<section class = "classInformation-frame">
+	<main class="section-title">
+		<div>
+			<h2>
+				我們的課程
+				<hr>
+			</h2>
+		</div>
+	</main>
 
-        <!-- Type 1 -->
+	<!-- TYPE 1 -->
 
-        <div class="col-lg-12 class-heading">
-          <h3> Orff奧福音樂遊戲課 </h3>
-        </div>
+	<main class="class-typeTitle">
+			<h4>
+				Orff奧福音樂遊戲課
+			</h4>
+	</main>
+	<main class = "classInformation-content">
+		
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					寶寶的親子遊戲班（0-2歲）
+				</h5>
+				<p>
+					透過音樂感受，增進孩子視聽動感覺統合，刺激多元能力發展。
+				</p>
+			</div>
+			<div>
+				
+			</div>
+		</div>
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					小寶貝的音樂啟蒙班（2-3歲）
+				</h5>
+				<p>
+					由民謠、古典、爵士等多元曲風，透過歌唱、樂器合奏和律動的遊戲中，累積音樂經驗和感受力。
+				</p>
+			</div>
+			
+		</div>
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					大寶貝的樂器預備班（4-6歲）
+				</h5>
+				<p>
+					透過進階的樂器合奏和音樂遊戲，累積音樂基礎能力和樂理知識，預備鋼琴和小提琴的學前能力。
+				</p>
+			</div>	
+		</div>
+	</main>
+	<!-- TYPE 2 -->
+	<main class="class-typeTitle">
+			<h4>
+				ChiaBow嘉寶樂器課
+			</h4>
+	</main>
+	<main class = "classInformation-content">
+		
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					鋼琴 個別課
+				</h5>
+				<p>
+					透過音樂感受，增進孩子視聽動感覺統合，刺激多元能力發展。
+				</p>
+			</div>
+			<div>
+				
+			</div>
+		</div>
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					小提琴 團體課
+				</h5>
+				<p>
+					由民謠、古典、爵士等多元曲風，透過歌唱、樂器合奏和律動的遊戲中，累積音樂經驗和感受力。
+				</p>
+			</div>
+			
+		</div>
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					小提琴 個別課
+				</h5>
+				<p>
+					透過進階的樂器合奏和音樂遊戲，累積音樂基礎能力和樂理知識，預備鋼琴和小提琴的學前能力。
+				</p>
+			</div>
+		</div>
+	</main>
 
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">寶寶的親子遊戲班（0-2歲）</a>
-              </h4>
-              <p class="card-text">透過音樂感受，增進孩子視聽動感覺統合，刺激多元能力發展。</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">小寶貝的音樂啟蒙班（2-3歲）</a>
-              </h4>
-              <p class="card-text">由民謠、古典、爵士等多元曲風，透過歌唱、樂器合奏和律動的遊戲中，累積音樂經驗和感受力。</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">大寶貝的樂器預備班（4-6歲）</a>
-              </h4>
-              <p class="card-text">透過進階的樂器合奏和音樂遊戲，累積音樂基礎能力和樂理知識，預備鋼琴和小提琴的學前能力。</p>
-            </div>
-          </div>
-        </div>
+	<!-- TYPE 3 -->
+	<main class="class-typeTitle">
+			<h4>
+				成果發表
+			</h4>
+	</main>
+	<main class = "classInformation-content">
+		
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					寶寶的親子遊戲班（0-2歲）
+				</h5>
+				<p>
+					透過音樂感受，增進孩子視聽動感覺統合，刺激多元能力發展。
+				</p>
+			</div>
+			<div>
+				
+			</div>
+		</div>
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					小寶貝的音樂啟蒙班（2-3歲）
+				</h5>
+				<p>
+					由民謠、古典、爵士等多元曲風，透過歌唱、樂器合奏和律動的遊戲中，累積音樂經驗和感受力。
+				</p>
+			</div>
+			
+		</div>
+		<div class="class-card">
+			<div class="class-cardPhoto">
+				
+			</div>
+			<div class="class-cardTxt">
+				<h5>
+					大寶貝的樂器預備班（4-6歲）
+				</h5>
+				<p>
+					透過進階的樂器合奏和音樂遊戲，累積音樂基礎能力和樂理知識，預備鋼琴和小提琴的學前能力。
+				</p>
+			</div>
+		</div>
+	</main>
+</section>
 
-        <!-- Type 2 -->
-        <div class="col-lg-12  class-heading">
-          <h3> 第二種課唷 </h3>
-        </div>
-        
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Project 4</a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Project 5</a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Project 6</a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
-            </div>
-          </div>
-        </div>
+<!-- 聯絡我 -->
 
-        <!-- Type 3 -->
+<section class = "contact-frame">
+	<main class="section-title">
+		<div>
+			<h2>
+				聯絡我們
+				<hr>
+			</h2>
+		</div>
+	</main>
+	<main class = "contact-content">
+		<div class = "contact-style">
+			<form action="https://formspree.io/cd12631@gmail.com"method="POST">
+	              <label> 姓名 </label> <br>
+	              <input type="text" name="name" class="input-style"> <br>
+	              <label> 年齡 </label> <br>
+	              <input type="numer" name="name" class="input-style"> <br>
+	              <label> 性別 </label> <br>
+	              <input type="text" name="gender" class="input-style"> <br>
+	              <label> 電話 </label> <br>
+	              <input type="number" name="phone" class="input-style"> <br>
+	              <label> 電子郵件地址 </label> <br>
+	              <input type="email" name="_replyto" class="input-style">
+	              <br>
+	              <!-- Submit -->
+	              <input type="submit" value="送出" class="button-style">
+        	</form>
+        	<div style = "height:50px;"></div>
+		</div>
+		<div> 
+			<!-- 圖片-->
+			<img src="img/631229.jpg" class="contact-photo">
+		</div>
+		
+	</main>
+	<div style = "height:100px;"><!-- 我只是用來分隔--></div>
+</section>
 
-        <div class="col-lg-12  class-heading">
-          <h3> 第三種音樂課唷 </h3>
-        </div>
+<!-- Footer -->
+<footer class = "footer-frame">
+	<main class = "footer-content">
+		<div class="uper-0">
+			<ul class="none-0">
+				<li>
+					最新消息
+				</li>
+				<li>
+					關於我們
+				</li>
+				<li>
+					課程一覽
+				</li>	
+				<li>
+					聯絡我們
+				</li>
+			</ul>
+		</div>
+		<div class="uper">
+			
+			<ul class="none">
+				<li>
+					Orff奧福音樂遊戲課
+				</li>
+				<li>
+					寶寶的親子遊戲班
+				</li>
+				<li>
+					小寶貝的音樂啟蒙班
+				</li>
+				<li>
+					大寶貝的樂器預備班
+				</li>	
+				
+			</ul>
+		</div>
+		<div class="uper">
+			
+			<ul class="none">
+				<li>
+					ChiaBow嘉寶樂器課
+				</li>
+				<li>
+					鋼琴 個別課
+				</li>
+				<li>
+					小提琴 團體課
+				</li>
+				<li>
+					小提琴 個別課
+				</li>	
+				
+			</ul>
+		</div>
+	</main>
+	<main class="footer-content">
+		<div class = down>
+			<div class="footer-icon-size">
+	         	<i class="fa fa-facebook-official"></i>
+	        </div>
+	        <div class = "footer-icon-size">
+	         	<i class="fa fa-instagram"></i>
+	        </div>
+	        <div class="footer-icon-size">
+	         	<i class="fa fa-twitter-square"></i>
+	        </div>
+	        <div class="footer-icon-size">
+	         	<i class="fa fa-youtube-play"></i>
+	        </div>
+		</div>
+		
+	</main>
+	<main class="footer-content">
+		
+		<div class = down>
+			© 2018 ChiaBow.com . All rights reserved. No part of this site may be reproduced without our written permission. <br>
+			© 2018 ChiaBow.com . 嘉寶的繆思課，版權所有。
+		</div>
+	</main>
+	<main class="footer-content">
+		
+		<div class = down>
+			本網站由YiChun Sung 維護製作。
+		</div>
+	</main>
+</footer>
 
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Project 7</a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Project 8</a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Project 9</a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- 聯絡我 -->
-    <section class = "contact_us section-normal">
-      <h2>聯絡我唷</h2>
-      <hr>
-      <div class="row">
-        <div class="col-lg-4"></div>  
-        <div class="col-lg-4">
-          <div class="from-group label-title">
-            <form action="https://formspree.io/cd12631@gmail.com"method="POST">
-              <label for = "name"> 姓名 </label>
-              <input type="text" name="name" class="form-control">
-              <label for = "gender">性別 </label>
-              <input type="text" name="gender" class="form-control">
-              <label for = "phone">電話</label> 
-              <input type="number" name="phone" class="form-control">
-              <label for = "mail">電子郵件地址</label>
-              <input type="email" name="_replyto" class="form-control">
-              <br>
-              <!-- Submit -->
-              <input type="submit" value="Send" class="form-control btn-default button-style">
-            </form>
-          </div>
-          <div class="col-lg-4"></div>  
-          
-        </div>
-      </div>
-    </section>
+<script type="text/javascript" src="js/ycsChiabow.js"></script>
+</body>
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Chiabow.com</p>
-      </div>
-      
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  </body>
 
 </html>
