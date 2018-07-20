@@ -518,6 +518,15 @@ ul.none {
 */
 
 @media (max-width: 1200px){
+/*====          Header 字體             ====*/
+
+.header-content>div{
+		flex: none;
+		text-align: center;
+		font-size: 26px;
+		color: #ffffff;
+	}
+
 /* ================最新消息================ */
 	.news-window{
 		width:700px; height:95vh; 
@@ -600,6 +609,14 @@ ul.none {
 	.phoneNav{ display: inline-block; }
 	.phoneNav-button{display: block;}
 	.nav-frame{display: none;}
+/*====          Header 字體             ====*/
+
+.header-content>div{
+		flex: none;
+		text-align: center;
+		font-size: 18px;
+		color: #ffffff;
+	}
 
 /* ================最新消息================ */
 	.news-window{
