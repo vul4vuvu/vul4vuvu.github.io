@@ -66,25 +66,28 @@
 
 
 <!-- 電腦版 導航狀態列 -->
-<nav class="nav-frame">
+<nav class="nav-frame" id ="navFrame">
 	<div class = "nav-background"></div>
 	<div class = "nav-opacity"></div>
 	<div class = "nav-section">
 		<main class="nav-content">
-			<div class = "navbar-left">
+			<div class = "navbar-left" >
 				嘉寶的繆思課
 			</div>
 			<div class="navbar-right">
-				<div class="list-div">
+				<div class="list-div" onclick="startScrollToNews();">
 					最新消息
 				</div>
-				<div class="list-div">
+				<div class="list-div" onclick="startScrollToAbout();">
 					關於嘉寶
 				</div>
-				<div class="list-div">
+				<div class="list-div" onclick="startScrollToClass();">
 					課程一覽
 				</div>
-				<div class="list-div">
+				<div class="list-div" onclick="startScrollToResult();">
+					成果發表
+				</div>
+				<div class="list-div" onclick="startScrollToContact();">
 					聯絡教室
 				</div>
 			</div>
@@ -94,7 +97,7 @@
 
 <!-- 主題視覺Header -->
 <!-- ==== Header網頁框架底層 ==== -->
-<header class = "header-frame">
+<header class = "header-frame" id = "headerFrame">
   <!-- ==== Header背景框架層 ==== -->
 	<div id = "slide">
 		<div class = "header-background" id = "bgHeaderImg1"></div>
@@ -117,7 +120,7 @@
 </header>
 
 <!-- 最新消息 -->
-<section class="news-frame">
+<section class="news-frame" id = "newsFrame">
 	<main class="section-title">
 		<div>
 			<h2>
@@ -131,7 +134,7 @@
 			<!-- 最新消息 1 -->
 			<div>
 				<h3>7/11 停課一日</h3>
-				<p>因應7/11 瑪莉亞颱風來襲，本教室停課一日。</p>
+				<p style="display: none;">因應7/11 瑪莉亞颱風來襲，本教室停課一日。</p>
 				<span class = "readMore" id = "readMoreButton1">Read more</span>
 				<!-- 彈出視窗 -->
 				<div class="news-window" id = "newsWindow1">
@@ -145,7 +148,7 @@
 			<!-- 最新消息 2 -->
 			<div>
 				<h3>7/03 停課一日</h3>
-				<p>因應本教室水電維修，停課一日。</p>
+				<p style="display: none;">因應本教室水電維修，停課一日。</p>
 				<span class = "readMore" id = "readMoreButton2">Read more</span>
 				<!-- 彈出視窗 -->
 				<div class="news-window" id = "newsWindow2">
@@ -159,7 +162,7 @@
 			<!-- 最新消息 3 -->
 			<div>
 				<h3>本教室開始招生</h3>
-				<p>本教室即日起開始招收2018年7月份新生！</p>
+				<p style="display: none;">本教室即日起開始招收2018年7月份新生！</p>
 				<span class = "readMore" id = "readMoreButton3">Read more</span>
 				<!-- 彈出視窗 -->
 				<div class="news-window" id = "newsWindow3">
@@ -176,7 +179,7 @@
 </section>
 
 <!-- 關於我 -->
-<section class="aboutMe-frame">
+<section class="aboutMe-frame" id = "aboutMeFrame">
 	<main class="section-title">
 		<div>
 			<h2>
@@ -210,7 +213,7 @@
 </section>
 
 <!-- 課程一覽 -->
-<section class = "classInformation-frame">
+<section class = "classInformation-frame" id = "classInfornationFrame">
 	<main class="section-title">
 		<div>
 			<h2>
@@ -326,12 +329,20 @@
 		</div>
 	</main>
 
-	<!-- TYPE 3 -->
-	<main class="class-typeTitle">
-			<h4>
+</section>
+
+<!-- 成果發表 -->
+<section class="result-frame" id = "resultFrame">
+	<main class="section-title">
+		<div>
+			<h2>
 				成果發表
-			</h4>
+				<hr>
+			</h2>
+		</div>
 	</main>
+	<!-- 成果發表 -->
+	
 	<main class = "classInformation-content">
 		
 		<div class="class-card">
@@ -340,10 +351,10 @@
 			</div>
 			<div class="class-cardTxt">
 				<h5>
-					寶寶的親子遊戲班（0-2歲）
+					6月份成果發表會
 				</h5>
 				<p>
-					透過音樂感受，增進孩子視聽動感覺統合，刺激多元能力發展。
+					這是我們5月份的成果發表會喔！
 				</p>
 			</div>
 			<div>
@@ -356,10 +367,10 @@
 			</div>
 			<div class="class-cardTxt">
 				<h5>
-					小寶貝的音樂啟蒙班（2-3歲）
+					5月份成果發表會
 				</h5>
 				<p>
-					由民謠、古典、爵士等多元曲風，透過歌唱、樂器合奏和律動的遊戲中，累積音樂經驗和感受力。
+					這是我們5月份的成果發表會喔！
 				</p>
 			</div>
 			
@@ -370,19 +381,23 @@
 			</div>
 			<div class="class-cardTxt">
 				<h5>
-					大寶貝的樂器預備班（4-6歲）
+					4月份成果發表會
 				</h5>
 				<p>
-					透過進階的樂器合奏和音樂遊戲，累積音樂基礎能力和樂理知識，預備鋼琴和小提琴的學前能力。
+					這是我們4月份的成果發表會喔！
 				</p>
 			</div>
 		</div>
 	</main>
+	
+
 </section>
+
+
 
 <!-- 聯絡我 -->
 
-<section class = "contact-frame">
+<section class = "contact-frame" id = "contactFrame">
 	<main class="section-title">
 		<div>
 			<h2>
@@ -508,6 +523,8 @@
 </footer>
 
 <script type="text/javascript" src="js/ycsChiabow.js"></script>
+<script type="text/javascript" src="js/scrollButton.js"></script>
+
 </body>
 
 
