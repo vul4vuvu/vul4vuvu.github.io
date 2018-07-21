@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="description" content="嘉寶的繆思課，Orff奧福音樂遊戲課，ChiaBow嘉寶樂器課。" />
+
+    <title>嘉寶的繆思課</title>
+
+    <!-- CSS -->
+    <link href="css/chiabow.css" rel="stylesheet">
+    
+    <!-- ICON CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+<!-- 手機 & 平板 導航狀態列 -->
+<nav class = "phoneNav" id = "nav">
+  <div id = "menuBackground" class = "phoneNav-background"></div>
+  <div id = menuBar class = "phoneNav-content">
+    <div id = "menuList" class = "phoneNav-menuList">
+      <div class = "menu-title">
+        嘉寶的繆思課
+      </div>
+      <div class = "menu-content">
+        <div class = "menu-list" id="membersButton" onclick="startScrollToNews();">
+          最新消息
+        </div>
+        <div class = "menu-list" id = "loginButton" onclick="startScrollToAbout();">
+          關於嘉寶
+        </div>
+        <div class = "menu-list" id = "registerButton" onclick="startScrollToClass();">
+          課程一覽
+        </div>
+        <div class = "menu-list" onclick="startScrollToResult();">
+          成果發表
+        </div>
+        <div class = "menu-list" onclick="startScrollToContact();">
+          聯絡教室
+        </div>
+        
+      </div>
+    </div> 
+  </div>
+  
+</nav>
+<div id = "navButton" class = "phoneNav-button">
+  <i id ="navButtonIcon" class="fa fa-sliders"></i>
+</div>
+
+
+<!-- 電腦版 導航狀態列 -->
+<nav class="nav-frame" id ="navFrame">
+	<div class = "nav-background"></div>
+	<div class = "nav-opacity"></div>
+	<div class = "nav-section">
+		<main class="nav-content">
+			<!-- 先測試 -->
+			<div class = "navbar-left" style="display: none;">
+				嘉寶的繆思課
+			</div>
+			<div class="navbar-right">
+				
+				<div class="list-div" onclick="startScrollToNews();">
+					最新消息
+				</div>
+				
+				<div class="list-div" onclick="startScrollToAbout();">
+					關於嘉寶
+				</div>
+				<a href="class.html">
+				<div class="list-div">
+					
+					繆思課有哪些
+					
+				</div>
+				</a>
+				<a href="result.html">
+				<div class="list-div" onclick="startScrollToResult();">
+					繆思課的足跡
+				</div>
+				</a>
+				<div class="list-div" onclick="startScrollToContact();">
+					聯絡教室
+				</div>
+			</div>
+		</main>
+	</div>
+</nav>
+
+<section class = "WebTitle-frame" id = "WebTitleFrame">
+	<main class = "WebTitle-content">
+		<div>
+			<h1 class = "webTitleTxt">CHIABOW'S MUSIC。嘉寶的繆思課</h1>
+		</div>
+	</main>
+</section>
+
+<!-- 八月謬思課 -->
+<section class="OrffMusicClass-frame" id = "aboutMeFrame">
+	<main class="section-title">
+		<div>
+			<h1>
+				繆思課的足跡。
+				<hr>
+			</h1>
+
+		</div>
+	</main>
+	<main class="section-title">
+		<div>
+			<h2>
+				『八月』繆思課的寶貝
+				
+			</h2>
+			
+		</div>
+	</main>
+	<main class="section-title">
+		<div>
+			<p>
+				大家一起用樂器體驗各種交通工具。
+			</p>
+			
+		</div>
+	</main>
+	<main class="aboutMe-content"> <!-- 容器 -->
+		<div class = "pic">
+			<img src="img/class/510524_801x793_500.jpg" class="orff-class-photo">
+		</div>
+		<div class = "pic">
+			<img src="img/517057_1478x1108_500.jpg" class="orff-class-photo">
+		</div>
+		<div class = "pic">
+			<img src="img/517057_1478x1108_500.jpg" class="orff-class-photo">
+		</div>
+	</main>
+	<div style="height: 20px;"></div>
+	<main class="aboutMe-content"> <!-- 容器 -->
+		<div class = "pic">
+			<img src="img/class/510524_801x793_500.jpg" class="orff-class-photo">
+		</div>
+		<div class = "pic">
+			<img src="img/517057_1478x1108_500.jpg" class="orff-class-photo">
+		</div>
+		<div class = "pic">
+			<img src="img/517057_1478x1108_500.jpg" class="orff-class-photo">
+		</div>
+	</main>
+	<div style="height: 20px;"></div>
+	<main class="aboutMe-content"> <!-- 容器 -->
+		<div class = "pic">
+			<img src="img/class/510524_801x793_500.jpg" class="orff-class-photo">
+		</div>
+		<div class = "pic">
+			<img src="img/517057_1478x1108_500.jpg" class="orff-class-photo">
+		</div>
+		<div class = "pic">
+			<img src="img/517057_1478x1108_500.jpg" class="orff-class-photo">
+		</div>
+	</main>
+	
+</section>
+<div style="height: 100px;"></div>
+<!-- 最新消息 -->
+<section class="news-frame" id = "newsFrame">
+	<main class="section-title">
+		<div>
+			<h2>
+				樂器課的大寶貝。
+				
+			</h2>
+		</div>
+	</main>
+	<main class="section-title">
+		<div>
+			<iframe width="750" height="460" src="https://www.youtube.com/embed/eLu-jOmvBiA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+	</main>
+</section>
+<div style="height:50px;"></div>
+<!-- Footer -->
+<footer class = "footer-frame">
+	<main class = "footer-content">
+		<div class="uper-0">
+			<ul class="none-0">
+				<li>
+					最新消息
+				</li>
+				<li>
+					關於我們
+				</li>
+				<li>
+					課程一覽
+				</li>	
+				<li>
+					聯絡我們
+				</li>
+			</ul>
+		</div>
+		<div class="uper">
+			
+			<ul class="none">
+				<li>
+					<strong>Orff奧福音樂遊戲課</strong>
+				</li>
+				<li>
+					寶寶的親子遊戲班
+				</li>
+				<li>
+					小寶貝的音樂啟蒙班
+				</li>
+				<li>
+					大寶貝的樂器預備班
+				</li>	
+				
+			</ul>
+		</div>
+		<div class="uper">
+			
+			<ul class="none">
+				<li>
+					<strong>ChiaBow嘉寶樂器課</strong>
+				</li>
+				<li>
+					鋼琴 個別課
+				</li>
+				<li>
+					小提琴 團體課
+				</li>
+				<li>
+					小提琴 個別課
+				</li>	
+				
+			</ul>
+		</div>
+	</main>
+	<main class="footer-content">
+		<div class = down>
+			<div class="footer-icon-size">
+	         	<i class="fa fa-facebook-official"></i>
+	        </div>
+	        <div class = "footer-icon-size">
+	         	<i class="fa fa-instagram"></i>
+	        </div>
+	        <div class="footer-icon-size">
+	         	<i class="fa fa-twitter-square"></i>
+	        </div>
+	        <div class="footer-icon-size">
+	         	<i class="fa fa-youtube-play"></i>
+	        </div>
+		</div>
+		
+	</main>
+	<main class="footer-content">
+		
+		<div class = down>
+			© 2018 ChiaBow.com . All rights reserved. No part of this site may be reproduced without our written permission. <br>
+			© 2018 ChiaBow.com . 嘉寶的繆思課，版權所有。
+		</div>
+	</main>
+	<main class="footer-content">
+		
+		<div class = down>
+			本網站由YiChun Sung 維護製作。
+		</div>
+	</main>
+</footer>
+
+</body>
+</html>

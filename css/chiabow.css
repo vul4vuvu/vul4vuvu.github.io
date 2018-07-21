@@ -140,7 +140,7 @@ ______________________________________
 	z-index: 1;
 	height: 5vh;
 	width: 100%;
-	background-color: #333;
+	background-color: #ffffff;
 	background-size: cover;
 	top: 0;
 }
@@ -152,7 +152,7 @@ ______________________________________
 	height: 5vh;
 	width: 100%;
 	border: solid 0px black;
-	background-color: #333;
+	background-color: #ffffff;
 	opacity: 0.2;
 	top:-5vh;
 }
@@ -166,7 +166,7 @@ ______________________________________
 	/*background-color: #333;*/
 	opacity: 1;
 	top:-10vh;
-	color: #ffffff;
+	color: #333;
 	overflow: hidden;
 	
 }
@@ -175,14 +175,14 @@ ______________________________________
 .nav-content{
 	
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 	overflow: hidden;
 }
 	.nav-content>div.navbar-left{
 		
 		flex: none;
 		width: 45%;
-		color: #ffffff;
+		color: #333;
 		font-size: 26px;
 		margin-left: 10px;
 		cursor: pointer;
@@ -194,11 +194,12 @@ ______________________________________
 
 	.nav-content>div.navbar-right{
 		display: flex;
-		justify-content: flex-end;
+		justify-content: center;
 		align-items: center; 
 		flex: none;
-		width: 45%;
-		color: #ffffff;
+		width: 100%;
+		margin-top: 10px;
+		color: #333;
 		font-size: 26px;
 		margin-left: 10px;
 		
@@ -206,8 +207,8 @@ ______________________________________
 
 .list-div{
 	flex: none;
-	width: 100px;
-	color: #ffffff;
+	width: 130px;
+	color: #333;
 	font-size: 20px;
 	text-align: center;
 	cursor: pointer;
@@ -215,6 +216,30 @@ ______________________________________
 	.list-div:hover{
 		color: #92A8D1;
 	}
+
+/*
+
+	網站標題列
+
+*/
+.WebTitle-content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 30vh;
+}
+
+.WebTitle-content>div{
+	flex:none;
+	
+	
+	margin-top: 4vh;
+}
+.webTitleTxt{
+	font-size: 36px;
+	
+}
 
 /* 
 
@@ -234,7 +259,7 @@ ______________________________________
 .header-frame{
 	z-index: -10;
 	display: block;
-	height: 100vh;
+	height: 70vh;
 	width: 100%;
 	overflow: hidden;
 }
@@ -242,7 +267,7 @@ ______________________________________
 	float: left;
 	position: relative;
 	z-index: 1;
-	height: 100vh;
+	height: 70vh;
 	width: 100%;
 	background-image: url("../img/5.jpg");
 	background-size: cover;
@@ -256,7 +281,7 @@ ______________________________________
 	float: left;
 	position: relative;
 	z-index: 1;
-	height: 100vh;
+	height: 70vh;
 	width: 100%;
 	background-image: url("../img/4.jpg");
 	background-size: cover;
@@ -271,7 +296,7 @@ ______________________________________
 	float: left;
 	position: relative;
 	z-index: 1;
-	height: 100vh;
+	height: 70vh;
 	width: 100%;
 	background-image: url("../img/header.jpg");
 	background-size: cover;
@@ -284,23 +309,23 @@ ______________________________________
 	z-index: 2;
 	position: relative;
 	top: 0vh;
-	height: 100vh;
+	height: 70vh;
 	width: 100%;
 	border: solid 0px black;
 	background-color: #333;
 	opacity: 0.5;
-	top:-100vh;
+	top:-70vh;
 }
 .header-section{
 	float: left;
 	z-index: 3;
 	position: relative;
 	top: 0vh;
-	height: 100vh;
+	height: 70vh;
 	width: 100%;
 	/*background-color: #333;*/
 	opacity: 1;
-	top:-200vh;
+	top:-140vh;
 	color: #ffffff;
 	
 }
@@ -309,11 +334,13 @@ ______________________________________
 .header-content{
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	height: 100vh;
 }
 	.header-content>div{
 		flex: none;
+		position: relative;
+		top:10vh;
 		text-align: center;
 		font-size: 40px;
 		color: #ffffff;
@@ -343,25 +370,50 @@ ______________________________________
 
 /* 最新消息彈出視窗 */
 .news-window{
-	width:1000px; height:95vh; 
+	width:1000px; 
+	height:95vh; 
 	background-color: #edf1f7; 
 	display: none; 
 	position: fixed; 
 	top: 30px; left: 200px; z-index: 101;
 }
+
+/* 最新消息內文容器 */
+.newsContent-button{
+	display: flex;
+	width: 100%;
+	justify-content: flex-start;
+}
+.newsContent-title{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+.newsContent-p{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+/* 內文樣式 */
 .news-turnOff-button{
-	position: relative;
-	float: left;
+	flex: none;
 	margin-left: 5px;
 	font-size: 40px;
-	text-align: center;
 	cursor: pointer;
+}
+.news-title{
+	flex: none;
+}
+.news-p{
+	flex: none;
 }
 
 /* ================關於老師================ */
 
 /* about me content */
 .aboutMe-content{
+	width: 100%;
 	display: flex; flex-wrap: wrap;
 	justify-content: center;
 }
@@ -371,12 +423,185 @@ ______________________________________
 		margin: 2%;
 		text-align: center;
 	}
+.aboutMe-content>.classInfor-left{
+		flex: none;
+		width: 40%;
+		margin: 1%;
+		margin-left: 8%;
+		text-align: left;
+		
+	}
+.aboutMe-content>.classInfor-right{
+		flex: none;
+		width: 40%;
+		margin: 1%;
+		text-align: left;
+		
+	}
+.classPhoto{
+	width: 500px; height: 300px;
+}
 .teacher-photo{
 	width: 500px; height: 500px;
 }
 
 
+/* ================ 奧福音樂課 ================ */
 
+/* about me content */
+.aboutMe-content{
+	width: 100%;
+	display: flex; flex-wrap: wrap;
+	justify-content: center;
+}
+	.aboutMe-content>div{
+		flex: none;
+		width: 45%;
+		margin: 2%;
+		text-align: center;
+	}
+.orff-left-photo{
+	width: 500px; height: 300px;
+}
+.orff-right-photo{
+	width: 400px; height: 299px;
+}
+.aboutMe-content>.pic{
+		flex: none;
+		width: 26%;
+		margin: 0;
+		text-align: center;
+	}
+.orff-class-photo{
+	width: 350px; height: 263px;
+}
+
+/* ================預約體驗課================ */
+
+/* 背景 */
+
+
+.orderClass-frame{
+	z-index: -10;
+	display: block;
+	height: 70vh;
+	width: 100%;
+	overflow: hidden;
+}
+.orderClass-background{
+	float: left;
+	position: relative;
+	z-index: 1;
+	height: 70vh;
+	width: 100%;
+	background-image: url("../img/631226.jpg");
+	background-size: cover;
+	background-attachment: fixed; 
+	top: 0;
+	display: block;
+	transition: background-image 1s;
+	
+
+}
+
+.orderClass-opacity{
+	float: left;
+	z-index: 2;
+	position: relative;
+	top: 0vh;
+	height: 70vh;
+	width: 100%;
+	border: solid 0px black;
+	background-color: #333;
+	opacity: 0.5;
+	top:-70vh;
+}
+.orderClass-section{
+	float: left;
+	z-index: 3;
+	position: relative;
+	top: 0vh;
+	height: 70vh;
+	width: 100%;
+	/*background-color: #333;*/
+	opacity: 1;
+	top:-140vh;
+	color: #ffffff;
+	
+}
+
+/* flex box  */
+.orderClass-content{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: 100vh;
+}
+.content-txt{
+		flex: none;
+		display: flex;
+		justify-content: center;
+		position: relative;
+		top:10vh;
+		width: 100%;
+		text-align: center;
+		font-size: 26px;
+		color: #ffffff;
+}
+.content-button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: none;
+	width: 100px; height:40px; 
+	border: 1px solid #ffffff;
+	margin: auto;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+	.content-button:hover{
+		background-color: #ffffff;
+		color: #333;
+	}
+.content-button-black{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: none;
+	width: 100px; height:40px; 
+	border: 1px solid #333;
+	margin: auto;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+	.content-button-black:hover{
+		background-color: #92A8D1;
+		border: 1px solid #92A8D1;
+		color: #333;
+	}
+
+/* 這是課程網頁中的樂器課按鈕 */
+.content-button-black-class{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: none;
+	width: 100px; height:40px; 
+	border: 1px solid #333;
+	
+	margin-top: 20px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+	.content-button-black-class:hover{
+		background-color: #92A8D1;
+		border: 1px solid #92A8D1;
+		color: #333;
+	}
 /* ================課程資訊================ */
 
 /* classInformation-content */
@@ -424,7 +649,8 @@ ______________________________________
 
 
 .contact-style{
-	
+	margin-top: 100px;
+	margin-left: 20px;
 }
 	label{
 		font-size: 18px;

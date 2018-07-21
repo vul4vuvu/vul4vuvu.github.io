@@ -11,8 +11,74 @@
 
     <!-- CSS -->
     <link href="css/chiabow.css" rel="stylesheet">
+    
     <!-- ICON CSS -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  	<style type="text/css">
+  		
+		#slide {
+		  position: relative;
+		  max-width: 100%;
+		}
+		#slide div {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  display: block;
+		  width: 100%;
+		  height: 25vh;
+		  text-align: center;
+		  margin: auto;
+		  opacity: 0;
+		  visibility: hidden;
+		  transition: 0.8s;
+		}
+		#slide div:first-child {
+		  position: static;
+		}
+		#slide div.show {
+		  opacity: 1;
+		  visibility: visible;
+		}
+		#slide .prev, #slide .next {
+		  display: block;
+		  position: absolute;
+		  top: 50%;
+		  transform: translateY(-50%);
+		  cursor: pointer;
+		  transition: 0.4s;
+		  background-color: rgba(0, 0, 0, 0.12);
+		  padding: 14px 12px;
+		}
+		#slide .prev:hover, #slide .next:hover {
+		  background-color: rgba(0, 0, 0, 0.24);
+		}
+		#slide .prev:after, #slide .next:after {
+		  display: block;
+		  content: "";
+		  width: 10px;
+		  height: 10px;
+		  border-top: 2px solid #fff;
+		  border-right: 2px solid #fff;
+		}
+		#slide .prev {
+		  left: 0;
+		}
+		#slide .prev:after {
+		  transform: rotate(-135deg);
+		  margin-left: 4px;
+		}
+		#slide .next {
+		  right: 0;
+		}
+		#slide .next:after {
+		  transform: rotate(45deg);
+		  margin-right: 4px;
+		}
+
+  	</style>
 </head>
 
 <!-- 
@@ -46,11 +112,13 @@
         <div class = "menu-list" id = "loginButton" onclick="startScrollToAbout();">
           關於嘉寶
         </div>
-        <div class = "menu-list" id = "registerButton" onclick="startScrollToClass();">
-          課程一覽
-        </div>
-        <div class = "menu-list" onclick="startScrollToResult();">
-          成果發表
+        <a href="class.html">
+	        <div class = "menu-list" id = "registerButton" >
+	          繆思課有哪些
+	        </div>
+        </a>
+        <div class = "menu-list" >
+          繆思課的足跡
         </div>
         <div class = "menu-list" onclick="startScrollToContact();">
           聯絡教室
@@ -72,22 +140,34 @@
 	<div class = "nav-opacity"></div>
 	<div class = "nav-section">
 		<main class="nav-content">
-			<div class = "navbar-left" >
+			<!-- 先測試 -->
+			
+			<div class = "navbar-left" style="display: none;">
 				嘉寶的繆思課
 			</div>
+			
+
 			<div class="navbar-right">
+				
 				<div class="list-div" onclick="startScrollToNews();">
 					最新消息
 				</div>
+				
 				<div class="list-div" onclick="startScrollToAbout();">
 					關於嘉寶
 				</div>
-				<div class="list-div" onclick="startScrollToClass();">
-					課程一覽
+				<a href="class.html">
+				<div class="list-div">
+					
+					繆思課有哪些
+					
 				</div>
+				</a>
+				<a href="result.html">
 				<div class="list-div" onclick="startScrollToResult();">
-					成果發表
+					繆思課的足跡
 				</div>
+				</a>
 				<div class="list-div" onclick="startScrollToContact();">
 					聯絡教室
 				</div>
@@ -96,17 +176,21 @@
 	</div>
 </nav>
 
+<section class = "WebTitle-frame" id = "WebTitleFrame">
+	<main class = "WebTitle-content">
+		<div>
+			<h1 class = "webTitleTxt">CHIABOW'S MUSIC。嘉寶的繆思課</h1>
+		</div>
+	</main>
+</section>
+
 <!-- 主題視覺Header -->
 <!-- ==== Header網頁框架底層 ==== -->
 <header class = "header-frame" id = "headerFrame">
   <!-- ==== Header背景框架層 ==== -->
-	<div id = "slide">
-		<div class = "header-background" id = "bgHeaderImg1"></div>
-	  <!-- 輪播第二層背景 -->
-		<div class = "header-background-2" id = "bgHeaderImg2"></div>
-	  <!-- 輪播第三層背景 -->
-		<div class = "header-background-3" id = "bgHeaderImg3"></div>
-	</div>
+	
+	<div class = "header-background" id = "bgHeaderImg1"></div>
+	
   <!-- ==== Header背景度調整 ==== -->
   <div class = "header-opacity"></div>
   <!-- ==== Header最上層框架 ==== -->
@@ -134,14 +218,34 @@
 		<div>
 			<!-- 最新消息 1 -->
 			<div>
-				<h3>7/11 停課一日</h3>
-				<p style="display: none;">因應7/11 瑪莉亞颱風來襲，本教室停課一日。</p>
-				<span class = "readMore" id = "readMoreButton1">Read more</span>
+				<h3>
+					7/11 停課一日
+				</h3>
+				
+				<span class = "readMore" id = "readMoreButton1">
+					Read more
+				</span>
+
 				<!-- 彈出視窗 -->
-				<div class="news-window" id = "newsWindow1">
-					<div class="news-turnOff-button" id = newsOffButton1 onclick="showTheNEWSWindow();"> 
+				<div class="news-window" id = "newsWindow1" >
+					<main class ="newsContent-button">
+						<div class="news-turnOff-button" id = newsOffButton1 onclick="showTheNEWSWindow();"> 
 						<i class="fa fa-times"></i>
 					</div>
+					</main>
+					<main class = "newsContent-title">
+						<div class="news-title">
+							<h2>7/11 停課一日</h2>
+							<h5>2018-07-10</h5>
+						</div>
+						
+					</main>
+					<main class="newsContent-p">
+						<div class = "news-p">
+							因應7/11 瑪莉亞颱風來襲，本教室停課一日。
+						</div>
+					</main>
+
 				</div>
 				<!-- 彈出視窗結束 -->
 			</div>
@@ -149,36 +253,70 @@
 			<!-- 最新消息 2 -->
 			<div>
 				<h3>7/03 停課一日</h3>
-				<p style="display: none;">因應本教室水電維修，停課一日。</p>
+				
 				<span class = "readMore" id = "readMoreButton2">Read more</span>
+
 				<!-- 彈出視窗 -->
-				<div class="news-window" id = "newsWindow2">
-					<div class="news-turnOff-button" id = newsOffButton2 onclick="showTheNEWSWindow();"> 
+				<div class="news-window" id = "newsWindow2" >
+					<main class ="newsContent-button">
+						<div class="news-turnOff-button" id = newsOffButton2 onclick="showTheNEWSWindow();"> 
 						<i class="fa fa-times"></i>
 					</div>
+					</main>
+					<main class = "newsContent-title">
+						<div class="news-title">
+							<h2>7/03 停課一日</h2>
+							<h5>2018-07-02</h5>
+						</div>
+						
+					</main>
+					<main class="newsContent-p">
+						<div class = "news-p">
+							因應7/03 本教室裝修，停課一日
+						</div>
+					</main>
+
 				</div>
 				<!-- 彈出視窗結束 -->
+
 			</div>
 
 			<!-- 最新消息 3 -->
 			<div>
 				<h3>本教室開始招生</h3>
-				<p style="display: none;">本教室即日起開始招收2018年7月份新生！</p>
+				
 				<span class = "readMore" id = "readMoreButton3">Read more</span>
+
 				<!-- 彈出視窗 -->
-				<div class="news-window" id = "newsWindow3">
-					<div class="news-turnOff-button" id = newsOffButton3 onclick="showTheNEWSWindow();"> 
+				<div class="news-window" id = "newsWindow3" >
+					<main class ="newsContent-button">
+						<div class="news-turnOff-button" id = newsOffButton3 onclick="showTheNEWSWindow();"> 
 						<i class="fa fa-times"></i>
 					</div>
+					</main>
+					<main class = "newsContent-title">
+						<div class="news-title">
+							<h2>本教室開始招生</h2>
+							<h5>2018-06-21</h5>
+						</div>
+						
+					</main>
+					<main class="newsContent-p">
+						<div class = "news-p">
+							本教室即日起開始招收2018年7月份新生！
+						</div>
+					</main>
+
 				</div>
 				<!-- 彈出視窗結束 -->
+
 			</div>
 		</div>
 		
 		
 	</main>
 </section>
-
+<div style="height:50px;"></div>
 <!-- 關於我 -->
 <section class="aboutMe-frame" id = "aboutMeFrame">
 	<main class="section-title">
@@ -212,9 +350,9 @@
 		</div>
 	</main>
 </section>
-
-<!-- 課程一覽 -->
-<section class = "classInformation-frame" id = "classInfornationFrame">
+<div style="height:50px;"></div>
+<!-- Orff 音樂課 -->
+<section class="OrffMusicClass-frame" id = "aboutMeFrame">
 	<main class="section-title">
 		<div>
 			<h2>
@@ -224,180 +362,145 @@
 		</div>
 	</main>
 
-	<!-- TYPE 1 -->
-
-	<main class="class-typeTitle">
-			<h4>
-				Orff奧福音樂遊戲課
-			</h4>
-	</main>
-	<main class = "classInformation-content">
-		
-		<div class="class-card">
-			<div class="class-cardPhoto">
-				
-			</div>
-			<div class="class-cardTxt">
-				<h5>
-					寶寶的親子遊戲班（0-2歲）
-				</h5>
-				<p>
-					透過音樂感受，增進孩子視聽動感覺統合，刺激多元能力發展。
-				</p>
-			</div>
-			<div>
-				
-			</div>
+	<main class="aboutMe-content"> <!-- 容器 -->
+		<div>
+			<img src="img/517032_1209x729_500.jpg" class="orff-left-photo">
 		</div>
-		<div class="class-card">
-			<div class="class-cardPhoto">
-				
-			</div>
-			<div class="class-cardTxt">
-				<h5>
-					小寶貝的音樂啟蒙班（2-3歲）
-				</h5>
-				<p>
-					由民謠、古典、爵士等多元曲風，透過歌唱、樂器合奏和律動的遊戲中，累積音樂經驗和感受力。
-				</p>
-			</div>
-			
-		</div>
-		<div class="class-card">
-			<div class="class-cardPhoto">
-				
-			</div>
-			<div class="class-cardTxt">
-				<h5>
-					大寶貝的樂器預備班（4-6歲）
-				</h5>
-				<p>
-					透過進階的樂器合奏和音樂遊戲，累積音樂基礎能力和樂理知識，預備鋼琴和小提琴的學前能力。
-				</p>
-			</div>	
+		<div>
+			<img src="img/517057_1478x1108_500.jpg" class="orff-right-photo">
 		</div>
 	</main>
-	<!-- TYPE 2 -->
-	<main class="class-typeTitle">
-			<h4>
-				ChiaBow嘉寶樂器課
-			</h4>
-	</main>
-	<main class = "classInformation-content">
-		
-		<div class="class-card">
-			<div class="class-cardPhoto">
-				
-			</div>
-			<div class="class-cardTxt">
-				<h5>
-					鋼琴 個別課
-				</h5>
-				<p>
-					透過音樂感受，增進孩子視聽動感覺統合，刺激多元能力發展。
-				</p>
-			</div>
-			<div>
-				
-			</div>
-		</div>
-		<div class="class-card">
-			<div class="class-cardPhoto">
-				
-			</div>
-			<div class="class-cardTxt">
-				<h5>
-					小提琴 團體課
-				</h5>
-				<p>
-					由民謠、古典、爵士等多元曲風，透過歌唱、樂器合奏和律動的遊戲中，累積音樂經驗和感受力。
-				</p>
-			</div>
-			
-		</div>
-		<div class="class-card">
-			<div class="class-cardPhoto">
-				
-			</div>
-			<div class="class-cardTxt">
-				<h5>
-					小提琴 個別課
-				</h5>
-				<p>
-					透過進階的樂器合奏和音樂遊戲，累積音樂基礎能力和樂理知識，預備鋼琴和小提琴的學前能力。
-				</p>
-			</div>
-		</div>
-	</main>
-
-</section>
-
-<!-- 成果發表 -->
-<section class="result-frame" id = "resultFrame">
 	<main class="section-title">
 		<div>
 			<h2>
-				成果發表
-				<hr>
+				Orff 音樂遊戲課
 			</h2>
-		</div>
-	</main>
-	<!-- 成果發表 -->
-	
-	<main class = "classInformation-content">
-		
-		<div class="class-card">
-			<div class="class-cardPhoto">
-				
-			</div>
-			<div class="class-cardTxt">
-				<h5>
-					6月份成果發表會
-				</h5>
-				<p>
-					這是我們6月份的成果發表會喔！
-				</p>
-			</div>
-			<div>
-				
-			</div>
-		</div>
-		<div class="class-card">
-			<div class="class-cardPhoto">
-				
-			</div>
-			<div class="class-cardTxt">
-				<h5>
-					5月份成果發表會
-				</h5>
-				<p>
-					這是我們5月份的成果發表會喔！
-				</p>
-			</div>
-			
-		</div>
-		<div class="class-card">
-			<div class="class-cardPhoto">
-				
-			</div>
-			<div class="class-cardTxt">
-				<h5>
-					4月份成果發表會
-				</h5>
-				<p>
-					這是我們4月份的成果發表會喔！
-				</p>
-			</div>
-		</div>
-	</main>
-	
 
+			<p style="width: 550px;">
+				孩子隨著音樂律動身體，動手讓樂器發出聲音，音樂對孩子有著自然而然的吸引力，而每個階段的孩子需要的音樂刺激也有所不同。<br>
+				
+				orff奧福音樂遊戲課，透過遊戲、律動、樂器合奏等音樂活動，讓孩子被音樂帶動，不僅在孩子黃金的聽覺發展時期，開發聽覺對音樂的敏感度、音感能力，也在音樂遊戲中，建立社會互動、語言發展、自我表現等多元能力的刺激。
+
+			</p>
+			<div class="content-button-black">
+    				了解更多
+    		</div>
+		</div>
+	</main>
+	
+</section>
+
+<!-- 嘉寶 音樂課 -->
+<section class="OrffMusicClass-frame" id = "aboutMeFrame">
+	
+	
+	<main class="aboutMe-content"> <!-- 容器 -->
+		<div>
+			<img src="img/517047_1706x960_500.jpg" class="orff-left-photo">
+		</div>
+		<div>
+			<img src="img/517037_1777x1769_500.jpg" class="orff-right-photo">
+		</div>
+	</main>
+	<main class="section-title">
+		<div>
+			<h2>
+				ChiaBow嘉寶樂器課
+			</h2>
+
+			<p style="width: 550px;">
+				結合國際奧福、高大宜、鈴木三大教學理念，自編ChiaBow教材，讓孩子在遊戲中玩著樂器，愛著音樂。<br>
+				『鋼琴 』、『小提琴』 — 個別、幼兒團體班（4歲半以上）
+
+			</p>
+			<div class="content-button-black">
+    				了解更多
+    		</div>
+		</div>
+	</main>
+	<div style="height:40px;"></div>
+</section>
+
+<!-- 過場效果 -->
+<!-- 主題視覺Header -->
+<!-- ==== Header網頁框架底層 ==== -->
+<header class = "orderClass-frame" id = "headerFrame">
+  <!-- ==== Header背景框架層 ==== -->
+	
+	<div class = "orderClass-background" id = "bgHeaderImg1"></div>
+	
+  <!-- ==== Header背景度調整 ==== -->
+  <div class = "orderClass-opacity"></div>
+  <!-- ==== Header最上層框架 ==== -->
+  <div class = "orderClass-section">
+    <main class = "orderClass-content">
+    	<div class = "content-txt">
+    		<h1><i class="material-icons" style="font-size:90px">audiotrack</i><br>
+    			預約體驗課 <br>
+    			<span style="font-size: 18px;">
+    				活動優惠期間單堂300元，額滿為止。 
+    			</span> <br>
+    			<div style="height:40px;"></div>
+    			<div class="content-button">
+    				線上報名
+    			</div>
+    		</h1>
+    	</div>
+    </main>
+    
+  </div>
+</header>
+
+
+<section>
+	<div id="slide">
+		<div style = "background-color: lightblue;">
+			<span style="position: relative; top: 10.2vh; font-size: 22px;">
+			經過12堂音樂課後，我們家霖霖在家經常哼哼唱唱，謝謝老師！
+			</sapn><br>
+			<span style="position: relative; top: 1vh; font-size: 14px;">
+			-霖霖媽咪
+			</sapn>
+		</div>
+		<div style = "background-color: lightblue;">
+			<span style="position: relative; top: 10.2vh; font-size: 22px;">
+				阿宣上很多課程總是亂跑亂跳，到現在能跟著音樂遊戲，跟著老師和同學一起合作完成音樂遊戲，媽媽我好開心！
+			</sapn><br>
+			<span style="position: relative; top: 1vh; font-size: 14px;">
+				-阿宣媽咪
+			</sapn>
+		</div>
+
+		<div style = "background-color: lightblue;">
+			<span style="position: relative; top: 10.2vh; font-size: 22px;">
+			經過12堂音樂課後，我們家霖霖在家經常哼哼唱唱，謝謝老師！
+			</sapn><br>
+			<span style="position: relative; top: 1vh; font-size: 14px;">
+			-霖霖媽咪
+			</sapn>
+		</div>
+		<div style = "background-color: lightblue;">
+			<span style="position: relative; top: 10.2vh; font-size: 22px;">
+				阿宣上很多課程總是亂跑亂跳，到現在能跟著音樂遊戲，跟著老師和同學一起合作完成音樂遊戲，媽媽我好開心！
+			</sapn><br>
+			<span style="position: relative; top: 1vh; font-size: 14px;">
+				-阿宣媽咪
+			</sapn>
+		</div>
+		<div style = "background-color: lightblue;">
+			<span style="position: relative; top: 10.2vh; font-size: 22px;">
+			經過12堂音樂課後，我們家霖霖在家經常哼哼唱唱，謝謝老師！
+			</sapn><br>
+			<span style="position: relative; top: 1vh; font-size: 14px;">
+			-霖霖媽咪
+			</sapn>
+		</div>
+	</div>
 </section>
 
 
-
 <!-- 聯絡我 -->
-
+<div style="height:50px;"></div>
 <section class = "contact-frame" id = "contactFrame">
 	<main class="section-title">
 		<div>
@@ -412,23 +515,29 @@
 			<form action="https://formspree.io/cd12631@gmail.com"method="POST">
 	              <label> 姓名 </label> <br>
 	              <input type="text" name="name" class="input-style"> <br>
-	              <label> 年齡 </label> <br>
-	              <input type="numer" name="name" class="input-style"> <br>
-	              <label> 性別 </label> <br>
-	              <input type="text" name="gender" class="input-style"> <br>
 	              <label> 電話 </label> <br>
-	              <input type="number" name="phone" class="input-style"> <br>
+	              <input type="numer" name="name" class="input-style"> <br>
 	              <label> 電子郵件地址 </label> <br>
-	              <input type="email" name="_replyto" class="input-style">
+	              <input type="text" name="gender" class="input-style"> <br>
+	              
+	              <label> 內容 </label> <br>
+	              <textarea rows="8" cols="50" name="_replyto" class="input-style"></textarea>
 	              <br>
 	              <!-- Submit -->
 	              <input type="submit" value="送出" class="button-style">
         	</form>
         	<div style = "height:50px;"></div>
 		</div>
-		<div> 
-			<!-- 圖片-->
-			<img src="img/631229.jpg" class="contact-photo">
+		<div class = "map-content"> 
+			<div style="margin-left:0; margin-top: 100px;">
+				<label>地址： 台北市松山區光復南路1號</label> <br>
+				<label>電話：0800000XXX</label><br>
+			</div>
+			
+			<!-- 地圖 -->
+          	<div id="test_map" style="height: 400px; width: 500px; margin-top: 20px;"></div>
+          	<!-- 圖片
+			<img src="img/631229.jpg" class="contact-photo">-->
 		</div>
 		
 	</main>
@@ -522,9 +631,65 @@
 		</div>
 	</main>
 </footer>
-
+<!-- Google Map package -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_r69t_T1l9C9FquU_hjGBN6emDfN9UvQ&callback=initMap"></script>
 <script type="text/javascript" src="js/ycsChiabow.js"></script>
+<script async defer type="text/javascript" src="js/gMapLoading.js"></script>
 <script type="text/javascript" src="js/scrollButton.js"></script>
+
+<script type="text/javascript">
+	
+	var counter = 0, // 一開始要顯示的圖，0 的話就是顯示第一張
+    slide = document.querySelector('#slide'),
+    items = slide.querySelectorAll('div'), // 抓取所有 img
+    //items = slide.querySelectorAll('div'), // 抓取所有 img
+    itemsCount = items.length, // 圖片總數 
+    prevBtn = document.createElement('a'), // 上一張按鈕
+    nextBtn = document.createElement('a'), // 下一張按鈕
+    timer = 3000, // 4 秒換圖
+    interval = window.setInterval(showNext, timer);  // 設定循環
+
+	prevBtn.classList.add('prev'); // 幫上一張按鈕加 class＝"prev" 給 CSS 指定樣式用
+	nextBtn.classList.add('next'); // 幫下一張按鈕加 class＝"next" 給 CSS 指定樣式用
+	slide.appendChild(prevBtn); // 將按鈕加到 #slide 裡
+	slide.appendChild(nextBtn);
+
+	// 帶入目前要顯示第幾張圖 
+	var showCurrent = function(){
+	  	var itemToShow = Math.abs(counter % itemsCount); // 取餘數才能無限循環
+	  	[].forEach.call( items, function(el){
+	    	el.classList.remove('show'); // 將所有 img 的 class="show" 移除
+	  	});
+	  	items[itemToShow].classList.add('show'); // 將要顯示的 img 加入 class="show"
+	};
+
+	function showNext(){
+		counter++; // 將 counter+1 指定下一張圖
+		showCurrent();
+	}
+
+	function showPrev(){
+		counter--; // 將 counter－1 指定上一張圖
+		showCurrent();
+	}
+
+	// 滑鼠移到 #slider 上方時，停止循環計時
+	slide.addEventListener('mouseover', function(){
+		interval = clearInterval(interval);
+	});
+
+	// 滑鼠離開 #slider 時，重新開始循環計時
+	slide.addEventListener('mouseout', function(){
+		interval = window.setInterval(showNext, timer);
+	});
+
+	// 綁定點擊上一張，下一張按鈕的事件
+	nextBtn.addEventListener('click', showNext, false);
+	prevBtn.addEventListener('click', showPrev, false);
+
+	// 一開始秀出第一張圖，也可以在 HTML 的第一個 img 裡加上 class="show"
+	items[0].classList.add('show');
+</script>
 
 </body>
 
