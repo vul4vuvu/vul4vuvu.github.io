@@ -93,7 +93,7 @@ ______________________________________
 }
 .menu-title{
 	width: 100%; height: 50px; 
-	font-size:26px;  padding: 10px 0;
+	font-size:22px;  padding: 10px 0;
 	cursor: pointer;
 }
 .menu-content{
@@ -517,7 +517,7 @@ ul.none {
 =================================================
 */
 
-@media (max-width: 1200px){
+@media (max-width: 1366px){
 /*====          Header 字體             ====*/
 
 .header-content>div{
@@ -556,6 +556,13 @@ ul.none {
 		margin: 2px;
 		text-align: center;
 	}
+	.class-cardPhoto{
+			margin: 5%;
+			margin-left: 20%;
+			width: 60%;
+			height: 300px;
+			background-color: grey;
+		}
 /* ================聯絡我們================ */
 	.contact-content>div{
 		flex: none;

@@ -22,10 +22,10 @@ function startScrollToNews() {
   let locationFrame = headerFrameSize-navFrameSize;
 
   if(body.scrollTop > locationFrame || html.scrollTop > locationFrame){
-    intervalId = window.setInterval(scrollUpToNewsFrame, 5);
-    console.log(body.scrollTop, html.scrollTop);
+    intervalId = window.setInterval(scrollUpToNewsFrame, 4);
+    
   }else if(body.scrollTop < locationFrame && html.scrollTop < locationFrame){
-    intervalId = window.setInterval(scrollDownToNewsFrame, 5);
+    intervalId = window.setInterval(scrollDownToNewsFrame, 4);
   }
 }
 
@@ -82,10 +82,10 @@ function startScrollToAbout() {
   let locationFrame = headerFrameSize+newsFrameSize-navFrameSize;
 
   if(body.scrollTop > locationFrame || html.scrollTop > locationFrame){
-    intervalId = window.setInterval(scrollUpToAboutFrame, 5);
-    console.log(body.scrollTop, html.scrollTop);
+    intervalId = window.setInterval(scrollUpToAboutFrame, 4);
+    
   }else if(body.scrollTop < locationFrame && html.scrollTop < locationFrame){
-    intervalId = window.setInterval(scrollDownToAboutFrame, 5);
+    intervalId = window.setInterval(scrollDownToAboutFrame, 4);
   }
 }
 
@@ -144,10 +144,10 @@ function startScrollToClass() {
   let locationFrame = headerFrameSize+newsFrameSize+aboutFrameSize-navFrameSize;
 
   if(body.scrollTop > locationFrame || html.scrollTop > locationFrame){
-    intervalId = window.setInterval(scrollUpToClassFrame, 5);
-    console.log(body.scrollTop, html.scrollTop);
+    intervalId = window.setInterval(scrollUpToClassFrame, 4);
+   
   }else if(body.scrollTop < locationFrame && html.scrollTop < locationFrame){
-    intervalId = window.setInterval(scrollDownToClassFrame, 5);
+    intervalId = window.setInterval(scrollDownToClassFrame, 4);
   }
 }
 
@@ -209,10 +209,10 @@ function startScrollToResult() {
   let locationFrame = headerFrameSize+newsFrameSize+aboutFrameSize+classInfornationFrame-navFrameSize;
 
   if(body.scrollTop > locationFrame || html.scrollTop > locationFrame){
-    intervalId = window.setInterval(scrollUpToResultFrame, 5);
-    console.log(body.scrollTop, html.scrollTop);
+    intervalId = window.setInterval(scrollUpToResultFrame, 4);
+    
   }else if(body.scrollTop < locationFrame && html.scrollTop < locationFrame){
-    intervalId = window.setInterval(scrollDownToResultFrame, 5);
+    intervalId = window.setInterval(scrollDownToResultFrame, 4);
   }
 }
 
@@ -277,10 +277,10 @@ function startScrollToContact() {
   let locationFrame = headerFrameSize+newsFrameSize+aboutFrameSize+classInfornationFrame+resultFrame-navFrameSize;
 
   if(body.scrollTop > locationFrame || html.scrollTop > locationFrame){
-    intervalId = window.setInterval(scrollUpToContactFrame, 5);
-    console.log(body.scrollTop, html.scrollTop);
+    intervalId = window.setInterval(scrollUpToContactFrame, 4);
+    
   }else if(body.scrollTop < locationFrame && html.scrollTop < locationFrame){
-    intervalId = window.setInterval(scrollDownToContactFrame, 5);
+    intervalId = window.setInterval(scrollDownToContactFrame, 4);
   }
 }
 
