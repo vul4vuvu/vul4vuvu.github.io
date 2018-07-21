@@ -11,74 +11,13 @@
 
     <!-- CSS -->
     <link href="css/chiabow.css" rel="stylesheet">
-    
+    <link rel="stylesheet" type="text/css" href="css/slide.css">
     <!-- ICON CSS -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  	<style type="text/css">
-  		
-		#slide {
-		  position: relative;
-		  max-width: 100%;
-		}
-		#slide div {
-		  position: absolute;
-		  top: 0;
-		  left: 0;
-		  display: block;
-		  width: 100%;
-		  height: 25vh;
-		  text-align: center;
-		  margin: auto;
-		  opacity: 0;
-		  visibility: hidden;
-		  transition: 0.8s;
-		}
-		#slide div:first-child {
-		  position: static;
-		}
-		#slide div.show {
-		  opacity: 1;
-		  visibility: visible;
-		}
-		#slide .prev, #slide .next {
-		  display: block;
-		  position: absolute;
-		  top: 50%;
-		  transform: translateY(-50%);
-		  cursor: pointer;
-		  transition: 0.4s;
-		  background-color: rgba(0, 0, 0, 0.12);
-		  padding: 14px 12px;
-		}
-		#slide .prev:hover, #slide .next:hover {
-		  background-color: rgba(0, 0, 0, 0.24);
-		}
-		#slide .prev:after, #slide .next:after {
-		  display: block;
-		  content: "";
-		  width: 10px;
-		  height: 10px;
-		  border-top: 2px solid #fff;
-		  border-right: 2px solid #fff;
-		}
-		#slide .prev {
-		  left: 0;
-		}
-		#slide .prev:after {
-		  transform: rotate(-135deg);
-		  margin-left: 4px;
-		}
-		#slide .next {
-		  right: 0;
-		}
-		#slide .next:after {
-		  transform: rotate(45deg);
-		  margin-right: 4px;
-		}
-
-  	</style>
+  	
+  	
 </head>
 
 <!-- 
@@ -149,29 +88,31 @@
 
 			<div class="navbar-right">
 				
-				<div class="list-div" onclick="startScrollToNews();">
+				<div class="list-div" onclick="startScrollToNews();" style="display: none;">
 					最新消息
 				</div>
-				
-				<div class="list-div" onclick="startScrollToAbout();">
-					關於嘉寶
-				</div>
+				<a href="index.html">
+					<div class="list-div" onclick="startScrollToAbout();">
+						CHIABOW的品牌故事。
+					</div>
+				</a>
 				<a href="class.html">
-				<div class="list-div">
-					
-					繆思課有哪些
-					
-				</div>
+					<div class="list-div">
+						
+						繆思課有哪些。
+						
+					</div>
 				</a>
 				<a href="result.html">
-				<div class="list-div" onclick="startScrollToResult();">
-					繆思課的足跡
-				</div>
+					<div class="list-div" onclick="startScrollToResult();">
+						繆思課的足跡。
+					</div>
 				</a>
 				<div class="list-div" onclick="startScrollToContact();">
 					聯絡教室
 				</div>
 			</div>
+			
 		</main>
 	</div>
 </nav>
@@ -451,48 +392,54 @@
   </div>
 </header>
 
-
+<!-- == 輪播跑馬燈系統 == -->
+	<!-- CSS設定都擺在 slide.css ，JS在 slide.js -->
 <section>
 	<div id="slide">
-		<div style = "background-color: lightblue;">
-			<span style="position: relative; top: 10.2vh; font-size: 22px;">
-			經過12堂音樂課後，我們家霖霖在家經常哼哼唱唱，謝謝老師！
-			</sapn><br>
-			<span style="position: relative; top: 1vh; font-size: 14px;">
-			-霖霖媽咪
+		<div class = "slide-bg">
+			<span class="slide-font-big">
+				經過12堂音樂課後，我們家霖霖在家經常哼哼唱唱，謝謝老師！
+			</sapn>
+			<br>
+			<span class="slide-font-small">
+				-霖霖媽咪
 			</sapn>
 		</div>
-		<div style = "background-color: lightblue;">
-			<span style="position: relative; top: 10.2vh; font-size: 22px;">
+		<div class = "slide-bg">
+			<span class="slide-font-big">
 				阿宣上很多課程總是亂跑亂跳，到現在能跟著音樂遊戲，跟著老師和同學一起合作完成音樂遊戲，媽媽我好開心！
-			</sapn><br>
-			<span style="position: relative; top: 1vh; font-size: 14px;">
+			</sapn>
+			<br>
+			<span class="slide-font-small">
 				-阿宣媽咪
 			</sapn>
 		</div>
 
-		<div style = "background-color: lightblue;">
-			<span style="position: relative; top: 10.2vh; font-size: 22px;">
-			經過12堂音樂課後，我們家霖霖在家經常哼哼唱唱，謝謝老師！
-			</sapn><br>
-			<span style="position: relative; top: 1vh; font-size: 14px;">
-			-霖霖媽咪
+		<div class = "slide-bg">
+			<span class="slide-font-big">
+				經過12堂音樂課後，我們家霖霖在家經常哼哼唱唱，謝謝老師！
+			</sapn>
+			<br>
+			<span class="slide-font-small">
+				-霖霖媽咪
 			</sapn>
 		</div>
-		<div style = "background-color: lightblue;">
-			<span style="position: relative; top: 10.2vh; font-size: 22px;">
+		<div class = "slide-bg">
+			<span class="slide-font-big">
 				阿宣上很多課程總是亂跑亂跳，到現在能跟著音樂遊戲，跟著老師和同學一起合作完成音樂遊戲，媽媽我好開心！
-			</sapn><br>
-			<span style="position: relative; top: 1vh; font-size: 14px;">
+			</sapn>
+			<br>
+			<span class="slide-font-small">
 				-阿宣媽咪
 			</sapn>
 		</div>
-		<div style = "background-color: lightblue;">
-			<span style="position: relative; top: 10.2vh; font-size: 22px;">
-			經過12堂音樂課後，我們家霖霖在家經常哼哼唱唱，謝謝老師！
-			</sapn><br>
-			<span style="position: relative; top: 1vh; font-size: 14px;">
-			-霖霖媽咪
+		<div class = "slide-bg">
+			<span class="slide-font-big">
+				經過12堂音樂課後，我們家霖霖在家經常哼哼唱唱，謝謝老師！
+			</sapn>
+			<br>
+			<span class="slide-font-small">
+				-霖霖媽咪
 			</sapn>
 		</div>
 	</div>
@@ -636,60 +583,7 @@
 <script type="text/javascript" src="js/ycsChiabow.js"></script>
 <script async defer type="text/javascript" src="js/gMapLoading.js"></script>
 <script type="text/javascript" src="js/scrollButton.js"></script>
-
-<script type="text/javascript">
-	
-	var counter = 0, // 一開始要顯示的圖，0 的話就是顯示第一張
-    slide = document.querySelector('#slide'),
-    items = slide.querySelectorAll('div'), // 抓取所有 img
-    //items = slide.querySelectorAll('div'), // 抓取所有 img
-    itemsCount = items.length, // 圖片總數 
-    prevBtn = document.createElement('a'), // 上一張按鈕
-    nextBtn = document.createElement('a'), // 下一張按鈕
-    timer = 3000, // 4 秒換圖
-    interval = window.setInterval(showNext, timer);  // 設定循環
-
-	prevBtn.classList.add('prev'); // 幫上一張按鈕加 class＝"prev" 給 CSS 指定樣式用
-	nextBtn.classList.add('next'); // 幫下一張按鈕加 class＝"next" 給 CSS 指定樣式用
-	slide.appendChild(prevBtn); // 將按鈕加到 #slide 裡
-	slide.appendChild(nextBtn);
-
-	// 帶入目前要顯示第幾張圖 
-	var showCurrent = function(){
-	  	var itemToShow = Math.abs(counter % itemsCount); // 取餘數才能無限循環
-	  	[].forEach.call( items, function(el){
-	    	el.classList.remove('show'); // 將所有 img 的 class="show" 移除
-	  	});
-	  	items[itemToShow].classList.add('show'); // 將要顯示的 img 加入 class="show"
-	};
-
-	function showNext(){
-		counter++; // 將 counter+1 指定下一張圖
-		showCurrent();
-	}
-
-	function showPrev(){
-		counter--; // 將 counter－1 指定上一張圖
-		showCurrent();
-	}
-
-	// 滑鼠移到 #slider 上方時，停止循環計時
-	slide.addEventListener('mouseover', function(){
-		interval = clearInterval(interval);
-	});
-
-	// 滑鼠離開 #slider 時，重新開始循環計時
-	slide.addEventListener('mouseout', function(){
-		interval = window.setInterval(showNext, timer);
-	});
-
-	// 綁定點擊上一張，下一張按鈕的事件
-	nextBtn.addEventListener('click', showNext, false);
-	prevBtn.addEventListener('click', showPrev, false);
-
-	// 一開始秀出第一張圖，也可以在 HTML 的第一個 img 裡加上 class="show"
-	items[0].classList.add('show');
-</script>
+<script type="text/javascript" src="js/slide.js"></script>
 
 </body>
 

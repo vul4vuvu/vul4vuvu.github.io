@@ -1,6 +1,24 @@
+		
+/* 這邊是輪播的相關 "客製化" 字型和背景設定 */
+		.slide-bg{
+			background-color: #92A8D1;
+		}
+		.slide-font-big{
+			position: relative; 
+			top: 10.2vh; 
+			font-size: 22px;
+		}
+		.slide-font-small{
+			position: relative; 
+			top: 1vh; 
+			font-size: 14px;
+		}
+
+/* 這邊是 輪播Slide的基本設定 */
+
 		#slide {
 		  position: relative;
-		  max-width: 600px;
+		  max-width: 100%;
 		}
 		#slide div {
 		  position: absolute;
@@ -8,6 +26,9 @@
 		  left: 0;
 		  display: block;
 		  width: 100%;
+		  height: 25vh;
+		  text-align: center;
+		  margin: auto;
 		  opacity: 0;
 		  visibility: hidden;
 		  transition: 0.8s;

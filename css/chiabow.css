@@ -8,17 +8,35 @@ hr{
 	}
 
 /* 通用設定 */
-	.section-title{ /* 容器 */
-		display: flex;
-		justify-content: center;
+.section-title{ /* 容器 */
+	display: flex;
+	justify-content: center;
+
+}
+	.section-title>div{
+		flex: none;
+		text-align: center;
 
 	}
-		.section-title>div{
-			flex: none;
-			text-align: center;
+/* unvisited link */
+a:link {
+    text-decoration: none;
+}
 
-		}
-	
+/* visited link */
+a:visited {
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    text-decoration: none;
+}
 /*
 ______________________________________
 
@@ -195,7 +213,7 @@ ______________________________________
 	.nav-content>div.navbar-right{
 		display: flex;
 		justify-content: center;
-		align-items: center; 
+		align-items: flex-start; 
 		flex: none;
 		width: 100%;
 		margin-top: 10px;
@@ -207,11 +225,14 @@ ______________________________________
 
 .list-div{
 	flex: none;
-	width: 130px;
+	/*width: 200px;*/
+	margin-top: 10px;
+	margin-left: 6px;
 	color: #333;
-	font-size: 20px;
+	font-size: 16px;
 	text-align: center;
 	cursor: pointer;
+	
 }
 	.list-div:hover{
 		color: #92A8D1;
