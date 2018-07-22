@@ -1,4 +1,4 @@
-var counter = 0, // 一開始要顯示的圖，0 的話就是顯示第一張
+let counter = 0, // 一開始要顯示的圖，0 的話就是顯示第一張
     slide = document.querySelector('#slide'),
     items = slide.querySelectorAll('div'), // 抓取所有 img
     //items = slide.querySelectorAll('div'), // 抓取所有 img
@@ -14,8 +14,8 @@ var counter = 0, // 一開始要顯示的圖，0 的話就是顯示第一張
 	slide.appendChild(nextBtn);
 
 	// 帶入目前要顯示第幾張圖 
-	var showCurrent = function(){
-	  	var itemToShow = Math.abs(counter % itemsCount); // 取餘數才能無限循環
+	let showCurrent = function(){
+	  	let itemToShow = Math.abs(counter % itemsCount); // 取餘數才能無限循環
 	  	[].forEach.call( items, function(el){
 	    	el.classList.remove('show'); // 將所有 img 的 class="show" 移除
 	  	});
