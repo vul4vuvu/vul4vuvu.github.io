@@ -44,24 +44,28 @@
   <div id = "menuBackground" class = "phoneNav-background"></div>
   <div id = menuBar class = "phoneNav-content">
     <div id = "menuList" class = "phoneNav-menuList">
-      <div class = "menu-title">
-        嘉寶的繆思課
-      </div>
+    	<a href="index.html">	
+	    	<div class = "menu-title">
+	        	嘉寶的繆思課
+	    	</div>
+	    </a>
       <div class = "menu-content">
         <div class = "menu-list" id="membersButton" onclick="startScrollToNews();">
-          最新消息
+        	最新消息
         </div>
         <div class = "menu-list" id = "loginButton" onclick="startScrollToAbout();">
-          關於嘉寶
+        	品牌故事
         </div>
         <a href="class.html">
 	        <div class = "menu-list" id = "registerButton" >
-	          繆思課有哪些
+	        	繆思課有哪些
 	        </div>
         </a>
-        <div class = "menu-list" >
-          繆思課的足跡
-        </div>
+        <a href="result.html">
+        	<div class = "menu-list" >
+          		繆思課的足跡
+        	</div>
+    	</a>
         <div class = "menu-list" onclick="startScrollToContact();">
           聯絡教室
         </div>
@@ -90,15 +94,19 @@
 			
 
 			<div class="navbar-right">
-				
-				<div class="list-div" onclick="startScrollToNews();" style="display: none;">
-					最新消息
-				</div>
 				<a href="index.html">
+					<div class="list-div">
+						嘉寶的繆思課。
+					</div>
+				</a>
+				<div class="list-div" onclick="startScrollToNews();">
+					最新消息。
+				</div>
+				
 					<div class="list-div" onclick="startScrollToAbout();">
 						CHIABOW的品牌故事。
 					</div>
-				</a>
+				
 				<a href="class.html">
 					<div class="list-div">
 						
@@ -107,7 +115,7 @@
 					</div>
 				</a>
 				<a href="result.html">
-					<div class="list-div" onclick="startScrollToResult();">
+					<div class="list-div">
 						繆思課的足跡。
 					</div>
 				</a>
@@ -120,7 +128,7 @@
 	</div>
 </nav>
 
-<section class = "WebTitle-frame" id = "WebTitleFrame">
+<section class = "section-frame" id = "WebTitleFrame">
 	<main class = "WebTitle-content">
 		<div>
 			<h1 class = "webTitleTxt">CHIABOW'S MUSIC。嘉寶的繆思課</h1>
@@ -149,7 +157,7 @@
 </header>
 
 <!-- 最新消息 -->
-<section class="news-frame" id = "newsFrame">
+<section class="section-frame" id = "newsFrame">
 	<main class="section-title">
 		<div>
 			<h2>
@@ -158,7 +166,7 @@
 			</h2>
 		</div>
 	</main>
-	<main class="news-content"> <!-- 容器 -->
+	<main class="section-single-content"> <!-- 容器 -->
 		<div>
 			<!-- 最新消息 1 -->
 			<div>
@@ -256,17 +264,17 @@
 
 			</div>
 		</div>
-		
-		
+			
 	</main>
 </section>
 
 <!-- ====== 區塊間分隔設計 ======== -->
-<div style="height:50px;"></div> <!-- 區塊間間隔50px -->
+<div style="height:50px;" id="sectionDiv1"></div> <!-- 區塊間間隔50px -->
 <!-- ====== 區塊間分隔設計 ======== -->
 
 <!-- ====== 關於嘉寶老師區塊 ======== -->
-<section class="aboutMe-frame" id = "aboutMeFrame">
+<section class="section-frame" id = "aboutMeFrame">
+	<!-- >>>>> 區塊標題 <<<<<  -->
 	<main class="section-title">
 		<div>
 			<h2>
@@ -275,15 +283,20 @@
 			</h2>
 		</div>
 	</main>
-	<main class="aboutMe-content"> <!-- 容器 -->
+	<!-- >>>>> 區塊內容 <<<<<  -->
+	<main class="section-twice-content"> <!-- 容器 -->
+		<!-- ##### 左邊老師照片 #####  -->
 		<div>
-			<img src="img/teacher.jpg" class="teacher-photo">
+			<img src="img/teacher.jpg" class="teacher-photo"> 
+			<!-- 如果有修改 photo 請確認css 尺寸設定-->
 		</div>
+		<!-- ##### 右邊老師簡介 #####  -->
 		<div>
 			<h3>關於嘉寶老師</h3>
 			<p>
 				Chia是我 Bow是小提琴的弓。 <br>
-				我是用弓在提琴上演奏音樂，讓孩子感受謬思課的嘉寶。 <br>
+				我是用弓在提琴上演奏音樂，<br>
+				讓孩子感受謬思課的嘉寶。 <br>
 				<br>
 				MuSic mUsiC MusiC  <br>
 				我們都是你的寶貝 <br>
@@ -301,12 +314,13 @@
 
 
 <!-- ====== 區塊間分隔設計 ======== -->
-<div style="height:50px;"></div> <!-- 區塊間間隔50px -->
+<div style="height:50px;" id="sectionDiv2"></div> <!-- 區塊間間隔50px -->
 <!-- ====== 區塊間分隔設計 ======== -->
 
 
 <!-- ====== Orff 音樂課 ======== -->
-<section class="OrffMusicClass-frame" id = "OrffClassFrame">
+<section class="section-frame" id = "OrffClassFrame">
+	<!-- >>>>> 區塊標題 <<<<<  -->
 	<main class="section-title">
 		<div>
 			<h2>
@@ -315,54 +329,67 @@
 			</h2>
 		</div>
 	</main>
-
-	<main class="aboutMe-content"> <!-- 容器 -->
+	<!-- >>>>> 上層區塊內容 <<<<<  -->
+	<!--  兩張照片 -->
+	<main class="section-twice-content"> <!-- 容器 -->
+		<!-- ##### 上層左邊照片 #####  -->
 		<div>
-			<img src="img/517032_1209x729_500.jpg" class="orff-left-photo">
+			<img src="img/517032_1209x729_500.jpg" class="class-left-photo">
 		</div>
+		<!-- ##### 上層右邊照片 #####  -->
 		<div>
-			<img src="img/517057_1478x1108_500.jpg" class="orff-right-photo">
+			<img src="img/517057_1478x1108_500.jpg" class="class-right-photo">
 		</div>
 	</main>
-	<main class="section-title">
+	<!-- >>>>> 下層區塊內容 <<<<<  -->
+	<main class="section-single-content">
+		<!-- ##### 下層區塊文字簡介 #####  -->
 		<div>
 			<h2>
 				Orff 音樂遊戲課
 			</h2>
 
-			<p style="width: 550px;">
+			<div class="class-detail">
 				孩子隨著音樂律動身體，動手讓樂器發出聲音，音樂對孩子有著自然而然的吸引力，而每個階段的孩子需要的音樂刺激也有所不同。<br>
 				
 				orff奧福音樂遊戲課，透過遊戲、律動、樂器合奏等音樂活動，讓孩子被音樂帶動，不僅在孩子黃金的聽覺發展時期，開發聽覺對音樂的敏感度、音感能力，也在音樂遊戲中，建立社會互動、語言發展、自我表現等多元能力的刺激。
 
-			</p>
+			</div>
 			<div class="content-button-black">
-    				了解更多
+    			了解更多
     		</div>
 		</div>
 	</main>
 	
 </section>
 
+<!-- ====== 區塊間分隔設計 ======== -->
+<div style="height:50px;" id="sectionDiv3"></div> <!-- 區塊間間隔50px -->
+<!-- ====== 區塊間分隔設計 ======== -->
+
 <!-- ====== 嘉寶樂器課區塊 ======== -->
-<section class="OrffMusicClass-frame" id = "aboutMeFrame">
-	
-	
-	<main class="aboutMe-content"> <!-- 容器 -->
+<section class="section-frame" id = "musicClassFrame">
+	<!-- >>>>> 上層區塊內容 <<<<<  -->
+	<!--  兩張照片 -->
+	<main class="section-twice-content"> <!-- 容器 -->
+		<!-- ##### 上層左邊照片 #####  -->
 		<div>
-			<img src="img/517047_1706x960_500.jpg" class="orff-left-photo">
+			<img src="img/517047_1706x960_500.jpg" class="class-left-photo">
 		</div>
+		<!-- ##### 上層右邊照片 #####  -->
 		<div>
-			<img src="img/517037_1777x1769_500.jpg" class="orff-right-photo">
+			<img src="img/517037_1777x1769_500.jpg" class="class-right-photo">
 		</div>
 	</main>
-	<main class="section-title">
+	<!-- >>>>> 下層區塊內容 <<<<<  -->
+	<main class="section-single-content">
+		<!-- ##### 下層區塊文字簡介 #####  -->
 		<div>
 			<h2>
 				ChiaBow嘉寶樂器課
 			</h2>
 
-			<p style="width: 550px;">
+			<p class="class-detail">
 				結合國際奧福、高大宜、鈴木三大教學理念，自編ChiaBow教材，讓孩子在遊戲中玩著樂器，愛著音樂。<br>
 				『鋼琴 』、『小提琴』 — 個別、幼兒團體班（4歲半以上）
 
@@ -376,12 +403,12 @@
 
 
 <!-- ====== 區塊間分隔設計 ======== -->
-<div style="height:50px;"></div> <!-- 區塊間間隔50px -->
+<div style="height:50px;" id="sectionDiv4"></div> <!-- 區塊間間隔50px -->
 <!-- ====== 區塊間分隔設計 ======== -->
 
 
 <!-- ====== 預約體驗課 + 過場效果 ======== -->
-<section class = "orderClass-frame" id = "headerFrame">
+<section class = "orderClass-frame" id = "orderClassFrame">
 	<!-- >>>>> 預約體驗課 + 過場背景框架層 <<<<< -->	
 	<div class = "orderClass-background"></div>
 	<!-- >>>>> 預約體驗課 + 過場背景透明度框架層 <<<<< -->	
@@ -416,7 +443,7 @@
 
 <!-- ====== 輪播跑馬燈系統 ======== -->
 	<!-- CSS設定都擺在 slide.css ，JS在 slide.js -->
-<section class="slide-frame">
+<section class="slide-frame" id = "slideFrame">
 	<main id="slide">
 
 		<!-- >>>>> 第一張 <<<<< -->	
@@ -479,12 +506,12 @@
 
 
 <!-- ====== 區塊間分隔設計 ======== -->
-<div style="height:50px;"><!-- 我只是用來分隔 50px--></div> 
+<div style="height:50px;" id="sectionDiv5"><!-- 我只是用來分隔 50px--></div> 
 <!-- ====== 區塊間分隔設計 ======== -->
 
 
 <!-- ====== 聯絡我們區塊 ======== -->
-<section class = "contact-frame" id = "contactFrame">
+<section class = "section-frame" id = "contactFrame">
 	
 	<!-- >>>>> 區塊標題 <<<<<  -->
 	<main class="section-title"> <!-- *** Flex 外層容器 -->
@@ -497,11 +524,11 @@
 	</main>
 
 	<!-- >>>>> 區塊內容 <<<<<  -->
-	<main class = "contact-content"><!-- *** Flex外層容器 -->
+	<main class = "section-twice-content"><!-- *** Flex外層容器 -->
 		<!-- ##### 左邊表單 #####  -->
-		<div class = "contact-style">
+		<div class = "contact-style" >
 			<!-- 表單區 -->
-			<form action="https://formspree.io/cd12631@gmail.com"method="POST">
+			<form action="https://formspree.io/cd12631@gmail.com"method="POST" style="margin-left: 100px;">
 	              <label> 姓名 </label> 
 	              <br>
 	              <input type="text" name="name" class="input-style"> 
@@ -519,11 +546,11 @@
 	              <textarea rows="8" cols="50" name="_replyto" class="input-style"></textarea>
 	              <br>
 	              <!-- Submit -->
-	              <input type="submit" value="送出" class="button-style">
+	              <input type="submit" value="送出" class="contact-button-style">
         	</form>
 		</div>
 		<!-- ##### 右邊地圖以及聯絡地址電話 #####  -->
-		<div class = "map-content"> 
+		<div class="contact-style"> 
 			<!-- 地址和電話區 -->
 			<div class="contact-infor">
 				<label>地址： 台北市松山區光復南路1號</label> <br>
@@ -545,7 +572,7 @@
 <!-- ====== 區塊間分隔設計 ======== -->
 
 <!-- Footer -->
-<footer class = "footer-frame">
+<footer class = "footer-frame" id = "footerFrame">
 	<main class = "footer-content">
 		<div class="uper-0">
 			<ul class="none-0">
@@ -585,7 +612,7 @@
 			
 			<ul class="none">
 				<li>
-					<strong>ChiaBow嘉寶樂器課</strong>
+					<strong>ChiaBow樂器課</strong>
 				</li>
 				<li>
 					鋼琴 個別課
@@ -633,10 +660,10 @@
 </footer>
 <!-- Google Map package -->
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_r69t_T1l9C9FquU_hjGBN6emDfN9UvQ&callback=initMap"></script>
-<script type="text/javascript" src="js/ycsChiabow.js"></script>
+<script async defer type="text/javascript" src="js/ycsChiabow.js"></script>
 <script async defer type="text/javascript" src="js/gMapLoading.js"></script>
-<script type="text/javascript" src="js/scrollButton.js"></script>
-<script type="text/javascript" src="js/slide.js"></script>
+<script async defer type="text/javascript" src="js/scrollButton.js"></script>
+<script async defer type="text/javascript" src="js/slide.js"></script>
 
 </body>
 

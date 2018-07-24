@@ -15,11 +15,13 @@ let intervalId;
 */
 
 function startScrollToNews() {
+
   let headerFrameSize = document.getElementById('headerFrame').getBoundingClientRect().height;
+  let WebTitleFrameSize = document.getElementById('WebTitleFrame').getBoundingClientRect().height;
   let navFrameSize = document.getElementById('navFrame').getBoundingClientRect().height;
   let body = document.body; // For Safari
   let html = document.documentElement; // For Chrome, IE, and FireFox
-  let locationFrame = headerFrameSize-navFrameSize;
+  let locationFrame = headerFrameSize+WebTitleFrameSize-navFrameSize;
 
   if(body.scrollTop > locationFrame || html.scrollTop > locationFrame){
     intervalId = window.setInterval(scrollUpToNewsFrame, 4);
@@ -33,10 +35,11 @@ function startScrollToNews() {
 
 function scrollUpToNewsFrame() {
   let headerFrameSize = document.getElementById('headerFrame').getBoundingClientRect().height;
+  let WebTitleFrameSize = document.getElementById('WebTitleFrame').getBoundingClientRect().height;
   let navFrameSize = document.getElementById('navFrame').getBoundingClientRect().height;
   let body = document.body; // For Safari
   let html = document.documentElement; // For Chrome, IE, and FireFox
-  let locationFrame = headerFrameSize-navFrameSize;
+  let locationFrame = headerFrameSize+WebTitleFrameSize-navFrameSize;
   
   if(body.scrollTop > locationFrame || html.scrollTop > locationFrame){
     body.scrollTop-=20;
@@ -50,10 +53,11 @@ function scrollUpToNewsFrame() {
 
 function scrollDownToNewsFrame() {
   let headerFrameSize = document.getElementById('headerFrame').getBoundingClientRect().height;
+  let WebTitleFrameSize = document.getElementById('WebTitleFrame').getBoundingClientRect().height;
   let navFrameSize = document.getElementById('navFrame').getBoundingClientRect().height;
   let body = document.body; // For Safari
   let html = document.documentElement; // For Chrome, IE, and FireFox
-  let locationFrame = headerFrameSize-navFrameSize;
+  let locationFrame = headerFrameSize+WebTitleFrameSize-navFrameSize;
   
   if(body.scrollTop < locationFrame && html.scrollTop < locationFrame){
     body.scrollTop+=20;
@@ -75,11 +79,13 @@ function scrollDownToNewsFrame() {
 
 function startScrollToAbout() {
   let headerFrameSize = document.getElementById('headerFrame').getBoundingClientRect().height;
-  let newsFrameSize = document.getElementById('newsFrame').getBoundingClientRect().height;
+  let WebTitleFrameSize = document.getElementById('WebTitleFrame').getBoundingClientRect().height;
+  let newsFrameSize = document.getElementById('newsFrame').getBoundingClientRect().height;  
+  let sectionDiv1Size = document.getElementById('sectionDiv1').getBoundingClientRect().height;
   let navFrameSize = document.getElementById('navFrame').getBoundingClientRect().height;
   let body = document.body; // For Safari
   let html = document.documentElement; // For Chrome, IE, and FireFox
-  let locationFrame = headerFrameSize+newsFrameSize-navFrameSize;
+  let locationFrame = headerFrameSize+WebTitleFrameSize+newsFrameSize+sectionDiv1Size-navFrameSize;
 
   if(body.scrollTop > locationFrame || html.scrollTop > locationFrame){
     intervalId = window.setInterval(scrollUpToAboutFrame, 4);
@@ -93,11 +99,13 @@ function startScrollToAbout() {
 
 function scrollUpToAboutFrame() {
   let headerFrameSize = document.getElementById('headerFrame').getBoundingClientRect().height;
-  let newsFrameSize = document.getElementById('newsFrame').getBoundingClientRect().height;
+  let WebTitleFrameSize = document.getElementById('WebTitleFrame').getBoundingClientRect().height;
+  let newsFrameSize = document.getElementById('newsFrame').getBoundingClientRect().height;  
+  let sectionDiv1Size = document.getElementById('sectionDiv1').getBoundingClientRect().height;
   let navFrameSize = document.getElementById('navFrame').getBoundingClientRect().height;
   let body = document.body; // For Safari
   let html = document.documentElement; // For Chrome, IE, and FireFox
-  let locationFrame = headerFrameSize+newsFrameSize-navFrameSize;
+  let locationFrame = headerFrameSize+WebTitleFrameSize+newsFrameSize+sectionDiv1Size-navFrameSize;
   
   if(body.scrollTop > locationFrame || html.scrollTop > locationFrame){
     body.scrollTop-=20;
@@ -111,11 +119,13 @@ function scrollUpToAboutFrame() {
 
 function scrollDownToAboutFrame() {
   let headerFrameSize = document.getElementById('headerFrame').getBoundingClientRect().height;
+  let WebTitleFrameSize = document.getElementById('WebTitleFrame').getBoundingClientRect().height;
   let newsFrameSize = document.getElementById('newsFrame').getBoundingClientRect().height;  
+  let sectionDiv1Size = document.getElementById('sectionDiv1').getBoundingClientRect().height;
   let navFrameSize = document.getElementById('navFrame').getBoundingClientRect().height;
   let body = document.body; // For Safari
   let html = document.documentElement; // For Chrome, IE, and FireFox
-  let locationFrame = headerFrameSize+newsFrameSize-navFrameSize;
+  let locationFrame = headerFrameSize+WebTitleFrameSize+newsFrameSize+sectionDiv1Size-navFrameSize;
   
   if(body.scrollTop < locationFrame && html.scrollTop < locationFrame){
     body.scrollTop+=20;
@@ -266,15 +276,26 @@ function scrollDownToResultFrame() {
 
 
 function startScrollToContact() {
+
   let headerFrameSize = document.getElementById('headerFrame').getBoundingClientRect().height;
+  let WebTitleFrameSize = document.getElementById('WebTitleFrame').getBoundingClientRect().height;  
   let newsFrameSize = document.getElementById('newsFrame').getBoundingClientRect().height;
   let aboutFrameSize = document.getElementById('aboutMeFrame').getBoundingClientRect().height;
-  let classInfornationFrame = document.getElementById('classInfornationFrame').getBoundingClientRect().height;
-  let resultFrame = document.getElementById('resultFrame').getBoundingClientRect().height;
+  let sectionDiv1Size = document.getElementById('sectionDiv1').getBoundingClientRect().height;
+  let sectionDiv2Size = document.getElementById('sectionDiv2').getBoundingClientRect().height;
+  let sectionDiv3Size = document.getElementById('sectionDiv3').getBoundingClientRect().height;
+  let sectionDiv4Size = document.getElementById('sectionDiv4').getBoundingClientRect().height;
+  let sectionDiv5Size = document.getElementById('sectionDiv5').getBoundingClientRect().height;
+
+  let OrffClassFrame = document.getElementById('OrffClassFrame').getBoundingClientRect().height;
+  let musicClassFrame = document.getElementById('musicClassFrame').getBoundingClientRect().height;
+  let orderClassFrame = document.getElementById('orderClassFrame').getBoundingClientRect().height;
+  let slideFrame = document.getElementById('slideFrame').getBoundingClientRect().height;
+  
   let navFrameSize = document.getElementById('navFrame').getBoundingClientRect().height;
   let body = document.body; // For Safari
   let html = document.documentElement; // For Chrome, IE, and FireFox
-  let locationFrame = headerFrameSize+newsFrameSize+aboutFrameSize+classInfornationFrame+resultFrame-navFrameSize;
+  let locationFrame = sectionDiv1Size+sectionDiv2Size+sectionDiv3Size+sectionDiv4Size+sectionDiv5Size+WebTitleFrameSize+headerFrameSize+newsFrameSize+aboutFrameSize+OrffClassFrame+musicClassFrame+orderClassFrame+slideFrame-navFrameSize;
 
   if(body.scrollTop > locationFrame || html.scrollTop > locationFrame){
     intervalId = window.setInterval(scrollUpToContactFrame, 4);
@@ -288,14 +309,24 @@ function startScrollToContact() {
 
 function scrollUpToContactFrame() {
   let headerFrameSize = document.getElementById('headerFrame').getBoundingClientRect().height;
+  let WebTitleFrameSize = document.getElementById('WebTitleFrame').getBoundingClientRect().height;  
   let newsFrameSize = document.getElementById('newsFrame').getBoundingClientRect().height;
-  let aboutFrameSize = document.getElementById('aboutMeFrame').getBoundingClientRect().height;  
-  let classInfornationFrame = document.getElementById('classInfornationFrame').getBoundingClientRect().height;  
-  let resultFrame = document.getElementById('resultFrame').getBoundingClientRect().height;  
+  let aboutFrameSize = document.getElementById('aboutMeFrame').getBoundingClientRect().height;
+  let sectionDiv1Size = document.getElementById('sectionDiv1').getBoundingClientRect().height;
+  let sectionDiv2Size = document.getElementById('sectionDiv2').getBoundingClientRect().height;
+  let sectionDiv3Size = document.getElementById('sectionDiv3').getBoundingClientRect().height;
+  let sectionDiv4Size = document.getElementById('sectionDiv4').getBoundingClientRect().height;
+  let sectionDiv5Size = document.getElementById('sectionDiv5').getBoundingClientRect().height;
+
+  let OrffClassFrame = document.getElementById('OrffClassFrame').getBoundingClientRect().height;
+  let musicClassFrame = document.getElementById('musicClassFrame').getBoundingClientRect().height;
+  let orderClassFrame = document.getElementById('orderClassFrame').getBoundingClientRect().height;
+  let slideFrame = document.getElementById('slideFrame').getBoundingClientRect().height;
+  
   let navFrameSize = document.getElementById('navFrame').getBoundingClientRect().height;
   let body = document.body; // For Safari
   let html = document.documentElement; // For Chrome, IE, and FireFox
-  let locationFrame = headerFrameSize+newsFrameSize+aboutFrameSize+classInfornationFrame+resultFrame-navFrameSize;
+  let locationFrame = sectionDiv1Size+sectionDiv2Size+sectionDiv3Size+sectionDiv4Size+sectionDiv5Size+WebTitleFrameSize+headerFrameSize+newsFrameSize+aboutFrameSize+OrffClassFrame+musicClassFrame+orderClassFrame+slideFrame-navFrameSize;
   
   if(body.scrollTop > locationFrame || html.scrollTop > locationFrame){
     body.scrollTop-=20;
@@ -309,14 +340,24 @@ function scrollUpToContactFrame() {
 
 function scrollDownToContactFrame() {
   let headerFrameSize = document.getElementById('headerFrame').getBoundingClientRect().height;
-  let newsFrameSize = document.getElementById('newsFrame').getBoundingClientRect().height;  
+  let WebTitleFrameSize = document.getElementById('WebTitleFrame').getBoundingClientRect().height;  
+  let newsFrameSize = document.getElementById('newsFrame').getBoundingClientRect().height;
   let aboutFrameSize = document.getElementById('aboutMeFrame').getBoundingClientRect().height;
-  let classInfornationFrame = document.getElementById('classInfornationFrame').getBoundingClientRect().height;  
-  let resultFrame = document.getElementById('resultFrame').getBoundingClientRect().height;
+  let sectionDiv1Size = document.getElementById('sectionDiv1').getBoundingClientRect().height;
+  let sectionDiv2Size = document.getElementById('sectionDiv2').getBoundingClientRect().height;
+  let sectionDiv3Size = document.getElementById('sectionDiv3').getBoundingClientRect().height;
+  let sectionDiv4Size = document.getElementById('sectionDiv4').getBoundingClientRect().height;
+  let sectionDiv5Size = document.getElementById('sectionDiv5').getBoundingClientRect().height;
+
+  let OrffClassFrame = document.getElementById('OrffClassFrame').getBoundingClientRect().height;
+  let musicClassFrame = document.getElementById('musicClassFrame').getBoundingClientRect().height;
+  let orderClassFrame = document.getElementById('orderClassFrame').getBoundingClientRect().height;
+  let slideFrame = document.getElementById('slideFrame').getBoundingClientRect().height;
+  
   let navFrameSize = document.getElementById('navFrame').getBoundingClientRect().height;
   let body = document.body; // For Safari
   let html = document.documentElement; // For Chrome, IE, and FireFox
-  let locationFrame = headerFrameSize+newsFrameSize+aboutFrameSize+classInfornationFrame+resultFrame-navFrameSize;
+  let locationFrame = sectionDiv1Size+sectionDiv2Size+sectionDiv3Size+sectionDiv4Size+sectionDiv5Size+WebTitleFrameSize+headerFrameSize+newsFrameSize+aboutFrameSize+OrffClassFrame+musicClassFrame+orderClassFrame+slideFrame-navFrameSize;
   
   if(body.scrollTop < locationFrame && html.scrollTop < locationFrame){
     body.scrollTop+=20;

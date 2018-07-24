@@ -1,15 +1,70 @@
+/*
+===========================
+	*** 通用設定
+===========================
+*/
+
+/*
+
+@ 通用的html tag CSS設定。
+@ body字型，hr 樣式，a 樣式。
+
+*/
 body{
 	margin: 0;
 	font-family: "Times New Roman", Times, serif;
 }
 hr{
-		width: 120px; 
-		border-width: 1px; 
-		border-style: solid;
-		border-color: #F7CAC9;
-	}
+	width: 120px; 
+	border-width: 1px; 
+	border-style: solid;
+	border-color: #F7CAC9;
+}
+/* unvisited link */
+a:link {
+    text-decoration: none;
+}
+/* visited link */
+a:visited {
+    text-decoration: none;
+}
+/* mouse over link */
+a:hover {
+    text-decoration: none;
+}
+/* selected link */
+a:active {
+    text-decoration: none;
+}
 
-/* 通用設定 */
+/*
+
+@ 區塊外層 Frame通用設定
+@ 說明：這裡擺置區塊最外層的Frame 
+
+*/
+.section-frame{
+	background-color: #ffffff;
+	width: 100%;
+}
+
+
+
+/*
+
+@ Flex box 通用設定 
+@ 說明：這裏儲存所有Flex box的通用設定
+
+*/
+	
+/*
+		
+		1. 各區塊的標題列
+			。 容器main的class為section-title
+			。 內容物div為單物件，標題至中。
+
+*/
+
 .section-title{ /* 容器 */
 	display: flex;
 	justify-content: center;
@@ -20,31 +75,125 @@ hr{
 		text-align: center;
 
 	}
-/* unvisited link */
-a:link {
-    text-decoration: none;
-}
 
-/* visited link */
-a:visited {
-    text-decoration: none;
-}
-
-/* mouse over link */
-a:hover {
-    text-decoration: none;
-}
-
-/* selected link */
-a:active {
-    text-decoration: none;
-}
 /*
-______________________________________
+		
+		2. 各區塊的單區塊內文列
+			。 容器main的class為section-single-content
+			。 內容物div為單物件，物品至中。
 
-	導航列CSS
-______________________________________
 */
+
+
+.section-single-content{
+	display: flex;
+	justify-content: center;
+}
+	.section-single-content>div{
+		flex: none;
+		margin-top: 20px;
+		text-align: center;	
+	}
+/*
+		
+		3. 各區塊內的雙區塊並排內文列
+			。 容器main的class為section-twice-content
+			。 內容物div為單物件，物品至中。
+
+*/
+
+.section-twice-content{
+	width: 100%;
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: center;
+	
+}	
+/* 通用div設定 */
+.section-twice-content>div{
+	flex: none;
+	width: 42%;
+	margin-top: 40px;
+	margin-left: 0;
+	text-align: center;
+	
+}
+
+/* index.html個別區塊的個別設定 */
+
+/* 聯絡我們區塊左邊個別設定 */
+.section-twice-content>.contact-style{
+	flex: none;
+	width: 42%;
+	margin-top: 40px;
+	margin-left: 0;
+	text-align: left;
+}
+
+/* 聯絡我們區塊左邊個別設定 */
+.section-twice-content>.contact-style{
+	flex: none;
+	width: 42%;
+	margin-top: 40px;
+	margin-left: 0;
+	text-align: left;
+	
+}
+
+/* class.html個別區塊的個別設定 */
+
+
+/* 課程區塊中，兩兩並排的左邊設定 */
+.section-twice-content>.classInfor-left {
+    flex: none;
+    width: 40%;
+    margin: 1%;
+    margin-left: 8%;
+    text-align: left;
+}
+/* 課程區塊中，兩兩並排的右邊設定 */
+.section-twice-content>.classInfor-right {
+    flex: none;
+    width: 40%;
+    margin: 1%;
+    text-align: left;
+}
+
+
+/*
+		
+		4. 各區塊內的三區塊並排內文列
+			。 容器main的class為section-triple-content
+			。 內容物div為單物件，物品至中。
+
+*/
+
+.section-triple-content{
+	width: 100%;
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: center;
+	
+}	
+/* 通用div設定 */
+.section-triple-content>div{
+	flex: none;
+	width: 26%;
+	margin-top: 0;
+	margin-left: 0;
+	text-align: center;
+	
+}
+
+
+
+
+/*
+===========================
+	*** 手機版導航列layout
+===========================
+*/
+
 
 /* 手機 & 平板 導航狀態列 */
 .phoneNav{
@@ -115,6 +264,7 @@ ______________________________________
 	width: 100%; height: 50px; 
 	font-size:22px;  padding: 10px 0;
 	cursor: pointer;
+	color: #ffffff;
 }
 .menu-content{
 	width: 100%;
@@ -140,11 +290,11 @@ ______________________________________
 		background-color: black;
 	}
 
-
-
-/* 
-	電腦版 背景設定
- */
+/*
+===========================
+	*** 電腦版導航列layout
+===========================
+*/
 
 .nav-frame{
 	position: fixed;
@@ -241,9 +391,9 @@ ______________________________________
 	}
 
 /*
-
-	網站標題列
-
+===========================
+	*** 網站標題 layout
+===========================
 */
 .WebTitle-content{
 	display: flex;
@@ -255,24 +405,16 @@ ______________________________________
 
 .WebTitle-content>div{
 	flex:none;
-	
-	
 	margin-top: 4vh;
 }
 .webTitleTxt{
 	font-size: 36px;
-	
 }
 
-/* 
-
-_______________________________
-|                             |
-|           Header            |
-|                             |
-===============================
-
-
+/*
+===========================
+	*** Header layout
+===========================
 	# Header 頁面背景: 
 		1. page-frame: 底層框架 
 		2. page-background: 底層背景 
@@ -369,27 +511,11 @@ _______________________________
 		color: #ffffff;
 	}
 
-/* 
-
-=======================================
-                            
-        最新消息CSS區             
-                          
-=======================================
-
- */
-
-/* news-content */
-.news-content{
-	display: flex;
-	justify-content: center;
-}
-	.news-content>div{
-		flex: none;
-		width: 45%;
-		margin: 2%;
-		text-align: center;
-	}
+/*
+===========================
+	*** NEWS layout
+===========================
+*/
 
 .readMore{
 	color: #99ccff;
@@ -440,95 +566,44 @@ _______________________________
 	flex: none;
 }
 
-/* 
 
-=======================================
-                            
-        關於老師            
-                          
-=======================================
+/*
+===========================
+	*** aboutMe layout
+===========================
+*/
 
- */
-
-/* about me content */
-.aboutMe-content{
-	width: 100%;
-	display: flex; flex-wrap: wrap;
-	justify-content: center;
-}
-	.aboutMe-content>div{
-		flex: none;
-		width: 45%;
-		margin: 2%;
-		text-align: center;
-	}
-.aboutMe-content>.classInfor-left{
-		flex: none;
-		width: 40%;
-		margin: 1%;
-		margin-left: 8%;
-		text-align: left;
-		
-	}
-.aboutMe-content>.classInfor-right{
-		flex: none;
-		width: 40%;
-		margin: 1%;
-		text-align: left;
-		
-	}
-.classPhoto{
-	width: 500px; height: 300px;
-}
+/* 老師照片樣式設定 */
 .teacher-photo{
 	width: 500px; height: 500px;
 }
 
 
-/* 
+/*
+===========================
+	*** Class layout
+===========================
+	
+	1. Orff和Chiabow樂器課共同設定
+	2. 請確認清楚照片的尺寸樣式
+*/
 
-=======================================
-                            
-        課程區 （奧福課 樂器課）         
-                          
-=======================================
-
- */
-
-/* about me content */
-.aboutMe-content{
-	width: 100%;
-	display: flex; flex-wrap: wrap;
-	justify-content: center;
-}
-	.aboutMe-content>div{
-		flex: none;
-		width: 45%;
-		margin: 2%;
-		text-align: center;
-	}
-.orff-left-photo{
+/* 下層文字說明區 */
+ .class-detail{
+ 	width: 550px;
+ }
+/* 上層照片區 */
+.class-left-photo{
 	width: 500px; height: 300px;
 }
-.orff-right-photo{
+.class-right-photo{
 	width: 400px; height: 299px;
-}
-.aboutMe-content>.pic{
-		flex: none;
-		width: 26%;
-		margin: 0;
-		text-align: center;
-	}
-.orff-class-photo{
-	width: 350px; height: 263px;
 }
 
 /*
-=======================================
-                            
-        預約體驗課         
-                          
-=======================================
+===========================
+	*** 預約體驗課 layout
+===========================
 */
 
 /* 符號 ICON */
@@ -542,9 +617,7 @@ _______________________________
 	font-size: 18px;
 }
 
-/* 背景 */
-
-
+/* 框架層 */
 .orderClass-frame{
 	z-index: -10;
 	display: block;
@@ -552,6 +625,7 @@ _______________________________
 	width: 100%;
 	overflow: hidden;
 }
+/* 背景圖層 */
 .orderClass-background{
 	float: left;
 	position: relative;
@@ -564,10 +638,8 @@ _______________________________
 	top: 0;
 	display: block;
 	transition: background-image 1s;
-	
-
 }
-
+/* 背景透明度層 */
 .orderClass-opacity{
 	float: left;
 	z-index: 2;
@@ -580,6 +652,7 @@ _______________________________
 	opacity: 0.5;
 	top:-70vh;
 }
+/* 內容層 */
 .orderClass-section{
 	float: left;
 	z-index: 3;
@@ -594,13 +667,14 @@ _______________________________
 	
 }
 
-/* flex box  */
+/* flex box 容器  */
 .orderClass-content{
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
 	height: 100vh;
 }
+/* 內文樣式 */
 .content-txt{
 		flex: none;
 		display: flex;
@@ -612,113 +686,17 @@ _______________________________
 		font-size: 26px;
 		color: #ffffff;
 }
-.content-button{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex: none;
-	width: 100px; height:40px; 
-	border: 1px solid #ffffff;
-	margin: auto;
-	text-align: center;
-	font-size: 16px;
-	cursor: pointer;
-}
-	.content-button:hover{
-		background-color: #ffffff;
-		color: #333;
-	}
-.content-button-black{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex: none;
-	width: 100px; height:40px; 
-	border: 1px solid #333;
-	margin: auto;
-	margin-top: 20px;
-	text-align: center;
-	font-size: 16px;
-	cursor: pointer;
-}
-	.content-button-black:hover{
-		background-color: #92A8D1;
-		border: 1px solid #92A8D1;
-		color: #333;
-	}
-
-/* 這是課程網頁中的樂器課按鈕 */
-.content-button-black-class{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex: none;
-	width: 100px; height:40px; 
-	border: 1px solid #333;
-	
-	margin-top: 20px;
-	text-align: center;
-	font-size: 16px;
-	cursor: pointer;
-}
-	.content-button-black-class:hover{
-		background-color: #92A8D1;
-		border: 1px solid #92A8D1;
-		color: #333;
-	}
-/* ================課程資訊================ */
-
-/* classInformation-content */
-.class-typeTitle{
-		width: 100%;
-		text-align: center;
-	}
-.classInformation-content{
-	display: flex; 
-	width: 100%;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-	.classInformation-content>.class-card{
-		flex: none;
-		width: 30%;
-		height: 500px;
-		border: 1px solid;
-		margin: 1%;
-		text-align: center;
-	}
-		.class-cardPhoto{
-			margin: 5%;
-			width: 90%;
-			height: 250px;
-			background-color: grey;
-		}
-		.class-cardTxt{
-			text-align: left;
-		}
+/*
+===========================
+	*** 聯絡我們 layout 
+===========================
+*/
 
 
-/* ================聯絡我們================ */
-
-/* classInformation-content */
-.contact-content{
-
-	display: flex; flex-wrap: wrap;
-	justify-content: center;
-}
-	.contact-content>div{
-		flex: none;
-		width: 40%;
-	}
-
-
-.contact-style{
-	margin-top: 100px;
-	margin-left: 20px;
-}
-	label{
+label{
 		font-size: 18px;
 		text-shadow:0px 0px 0 #444;
+		text-align: left;
 		
 	}
 .input-style{
@@ -729,20 +707,6 @@ _______________________________
 	width:350px;
 	resize: none;
 }
-.button-style{
-	width: 150px;
-	font-size: 18px;
-	border: none;
-	color:#fff;
-	background-color:#92A8D1;
-	margin-left: 100px;
-	cursor: pointer;
-
-}
-	.button-style:hover{
-		background-color:#5d7ebb; 
-		color: #fff;
-	}
 
 .contact-photo{
 	width: 388px; height:517px; margin-left: 100px; 
@@ -751,15 +715,18 @@ _______________________________
 /* 地址和電話區 */
 
 .contact-infor{
-	margin-left:0; margin-top: 100px;
+	margin-left:0; margin-top: 0; 
 }
 /* 地圖設定 */
 .google-map{
 	height: 400px; width: 500px; margin-top: 20px;
 }
 
-
-/* ================ Footer ================ */
+/*
+===========================
+	*** footer layout
+===========================
+*/
 
 .footer-frame{
 	background-color: #F7CAC9; 
@@ -811,6 +778,109 @@ ul.none {
 		color:#5d7ebb;
 	}
 
+
+/*
+===========================
+	*** button style
+===========================
+*/
+.content-button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: none;
+	width: 100px; height:40px; 
+	border: 1px solid #ffffff;
+	margin: auto;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+.content-button:hover{
+	background-color: #ffffff;
+	color: #333;
+}
+
+.content-button-black{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: none;
+	width: 100px; height:40px; 
+	border: 1px solid #333;
+	margin: auto;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+.content-button-black:hover{
+	background-color: #333;
+	border: 1px solid #333;
+	color: #ffffff;
+}
+
+/* 聯絡資訊送出的按鈕 */
+.contact-button-style{
+	width: 150px;
+	font-size: 18px;
+	border: none;
+	color:#fff;
+	background-color:#92A8D1;
+	margin-left: 100px;
+	cursor: pointer;
+
+}
+.contact-button-style:hover{
+	background-color:#5d7ebb; 
+	color: #fff;
+}
+
+
+/* 這是課程網頁中的樂器課按鈕 */
+.content-button-black-class{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: none;
+	width: 100px; height:40px; 
+	border: 1px solid #333;
+	
+	margin-top: 20px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+	.content-button-black-class:hover{
+		background-color: #333;
+		border: 1px solid #333;
+		color: #ffffff;
+	}
+
+/* 
+
+###### Class.html and Result.html Style Setting ######
+
+*/
+
+/* result.html與class.html 中照片的設定 （待調整） */
+.orff-class-photo{
+	    width: 350px;
+    	height: 263px;
+}
+
+/* class.html 兩區塊並排的照片配置這定 (待調整) */
+.classPhoto {
+    width: 500px;
+    height: 300px;
+}
+
+/* result.html 的影片檔 */
+.youtube-style{
+	width: 750px;
+	height: 460px;	
+}
+
 /*
 =================================================
 
@@ -819,58 +889,116 @@ ul.none {
 =================================================
 */
 
-@media (max-width: 1366px){
-/*====          Header 字體             ====*/
-
-.header-content>div{
+/* 平板 */
+@media (max-width: 1360px){
+	.section-title>div{
 		flex: none;
+		width: 90%;
 		text-align: center;
-		font-size: 26px;
-		color: #ffffff;
+
+	}
+	.section-single-content>div{
+		flex: none;
+		width: 100%;
+		
+		margin-top: 20px;
+		text-align: center;	
+	}
+	.section-twice-content>div{
+		flex: none;
+		width: 100%;
+		margin: 20px;
+		text-align: center;
+	}
+	.section-triple-content>div{
+		flex: none;
+		width: 100%;
+		margin-top: 0;
+		margin-left: 0;
+		text-align: center;
+	
 	}
 
-/* ================最新消息================ */
-	.news-window{
-		width:700px; height:95vh; 
-		background-color: #edf1f7; 
-		display: none; 
-		position: fixed; 
-		top: 30px; left: 38px; z-index: 101;
+	/* class.html個別區塊的個別設定 */
+
+
+	/* 課程區塊中，兩兩並排的左邊設定 */
+	.section-twice-content>.classInfor-left {
+	    flex: none;
+	    width: 51%;
+	    margin: 0;
+	    margin-left: 0;
+	    text-align: left;
+	}
+	/* 課程區塊中，兩兩並排的右邊設定 */
+	.section-twice-content>.classInfor-right {
+	    flex: none;
+	    width: 51%;
+	    margin: 0;
+	    text-align: left;
+	}
+	/* 聯絡我們區塊左邊個別設定 */
+	.section-twice-content>.contact-style{
+		flex: none;
+		width: 100%;
+		margin-top: 40px;
+		margin-left: 0;
+		text-align: left;
 	}
 
-/* ================關於老師================ */
+	
+
+	/*================網頁標題列================*/
+	.webTitleTxt{
+		font-size: 20px;
+	}
+
+	/*==== Header 字體====*/
+
+	.header-content>div{
+			flex: none;
+			text-align: center;
+			font-size: 26px;
+			color: #ffffff;
+	}
+
+	/* ================最新消息================ */
+		.news-window{
+			width:700px; height:95vh; 
+			background-color: #edf1f7; 
+			display: none; 
+			position: fixed; 
+			top: 30px; left: 38px; z-index: 101;
+		}
+
+	/* ================關於老師================ */
 	.teacher-photo{
 		width: 500px; height: 500px;
 	}
-	.aboutMe-content>div{
-			flex: none;
-			width: 80%;
-			margin: 2%;
-			text-align: center;
+	
+	
+	/* ================課程資訊================ */
+	/* 下層文字說明區 */
+	 .class-detail{
+	 	width: 300px; margin: auto;
+	 }
+	/* 上層照片區 */
+	.class-left-photo{
+		width: 300px; height: 200px; margin:auto;
 	}
-/* ================課程資訊================ */
+	.class-right-photo{
+		width: 300px; height: 200px;
+	}
+	/* class.html 兩區塊並排的照片配置這定 (待調整) */
+	.classPhoto {
+	    width: 400px;
+	    height: 250px;
+	    margin: auto;
+	}
 
-	.classInformation-content > .class-card{
-		flex: none;
-		width: 90%;
-		height: 500px;
-		border: 1px solid;
-		margin: 2px;
-		text-align: center;
-	}
-	.class-cardPhoto{
-			margin: 5%;
-			margin-left: 20%;
-			width: 60%;
-			height: 300px;
-			background-color: grey;
-		}
+
 /* ================聯絡我們================ */
-	.contact-content>div{
-		flex: none;
-		width: 90%;
-
-	}
+	
 	label{
 		font-size: 18px;
 		text-shadow:0px 0px 0 #444;
@@ -893,9 +1021,20 @@ ul.none {
 		background-color:#607d8b;
 		text-align: center;
 	}
-	.contact-photo{
-		width: 698.4px; height:930px; margin-left: 2px; 
+	.contact-infor{
+		margin-left:0; margin-top: 0; text-align: center;
 	}
+	/* 地圖設定 */
+	.google-map{
+		height: 300px; width: 100%; margin-top: 20px; margin-left:auto;
+	}
+
+	/* result.html 影片設定 */
+	.youtube-style{
+		width: 100%;
+		height: 460px;	
+	}
+
 
 /* ================ Footer ================ */
 	.footer-content>div.uper-0{
@@ -918,13 +1057,73 @@ ul.none {
 	.phoneNav{ display: inline-block; }
 	.phoneNav-button{display: block;}
 	.nav-frame{display: none;}
-/*====          Header 字體             ====*/
 
-.header-content>div{
+	/* 通用div設定 */
+	.section-title>div{
 		flex: none;
+		width: 90%;
 		text-align: center;
-		font-size: 18px;
-		color: #ffffff;
+
+	}
+	.section-single-content>div{
+		flex: none;
+		width: 51%;
+		
+		margin-top: 20px;
+		text-align: center;	
+	}
+	.section-twice-content>div{
+		flex: none;
+		width: 100%;
+		margin-top: 20px;
+		text-align: center;
+	}
+	.section-triple-content>div{
+		flex: none;
+		width: 100%;
+		margin-top: 0;
+		margin-left: 0;
+		text-align: center;
+		
+	}
+	/* class.html個別區塊的個別設定 */
+
+
+	/* 課程區塊中，兩兩並排的左邊設定 */
+	.section-twice-content>.classInfor-left {
+	    flex: none;
+	    width: 100%;
+	    margin: 0;
+	    margin-left: 0;
+	    text-align: left;
+	}
+	/* 課程區塊中，兩兩並排的右邊設定 */
+	.section-twice-content>.classInfor-right {
+	    flex: none;
+	    width: 100%;
+	    margin: 0;
+	    text-align: left;
+	}
+	/* 聯絡我們區塊左邊個別設定 */
+	.section-twice-content>.contact-style{
+		flex: none;
+		width: 100%;
+		margin-top: 40px;
+		margin-left: 0;
+		text-align: left;
+	}
+
+	/*================網頁標題列================*/
+	.webTitleTxt{
+		font-size: 20px;
+	}
+	/*==== Header 字體 ====*/
+
+	.header-content>div{
+			flex: none;
+			text-align: center;
+			font-size: 18px;
+			color: #ffffff;
 	}
 
 /* ================最新消息================ */
@@ -940,27 +1139,18 @@ ul.none {
 	.teacher-photo{
 	width: 300px; height: 300px;
 	}
-	.aboutMe-content>div{
-		flex: none;
-		width: 80%;
-		margin: 2%;
-		text-align: center;
-	}
-/* ================課程資訊================ */
-	.classInformation-content .class-card{
-		flex: none;
-		width: 90%;
-		height: 500px;
-		border: 1px solid;
-		margin: 2px;
-		text-align: center;
+
+/* ================課程內容================ */
+	.classPhoto {
+		    width: 100%;
+		    height: 150px;
+		    margin-left: 0;
+		}
+	.class-detail{
+		width: 200px; margin: auto;
 	}
 /* ================聯絡我們================ */
 
-	.contact-content>div{
-		flex: none;
-		width: 90%;
-	}
 	label{
 		font-size: 18px;
 		text-shadow:0px 0px 0 #444;
@@ -984,10 +1174,12 @@ ul.none {
 		text-align: center;
 		margin-left: auto;
 	}
-	.contact-photo{
-		width: 271.6px; height:361.9px; margin: auto; 
-
+	/* result.html 影片設定 */
+	.youtube-style{
+		width: 100%;
+		height: 230px;	
 	}
+
 
 /* ================ Footer ================ */
 	.footer-content>div.uper-0{

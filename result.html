@@ -20,34 +20,48 @@
 <body>
 <!-- 手機 & 平板 導航狀態列 -->
 <nav class = "phoneNav" id = "nav">
-  <div id = "menuBackground" class = "phoneNav-background"></div>
-  <div id = menuBar class = "phoneNav-content">
-    <div id = "menuList" class = "phoneNav-menuList">
-      <div class = "menu-title">
-        嘉寶的繆思課
-      </div>
-      <div class = "menu-content">
-        <div class = "menu-list" id="membersButton" onclick="startScrollToNews();">
-          最新消息
-        </div>
-        <div class = "menu-list" id = "loginButton" onclick="startScrollToAbout();">
-          關於嘉寶
-        </div>
-        <div class = "menu-list" id = "registerButton" onclick="startScrollToClass();">
-          課程一覽
-        </div>
-        <div class = "menu-list" onclick="startScrollToResult();">
-          成果發表
-        </div>
-        <div class = "menu-list" onclick="startScrollToContact();">
-          聯絡教室
-        </div>
+	<div id = "menuBackground" class = "phoneNav-background"></div>
+	<div id = menuBar class = "phoneNav-content">
+		<div id = "menuList" class = "phoneNav-menuList">
+			<a href="index.html">
+				<div class = "menu-title">
+					嘉寶的繆思課
+				</div>
+			</a>
+  			<div class = "menu-content">
+  				<a href="index.html#newsFrame">
+		        	<div class = "menu-list" id="membersButton">
+						最新消息
+		        	</div>
+		    	</a>
+		    	<a href="index.html#aboutMeFrame">
+					<div class = "menu-list" id = "loginButton">
+						品牌故事
+					</div>
+				</a>
+				<a href="class.html">
+			        <div class = "menu-list" id = "registerButton">
+			        	繆思課有哪些
+			        </div>
+			    </a>
+			    <a href="result.html">
+			        <div class = "menu-list">
+			          繆思課的足跡
+			        </div>
+			    </a>
+			    <a href="index.html#contactFrame">
+			        <div class = "menu-list">
+			          聯絡教室
+			        </div>
+			    </a>
         
-      </div>
-    </div> 
+			</div>
+    	</div> 
   </div>
   
 </nav>
+
+
 <div id = "navButton" class = "phoneNav-button">
   <i id ="navButtonIcon" class="fa fa-sliders"></i>
 </div>
@@ -60,17 +74,23 @@
 	<div class = "nav-section">
 		<main class="nav-content">
 			<!-- 先測試 -->
-			<div class = "navbar-left" style="display: none;">
+			<div class="navbar-left" style="display: none;">
 				嘉寶的繆思課
 			</div>
 			
 			<div class="navbar-right">
-				
-				<div class="list-div" onclick="startScrollToNews();" style="display: none;">
-					最新消息
-				</div>
 				<a href="index.html">
-					<div class="list-div" onclick="startScrollToAbout();">
+					<div class="list-div">
+						嘉寶的繆思課。
+					</div>
+				</a>
+				<a href="index.html#newsFrame">
+					<div class="list-div" >
+						最新消息。
+					</div>
+				</a>
+				<a href="index.html#sectionDiv1">
+					<div class="list-div">
 						CHIABOW的品牌故事。
 					</div>
 				</a>
@@ -82,13 +102,16 @@
 					</div>
 				</a>
 				<a href="result.html">
-					<div class="list-div" onclick="startScrollToResult();">
+					<div class="list-div">
 						繆思課的足跡。
 					</div>
 				</a>
-				<div class="list-div" onclick="startScrollToContact();">
-					聯絡教室
-				</div>
+				<a href="index.html#sectionDiv5">
+					<div class="list-div">
+						聯絡教室
+					</div>
+				</a>
+			
 			</div>
 			
 		</main>
@@ -104,13 +127,10 @@
 </section>
 
 <!-- 八月謬思課 -->
-<section class="OrffMusicClass-frame" id = "aboutMeFrame">
+<section class="section-frame" id = "resultPageFrame">
 	<main class="section-title">
 		<div>
-			<h1>
-				繆思課的足跡。
-				<hr>
-			</h1>
+			
 
 		</div>
 	</main>
@@ -131,38 +151,40 @@
 			
 		</div>
 	</main>
-	<main class="aboutMe-content"> <!-- 容器 -->
-		<div class = "pic">
+	<main class="section-triple-content"> <!-- 容器 -->
+		<div>
 			<img src="img/class/510524_801x793_500.jpg" class="orff-class-photo">
 		</div>
-		<div class = "pic">
+		<div>
 			<img src="img/517057_1478x1108_500.jpg" class="orff-class-photo">
 		</div>
-		<div class = "pic">
+		<div>
+			<img src="img/517057_1478x1108_500.jpg" class="orff-class-photo">
+		</div>
+	</main>
+
+	<div style="height: 20px;"></div>
+
+	<main class="section-triple-content"> <!-- 容器 -->
+		<div>
+			<img src="img/class/510524_801x793_500.jpg" class="orff-class-photo">
+		</div>
+		<div>
+			<img src="img/517057_1478x1108_500.jpg" class="orff-class-photo">
+		</div>
+		<div>
 			<img src="img/517057_1478x1108_500.jpg" class="orff-class-photo">
 		</div>
 	</main>
 	<div style="height: 20px;"></div>
-	<main class="aboutMe-content"> <!-- 容器 -->
-		<div class = "pic">
+	<main class="section-triple-content"> <!-- 容器 -->
+		<div>
 			<img src="img/class/510524_801x793_500.jpg" class="orff-class-photo">
 		</div>
-		<div class = "pic">
+		<div>
 			<img src="img/517057_1478x1108_500.jpg" class="orff-class-photo">
 		</div>
-		<div class = "pic">
-			<img src="img/517057_1478x1108_500.jpg" class="orff-class-photo">
-		</div>
-	</main>
-	<div style="height: 20px;"></div>
-	<main class="aboutMe-content"> <!-- 容器 -->
-		<div class = "pic">
-			<img src="img/class/510524_801x793_500.jpg" class="orff-class-photo">
-		</div>
-		<div class = "pic">
-			<img src="img/517057_1478x1108_500.jpg" class="orff-class-photo">
-		</div>
-		<div class = "pic">
+		<div>
 			<img src="img/517057_1478x1108_500.jpg" class="orff-class-photo">
 		</div>
 	</main>
@@ -181,7 +203,7 @@
 	</main>
 	<main class="section-title">
 		<div>
-			<iframe width="750" height="460" src="https://www.youtube.com/embed/eLu-jOmvBiA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<iframe class="youtube-style" src="https://www.youtube.com/embed/eLu-jOmvBiA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		</div>
 	</main>
 </section>
@@ -273,6 +295,11 @@
 		</div>
 	</main>
 </footer>
-
+<!-- Google Map package -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_r69t_T1l9C9FquU_hjGBN6emDfN9UvQ&callback=initMap"></script>
+<script type="text/javascript" src="js/ycsChiabow.js"></script>
+<script async defer type="text/javascript" src="js/gMapLoading.js"></script>
+<script type="text/javascript" src="js/scrollButton.js"></script>
+<script type="text/javascript" src="js/slide.js"></script>
 </body>
 </html>
