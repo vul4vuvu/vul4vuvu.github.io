@@ -111,6 +111,7 @@ function showTheNEWSWindow(){
   
 }
 
+
 function newsOpen() {
   let newsWindow = document.getElementById('newsWindow1');
   //let newsWindowStatus = newsWindow.style.display;
