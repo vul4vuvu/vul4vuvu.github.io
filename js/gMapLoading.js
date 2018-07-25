@@ -11,3 +11,7 @@ function initMap() {
                 map: map
               });
             }
+
+window.addEventListener("load", function () {
+  initMap();
+})

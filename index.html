@@ -156,6 +156,51 @@
   </div>
 </header>
 
+<!-- 最新彈出視窗 -->
+<!-- ==== 最新消息頁框架底層 ==== -->
+<section class = "news-window" id = "newsWindow1">
+  <!-- ==== 最新消息頁背景框架層 ==== -->
+	
+	<div class = "news-window-bg"></div>
+
+	<!-- ==== 最新消息頁背景度調整 ==== -->
+	<div class = "news-window-bgOpacity" ></div>
+	<!-- ==== 最新消息頁最上層框架 ==== -->
+	<div class = "news-window-section">
+
+		<main class = "news-window-content">
+
+			<div class="news-txt">
+				<div class="news-button" onclick="showTheNEWSWindow();">
+					<i class="fa fa-times"></i>
+				</div>
+				<div class="news-cont">
+					<div id = "newsP">
+						<span class="news-title" id ="newsTitle">
+							<!--7/11 停課一日-->
+						</span> 
+						<br>
+						<span class="news-publishTime" id = "newsTime">
+							<!--2018-07-10-->
+						</span>
+						<br>
+						<span class="news-article" id = "newsArticle">
+							<!--因應7/11 瑪莉亞颱風來襲，停課一日。-->
+						</span>
+						
+
+					</div>
+					<div class="news-pic">
+						<img src="img/631229.jpg" style="width: 60%; height:90%; margin: auto;">
+					</div>
+				</div>
+			</div>
+		</main>
+
+	</div>
+</section>
+<!-- 彈出視窗結束 -->
+
 <!-- 最新消息 -->
 <section class="section-frame" id = "newsFrame">
 	<main class="section-title">
@@ -176,30 +221,7 @@
 				
 				<span class = "readMore" id = "readMoreButton1">
 					Read more
-				</span>
-
-				<!-- 彈出視窗 -->
-				<div class="news-window" id = "newsWindow1" >
-					<main class ="newsContent-button">
-						<div class="news-turnOff-button" id = newsOffButton1 onclick="showTheNEWSWindow();"> 
-						<i class="fa fa-times"></i>
-					</div>
-					</main>
-					<main class = "newsContent-title">
-						<div class="news-title">
-							<h2>7/11 停課一日</h2>
-							<h5>2018-07-10</h5>
-						</div>
-						
-					</main>
-					<main class="newsContent-p">
-						<div class = "news-p">
-							因應7/11 瑪莉亞颱風來襲，本教室停課一日。
-						</div>
-					</main>
-
-				</div>
-				<!-- 彈出視窗結束 -->
+				</span>	
 			</div>
 
 			<!-- 最新消息 2 -->
@@ -207,30 +229,6 @@
 				<h3>7/03 停課一日</h3>
 				
 				<span class = "readMore" id = "readMoreButton2">Read more</span>
-
-				<!-- 彈出視窗 -->
-				<div class="news-window" id = "newsWindow2" >
-					<main class ="newsContent-button">
-						<div class="news-turnOff-button" id = newsOffButton2 onclick="showTheNEWSWindow();"> 
-						<i class="fa fa-times"></i>
-					</div>
-					</main>
-					<main class = "newsContent-title">
-						<div class="news-title">
-							<h2>7/03 停課一日</h2>
-							<h5>2018-07-02</h5>
-						</div>
-						
-					</main>
-					<main class="newsContent-p">
-						<div class = "news-p">
-							因應7/03 本教室裝修，停課一日
-						</div>
-					</main>
-
-				</div>
-				<!-- 彈出視窗結束 -->
-
 			</div>
 
 			<!-- 最新消息 3 -->
@@ -238,29 +236,6 @@
 				<h3>本教室開始招生</h3>
 				
 				<span class = "readMore" id = "readMoreButton3">Read more</span>
-
-				<!-- 彈出視窗 -->
-				<div class="news-window" id = "newsWindow3" >
-					<main class ="newsContent-button">
-						<div class="news-turnOff-button" id = newsOffButton3 onclick="showTheNEWSWindow();"> 
-						<i class="fa fa-times"></i>
-					</div>
-					</main>
-					<main class = "newsContent-title">
-						<div class="news-title">
-							<h2>本教室開始招生</h2>
-							<h5>2018-06-21</h5>
-						</div>
-						
-					</main>
-					<main class="newsContent-p">
-						<div class = "news-p">
-							本教室即日起開始招收2018年7月份新生！
-						</div>
-					</main>
-
-				</div>
-				<!-- 彈出視窗結束 -->
 
 			</div>
 		</div>
@@ -524,38 +499,50 @@
 	</main>
 
 	<!-- >>>>> 區塊內容 <<<<<  -->
-	<main class = "section-twice-content"><!-- *** Flex外層容器 -->
+	<main class = "section-single-content"><!-- *** Flex外層容器 -->
 		<!-- ##### 左邊表單 #####  -->
 		<div class = "contact-style" >
-			<!-- 表單區 -->
-			<form action="https://formspree.io/cd12631@gmail.com"method="POST" style="margin-left: 100px;">
-	              <label> 姓名 </label> 
-	              <br>
-	              <input type="text" name="name" class="input-style"> 
-	              <br>
-	              <label> 聯絡電話 </label> 
-	              <br>
-	              <input type="numer" name="name" class="input-style"> 
-	              <br>
-	              <label> 電子郵件 </label> 
-	              <br>
-	              <input type="text" name="gender" class="input-style"> 
-	              <br>
-	              <label> 想說的話 </label> 
-	              <br>
-	              <textarea rows="8" cols="50" name="_replyto" class="input-style"></textarea>
-	              <br>
-	              <!-- Submit -->
-	              <input type="submit" value="送出" class="contact-button-style">
-        	</form>
+			<div class="form-size">
+				<!-- 表單區 -->
+				<form action="https://formspree.io/ChiaBows@gmail.com"method="POST" style="margin-left: 0px;">
+		              <div class ="label"> 姓名 </div> 
+		              <br>
+		              <input type="text" name="name" class="input-style" placeholder="請輸入您的大名！" required> 
+		              <br>
+		              <div class ="label">  聯絡電話 </div> 
+		              <br>
+		              <input type="number" name="phone" class="input-style" placeholder="請告訴我們您的聯絡電話！" required> 
+		              <br>
+		              <div class ="label">  電子郵件 </div> 
+		              <br>
+		              <input type="email" name="email" class="input-style" placeholder="請輸入您的電子郵件地址！" required> 
+		              <br>
+		              <div class ="label">  想說的話 </div> 
+		              <br>
+		              <textarea rows="8" cols="50" name="_replyto" class="textarea-style" placeholder="如果您有任何建議或是疑問，請不吝告知我們！"></textarea>
+		              <br>
+		              <!-- Submit -->
+		              <div class="label">
+		              	<input type="submit" value="送出" class="content-button-black">
+		              </div>
+	        	</form>
+        	</div>
 		</div>
-		<!-- ##### 右邊地圖以及聯絡地址電話 #####  -->
+	</main>
+	<!-- ====== 區塊間分隔設計 ======== -->
+	<div style="height:50px;" id="sectionDiv5"><!-- 我只是用來分隔 50px--></div> 
+	<!-- ##### 地址 #####  -->
+	<main class="section-single-content">
+		<!-- 地址和電話區 -->
+		<div class="contact-infor">
+			<label>地址： 台北市松山區光復南路1號</label> <br>
+			<label>電話：0800000XXX</label><br>
+		</div>
+					
+	</main>
+	<!-- ##### 地圖 #####  -->
+	<main class="section-single-content">
 		<div class="contact-style"> 
-			<!-- 地址和電話區 -->
-			<div class="contact-infor">
-				<label>地址： 台北市松山區光復南路1號</label> <br>
-				<label>電話：0800000XXX</label><br>
-			</div>
 			
 			<!-- 地圖 -->
           	<div id="test_map" class="google-map"></div>
@@ -567,9 +554,7 @@
 	
 </section>
 
-<!-- ====== 區塊間分隔設計 ======== -->
-<div style = "height:150px;"><!-- 我只是用來分隔 150 px--></div>
-<!-- ====== 區塊間分隔設計 ======== -->
+
 
 <!-- Footer -->
 <footer class = "footer-frame" id = "footerFrame">
@@ -577,16 +562,16 @@
 		<div class="uper-0">
 			<ul class="none-0">
 				<li>
-					最新消息
+					最新消息。
 				</li>
 				<li>
-					關於我們
+					CHIABOW的品牌故事。
 				</li>
 				<li>
-					課程一覽
+					繆思課有哪些。
 				</li>	
 				<li>
-					聯絡我們
+					聯絡教室。
 				</li>
 			</ul>
 		</div>

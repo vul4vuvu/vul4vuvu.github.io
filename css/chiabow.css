@@ -121,24 +121,18 @@ a:active {
 
 /* index.html個別區塊的個別設定 */
 
-/* 聯絡我們區塊左邊個別設定 */
-.section-twice-content>.contact-style{
+/* 聯絡我們區塊左右邊個別設定 */
+.section-single-content>.contact-style{
+	display: flex;
 	flex: none;
-	width: 42%;
+	justify-content: center;
+	width: 100%;
 	margin-top: 40px;
 	margin-left: 0;
-	text-align: left;
+	text-align: center;
 }
 
-/* 聯絡我們區塊左邊個別設定 */
-.section-twice-content>.contact-style{
-	flex: none;
-	width: 42%;
-	margin-top: 40px;
-	margin-left: 0;
-	text-align: left;
-	
-}
+
 
 /* class.html個別區塊的個別設定 */
 
@@ -276,9 +270,7 @@ a:active {
 	margin-left:5px;
 	cursor: pointer; 
 }
-	.menu-list:hover{
-		background-color: black;
-	}
+	
 .menu-list-memberCenter{
 	width: 100%;
 	color:#fffff1;
@@ -286,9 +278,7 @@ a:active {
 	cursor: pointer; 
 	display:none;
 }
-	.menu-list-memberCenter:hover{
-		background-color: black;
-	}
+	
 
 /*
 ===========================
@@ -527,29 +517,118 @@ a:active {
 
 /* 最新消息彈出視窗 */
 .news-window{
-	width:1000px; 
-	height:95vh; 
-	background-color: #edf1f7; 
-	display: none; 
+	width:100%; 
+	height:100vh; 
+	
+
+	display: none ; 
 	position: fixed; 
-	top: 30px; left: 200px; z-index: 101;
+	top: 0px; left: 0px; z-index: 101;
 }
 
-/* 最新消息內文容器 */
-.newsContent-button{
-	display: flex;
+.news-window-bg{
+	float: left;
+	position: relative;
+	z-index: 1;
+	height: 100vh;
 	width: 100%;
-	justify-content: flex-start;
+	background-color: black;
+	background-size: cover;
+	opacity: 0.8;
+	top: 0;
+	display: block;
+	transition: background-image 1s;
 }
-.newsContent-title{
-	display: flex;
+.news-window-bgOpacity{
+	float: left;
+	z-index: 2;
+	position: relative;
+	top: 0vh;
+	height: 100vh;
 	width: 100%;
-	justify-content: center;
+	border: solid 0px black;
+	background-color: black;
+	opacity: 0;
+	top:-100vh;
 }
-.newsContent-p{
-	display: flex;
+
+.news-window-section{
+	float: left;
+	z-index: 3;
+	position: relative;
+	top: 0vh;
+	height: 100vh;
 	width: 100%;
+	
+	/*background-color: #333;*/
+	opacity: 1;
+	top: -200vh;
+	
+	color: #ffffff;
+	
+}
+/* flex box  */
+.news-window-content{
+	display: flex;
 	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+
+}
+div.bg-click{
+	position: relative;
+	z-index: 4;
+	width: 100%;
+	height: 100vh;
+	background-color: #ffffff;
+}
+div.news-txt{
+	position: relative;
+	z-index: 5;
+	flex: none;
+	display: flex; 
+	flex-wrap: wrap;
+	align-items: flex-start;
+	width: 80%;
+	height: 70%;
+	background-color: #ffffff;
+	text-align: center;
+	font-size: 40px;
+	color: #ffffff;
+	border-radius: 20px;
+}
+div.news-button{
+	flex: none;
+	width: 50px;height:8%; 
+	text-align: center;
+	color: #333f;
+	cursor: pointer;
+	
+}
+div.news-button:hover{
+	color: black;
+}
+div.news-cont{
+	width: 100%;height:92%; 
+	 flex: none;
+	display: flex;
+}
+div.news-cont > div{
+	width: 50%;
+	color: #333;
+	text-align: center;
+}
+
+/* 最新消息內文樣式*/
+.news-title{
+	font-size: 30px;
+}
+.news-publishTime{
+	font-size: 16px;
+}
+.news-article{
+	font-size: 20px;
 }
 
 /* 內文樣式 */
@@ -693,19 +772,36 @@ a:active {
 */
 
 
-label{
+div.label{
 		font-size: 18px;
 		text-shadow:0px 0px 0 #444;
-		text-align: left;
+		text-align: center;
 		
 	}
+.form-size{
+	width: 500px;
+}
 .input-style{
 	padding:8px;
 	display:block;
 	border:none;
-	border-bottom:1px solid #ccc;
-	width:350px;
+	border-bottom:2px solid #ccc;
+	width:100%;
+	height: 40px;
 	resize: none;
+	font-size: 16px;
+
+}
+.textarea-style{
+	padding:8px;
+	display:block;
+	border:none;
+	border-bottom:2px solid #ccc;
+	width:100%;
+	height: 140px;
+	resize: none;
+	font-size: 16px
+
 }
 
 .contact-photo{
@@ -719,7 +815,7 @@ label{
 }
 /* 地圖設定 */
 .google-map{
-	height: 400px; width: 500px; margin-top: 20px;
+	height: 400px; width: 100%; margin-top: 20px;
 }
 
 /*
@@ -827,8 +923,9 @@ ul.none {
 	border: none;
 	color:#fff;
 	background-color:#92A8D1;
-	margin-left: 100px;
+	/*margin-left: 100px;*/
 	cursor: pointer;
+	margin-left: auto;
 
 }
 .contact-button-style:hover{
@@ -925,17 +1022,17 @@ ul.none {
 	/* 課程區塊中，兩兩並排的左邊設定 */
 	.section-twice-content>.classInfor-left {
 	    flex: none;
-	    width: 51%;
+	    width: 100%;
 	    margin: 0;
 	    margin-left: 0;
-	    text-align: left;
+	    text-align: center;
 	}
 	/* 課程區塊中，兩兩並排的右邊設定 */
 	.section-twice-content>.classInfor-right {
 	    flex: none;
-	    width: 51%;
+	    width: 100%;
 	    margin: 0;
-	    text-align: left;
+	    text-align: center;
 	}
 	/* 聯絡我們區塊左邊個別設定 */
 	.section-twice-content>.contact-style{
@@ -943,9 +1040,14 @@ ul.none {
 		width: 100%;
 		margin-top: 40px;
 		margin-left: 0;
-		text-align: left;
+		text-align: center;
 	}
-
+	.x-width{
+		display: flex;
+		justify-content: center;
+		flex: none;
+		width: 100%;
+	}
 	
 
 	/*================網頁標題列================*/
@@ -963,13 +1065,15 @@ ul.none {
 	}
 
 	/* ================最新消息================ */
-		.news-window{
-			width:700px; height:95vh; 
-			background-color: #edf1f7; 
-			display: none; 
-			position: fixed; 
-			top: 30px; left: 38px; z-index: 101;
+		/* 把消息內文調成寬度100% */
+		#newsP{
+			width: 100%;
 		}
+		/* 隱藏圖片 */
+		.news-pic{
+			display: none;
+		}
+		
 
 	/* ================關於老師================ */
 	.teacher-photo{
@@ -979,7 +1083,7 @@ ul.none {
 	
 	/* ================課程資訊================ */
 	/* 下層文字說明區 */
-	 .class-detail{
+	.class-detail{
 	 	width: 300px; margin: auto;
 	 }
 	/* 上層照片區 */
@@ -999,10 +1103,11 @@ ul.none {
 
 /* ================聯絡我們================ */
 	
-	label{
+	div.label{
 		font-size: 18px;
 		text-shadow:0px 0px 0 #444;
 		text-align:center;
+		width: 100%;
 		
 	}
 	.input-style{
@@ -1010,8 +1115,20 @@ ul.none {
 		display:block;
 		border:none;
 		border-bottom:1px solid #ccc;
-		width:80%;
-		text-align: center;
+		width:100%;
+		text-align: left;
+	}
+	.textarea-style{
+		padding:8px;
+		display:block;
+		border:none;
+		border-bottom:2px solid #ccc;
+		width:100%;
+		height: 140px;
+		resize: none;
+		text-align: left;
+		font-size: 16px;
+
 	}
 	.button-style{
 		width: 150px;
@@ -1051,6 +1168,24 @@ ul.none {
 
 }
 
+.content-button-black-class{
+	display: flex;
+	flex: none;
+	align-items: center;
+	justify-content: center;
+	flex: none;
+	width: 100px; height:40px; 
+	border: 1px solid #333;
+	
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+	.content-button-black-class:hover{
+		background-color: #333;
+		border: 1px solid #333;
+		color: #ffffff;
+	}
 
 @media (max-width: 500px){
 	/* 導航列 */
@@ -1095,14 +1230,14 @@ ul.none {
 	    width: 100%;
 	    margin: 0;
 	    margin-left: 0;
-	    text-align: left;
+	    text-align: center;
 	}
 	/* 課程區塊中，兩兩並排的右邊設定 */
 	.section-twice-content>.classInfor-right {
 	    flex: none;
 	    width: 100%;
 	    margin: 0;
-	    text-align: left;
+	    text-align: center;
 	}
 	/* 聯絡我們區塊左邊個別設定 */
 	.section-twice-content>.contact-style{
@@ -1127,13 +1262,15 @@ ul.none {
 	}
 
 /* ================最新消息================ */
-	.news-window{
-		width:300px; height:95vh; 
-		background-color: #edf1f7; 
-		display: none; 
-		position: fixed; 
-		top: 30px; left: 30px; z-index: 101;
-	}
+	/* 把消息內文調成寬度100% */
+		#newsP{
+			width: 100%;
+		}
+		/* 隱藏圖片 */
+		.news-pic{
+			display: none;
+		}
+
 
 /* ================關於老師================ */
 	.teacher-photo{
@@ -1151,19 +1288,35 @@ ul.none {
 	}
 /* ================聯絡我們================ */
 
-	label{
+	div.label{
 		font-size: 18px;
 		text-shadow:0px 0px 0 #444;
 		text-align:center;
+		width: 100%;
 		
+	}
+	.form-size{
+		width: 300px;
 	}
 	.input-style{
 		padding:8px;
 		display:block;
 		border:none;
 		border-bottom:1px solid #ccc;
-		width:80%;
-		text-align: center;
+		width:100%;
+		text-align: left;
+	}
+	.textarea-style{
+		padding:8px;
+		display:block;
+		border:none;
+		border-bottom:2px solid #ccc;
+		width:100%;
+		height: 140px;
+		resize: none;
+		font-size: 16px;
+		text-align: left;
+
 	}
 	.button-style{
 		width: 150px;
@@ -1185,7 +1338,7 @@ ul.none {
 	.footer-content>div.uper-0{
 		flex: none;
 		width: 90%;
-		margin: 4%;
+		margin: 5%;
 		text-align: center;
 		
 	}
@@ -1196,7 +1349,7 @@ ul.none {
     	display: inline;
 	}
 	ul.none-0 > li{
-		display: inline;
+		/*display: inline;*/
 	}
 	.footer-content>div.uper{
 		flex: none;
