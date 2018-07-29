@@ -373,7 +373,7 @@ a:active {
 	flex: none;
 	/*width: 200px;*/
 	margin-top: 10px;
-	margin-left: 6px;
+	margin-left: 12px;
 	color: #333;
 	font-size: 16px;
 	text-align: center;
@@ -829,7 +829,7 @@ div.label{
 */
 
 .footer-frame{
-	background-color: #F7CAC9; 
+	background-color: #f0f0f5; 
 	color: #333;
 }
 
@@ -873,6 +873,7 @@ ul.none {
 	font-size:64px;
 	color:#92A8D1;
 	cursor: pointer;
+    text-shadow: 1px 2px 1px #333;
 }
 	.footer-icon-size:hover{
 		color:#5d7ebb;
