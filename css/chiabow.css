@@ -382,6 +382,7 @@ a:active {
 }
 	.list-div:hover{
 		color: #92A8D1;
+		font-weight: bolder;
 	}
 
 /*
@@ -873,10 +874,16 @@ ul.none {
 	font-size:64px;
 	color:#92A8D1;
 	cursor: pointer;
-    text-shadow: 1px 2px 1px #333;
+	/*
+    text-shadow: 2px 2px 2px #999;
+    */
+    
 }
 	.footer-icon-size:hover{
 		color:#5d7ebb;
+		text-shadow: 2px 2px 2px #999;
+		margin: 6px;
+		font-size: 68px;
 	}
 
 
@@ -923,19 +930,20 @@ ul.none {
 
 /* 聯絡資訊送出的按鈕 */
 .contact-button-style{
-	width: 150px;
-	font-size: 18px;
+	width: 100px; height:40px;
+	font-size: 16px;
 	border: none;
-	color:#fff;
-	background-color:#92A8D1;
-	/*margin-left: 100px;*/
+	color:#333;
+	background-color:#ffffff;
+	border: 1px solid #333;
 	cursor: pointer;
 	margin-left: auto;
 
 }
 .contact-button-style:hover{
-	background-color:#5d7ebb; 
+	background-color:#333; 
 	color: #fff;
+	border: 1px solid #333;
 }
 
 
