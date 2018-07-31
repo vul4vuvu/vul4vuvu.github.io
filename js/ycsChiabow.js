@@ -152,6 +152,11 @@ function newsOpen() {
   
 }
 
+function scrollBoomb() {
+  // 
+
+}
+
 
 window.addEventListener('load', function () {
   menuOn();
