@@ -1,9 +1,4 @@
-news = [
-  "news1": { 
-  	"title":" 停課", 
-  	"time":" 2018-07-10", 
-  	"article":"因應7/11 瑪莉亞颱風來襲，停課一日。" }
-];
+
 
 
 function newsOpen() {
@@ -23,9 +18,9 @@ function newsOpen() {
 	// 註冊 按鈕一
 	news1Button.addEventListener('click', function () {
 		newsWindow.style.display = 'block';
-		newsTitle.innerHTML = "7/11 停課一日";
-		newsTime.innerHTML = "2018-07-10";
-		newsArticle.innerHTML = "因應7/11 瑪莉亞颱風來襲，停課一日。";
+		newsTitle.innerHTML = "歡迎加入ChiaBow's Music 的官方Line帳號";
+		newsTime.innerHTML = "2018-08-10";
+		newsArticle.innerHTML = "ChiaBow的官方Line即日起上線，<br>趕快掃描QRcode，或搜尋ID，<br>加入Line，來教室體驗課就送音樂小禮物唷!";
 	});
 	// 註冊 按鈕二
 	news2Button.addEventListener('click', function () {

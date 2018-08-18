@@ -129,25 +129,25 @@ function newsOpen() {
   // 註冊 按鈕一
   news1Button.addEventListener('click', function () {
     newsWindow.style.display = 'block';
-    newsTitle.innerHTML = "7/11 停課一日";
-    newsTime.innerHTML = "2018-07-10";
-    newsArticle.innerHTML = "因應7/11 瑪莉亞颱風來襲，停課一日。";
+    newsTitle.innerHTML = "歡迎加入ChiaBow's Music的官方Line帳號";
+    newsTime.innerHTML = "2018-08-10";
+    newsArticle.innerHTML = "ChiaBow的官方Line即日起上線，<br>趕快掃描QRcode，或搜尋ID，<br>加入Line，來教室體驗課就送音樂小禮物唷!<br>ID：@ver2312s";
   });
 
   // 註冊 按鈕二
   news2Button.addEventListener('click', function () {
     newsWindow.style.display = 'block';
-    newsTitle.innerHTML = "7/03 停課一日";
-    newsTime.innerHTML = "2018-07-02";
-    newsArticle.innerHTML = "因應7/03 本教室裝修，停課一日";
+    newsTitle.innerHTML = "松山區『八德教室』招生中，開放體驗報名";
+    newsTime.innerHTML = "2018-08-09";
+    newsArticle.innerHTML = "積累10多年的音樂教學經驗，嘉寶老師在松山區『八德教室』創立『繆思課品牌，將多年研究幼兒音樂教學的心得，研發出分齡化的課程，包括『Orff奧福音樂遊戲』親子班，以及結合各大音樂教學法的『ChiaBow嘉寶樂器課』小提琴及鋼琴班。<br>招生期間，開放單堂體驗課，優惠價NT$400。<br>快來預約，跟嘉寶老師一起開心的玩樂器。<br>預約→ <a href='https://goo.gl/forms/hNB0LnBAn3mfUEcS2' target='_blank'>https://goo.gl/forms/hNB0LnBAn3mfUEcS2</a><br>了解課程→http://chiabow.com/ <br> 了解嘉寶老師→http://chiabow.com/";
   });
 
   // 註冊 按鈕三
   news3Button.addEventListener('click', function () {
     newsWindow.style.display = 'block';
-    newsTitle.innerHTML = "本教室開始招生";
-    newsTime.innerHTML = "2018-06-21";
-    newsArticle.innerHTML = "本教室即日起開始招收2018年7月份新生！";
+    newsTitle.innerHTML = "歡迎下載『嘉寶的繆思課』最新課程簡章。";
+    newsTime.innerHTML = "2018-08-01";
+    newsArticle.innerHTML = "歡迎下載『嘉寶的繆思課』最新課程簡章。";
   });
   
 }
@@ -160,7 +160,7 @@ function scrollBoomb() {
 
 window.addEventListener('load', function () {
   menuOn();
-  //showTheNEWSWindow();
+  
   newsOpen();
 });
 
