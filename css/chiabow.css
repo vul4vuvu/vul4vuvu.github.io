@@ -20,6 +20,18 @@ hr{
 	border-style: solid;
 	border-color: #F7CAC9;
 }
+hr.grey{
+	width: 80px; 
+	border-width: 1px; 
+	border-style: solid;
+	border-color: grey;
+}
+hr.white{
+	width: 80px; 
+	border-width: 1px; 
+	border-style: solid;
+	border-color: #ffffff;
+}
 /* unvisited link */
 a:link {
     text-decoration: none;
@@ -294,7 +306,7 @@ a:active {
 	position: fixed;
 	z-index: 100;
 	display: block;
-	height: 5vh;
+	height: 7vh;
 	width: 100vw;
 	overflow: hidden;
 }
@@ -302,7 +314,7 @@ a:active {
 	float: left;
 	position: relative;
 	z-index: 1;
-	height: 5vh;
+	height: 7vh;
 	width: 100%;
 	background-color: #ffffff;
 	background-size: cover;
@@ -313,23 +325,23 @@ a:active {
 	z-index: 2;
 	position: relative;
 	top: 0vh;
-	height: 5vh;
+	height: 7vh;
 	width: 100%;
 	border: solid 0px black;
 	background-color: #ffffff;
 	opacity: 0.2;
-	top:-5vh;
+	top:-7vh;
 }
 .nav-section{
 	float: left;
 	z-index: 3;
 	position: relative;
 	top: 0vh;
-	height: 5vh;
+	height: 7vh;
 	width: 100%;
 	/*background-color: #333;*/
 	opacity: 1;
-	top:-10vh;
+	top:-14vh;
 	color: #333;
 	overflow: hidden;
 	
@@ -373,7 +385,7 @@ a:active {
 	flex: none;
 	/*width: 200px;*/
 	margin-top: 10px;
-	margin-left: 12px;
+	margin-left: 15px;
 	color: #333;
 	font-size: 16px;
 	text-align: center;
@@ -429,8 +441,9 @@ a:active {
 	z-index: 1;
 	height: 70vh;
 	width: 100%;
-	background-image: url("../img/5.jpg");
+	background-image: url("../img/index/header.jpg");
 	background-size: cover;
+	background-attachment: fixed; 
 	top: 0;
 	display: block;
 	transition: background-image 1s;
@@ -633,7 +646,7 @@ div.news-cont > div{
 	font-size: 16px;
 }
 .news-article{
-	font-size: 20px;
+	font-size: 14px;
 }
 
 /* 內文樣式 */
@@ -659,7 +672,7 @@ div.news-cont > div{
 
 /* 老師照片樣式設定 */
 .teacher-photo{
-	width: 500px; height: 500px;
+	width: 200px; height: 200px; border-radius: 200px;
 }
 
 
@@ -716,7 +729,7 @@ div.news-cont > div{
 	z-index: 1;
 	height: 70vh;
 	width: 100%;
-	background-image: url("../img/631226.jpg");
+	background-image: url("../img/index/orderClass.jpg");
 	background-size: cover;
 	background-attachment: fixed; 
 	top: 0;
@@ -1091,7 +1104,7 @@ ul.none {
 
 	/* ================關於老師================ */
 	.teacher-photo{
-		width: 500px; height: 500px;
+		width: 150px; height: 150px; border-radius: 150px;
 	}
 	
 	
@@ -1288,7 +1301,7 @@ ul.none {
 
 /* ================關於老師================ */
 	.teacher-photo{
-	width: 300px; height: 300px;
+	width: 150px; height: 150px; border-radius: 150px;
 	}
 
 /* ================課程內容================ */

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="icon" href="img/index/chiabowIcon.ico" type="image/gif" sizes="16x16">
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -89,11 +90,17 @@
 			<!-- 先測試 -->
 			
 			<div class = "navbar-left" style="display: none;">
-				嘉寶的繆思課
+				
 			</div>
 			
 
 			<div class="navbar-right">
+				<a href="index.html">
+					<div class="list-div">
+						<!-- logo -->
+						<img src="img/index/logo.jpg" style="width: 30px; height:30px;">
+					</div>
+				</a>
 				<a href="index.html">
 					<div class="list-div">
 						嘉寶的繆思課。
@@ -102,11 +109,7 @@
 				<div class="list-div" onclick="startScrollToNews();">
 					最新消息。
 				</div>
-				
-					<div class="list-div" onclick="startScrollToAbout();">
-						CHIABOW的品牌故事。
-					</div>
-				
+
 				<a href="class.html">
 					<div class="list-div">
 						
@@ -114,11 +117,20 @@
 						
 					</div>
 				</a>
+
+					<div class="list-div" onclick="startScrollToAbout();">
+						CHIABOW的品牌故事。
+					</div>
+				
+				
 				<a href="result.html">
 					<div class="list-div">
 						繆思課的足跡。
 					</div>
 				</a>
+				<div class="list-div" onclick="startScrollToAbout();">
+						分享繆思。
+					</div>
 				<div class="list-div" onclick="startScrollToContact();">
 					聯絡教室。
 				</div>
@@ -149,7 +161,20 @@
   <div class = "header-section">
     <main class = "header-content">
     	<div>
-    		<h1>ChiaBow's Music</h1>
+    		<h1>ChiaBow</h1>
+    		<hr class = "white">
+    		<p style="font-size: 16px;">
+    			MuSic mUsiC MusiC<br>
+				我們都是你的寶貝<br>
+				從媽媽肚子裡就開始感受你<br>
+				你帶給我平靜也讓我澎湃<br>
+				雖然無法擁你 也無法成為你<br>
+				但我能夠享受你 創造你<br>
+				讓你成為我探索世界的勇氣。繆思課。<br>
+				<br>
+				- 嘉寶ChiaBow<br>
+
+    		</p>
     	</div>
     </main>
     
@@ -216,7 +241,7 @@
 			<!-- 最新消息 1 -->
 			<div>
 				<h3>
-					7/11 停課一日
+					歡迎加入ChiaBow's Music 的官方Line帳號
 				</h3>
 				
 				<span class = "readMore" id = "readMoreButton1">
@@ -226,14 +251,14 @@
 
 			<!-- 最新消息 2 -->
 			<div>
-				<h3>7/03 停課一日</h3>
+				<h3>松山區『八德教室』招生中，開放體驗報名</h3>
 				
 				<span class = "readMore" id = "readMoreButton2">Read more</span>
 			</div>
 
 			<!-- 最新消息 3 -->
 			<div>
-				<h3>本教室開始招生</h3>
+				<h3>歡迎下載『嘉寶的繆思課』最新課程簡章。</h3>
 				
 				<span class = "readMore" id = "readMoreButton3">Read more</span>
 
@@ -247,45 +272,6 @@
 <div style="height:50px;" id="sectionDiv1"></div> <!-- 區塊間間隔50px -->
 <!-- ====== 區塊間分隔設計 ======== -->
 
-<!-- ====== 關於嘉寶老師區塊 ======== -->
-<section class="section-frame" id = "aboutMeFrame">
-	<!-- >>>>> 區塊標題 <<<<<  -->
-	<main class="section-title">
-		<div>
-			<h2>
-				品牌故事
-				<hr>
-			</h2>
-		</div>
-	</main>
-	<!-- >>>>> 區塊內容 <<<<<  -->
-	<main class="section-twice-content"> <!-- 容器 -->
-		<!-- ##### 左邊老師照片 #####  -->
-		<div>
-			<img src="img/teacher.jpg" class="teacher-photo"> 
-			<!-- 如果有修改 photo 請確認css 尺寸設定-->
-		</div>
-		<!-- ##### 右邊老師簡介 #####  -->
-		<div>
-			<h3>關於嘉寶老師</h3>
-			<p>
-				Chia是我 Bow是小提琴的弓。 <br>
-				我是用弓在提琴上演奏音樂，<br>
-				讓孩子感受謬思課的嘉寶。 <br>
-				<br>
-				MuSic mUsiC MusiC  <br>
-				我們都是你的寶貝 <br>
-				從媽媽肚子裡就開始感受你 <br>
-				你帶給我平靜也讓我澎湃 <br>
-				雖然無法擁你 也無法成為你 <br>
-				但我能夠享受你 創造你 <br>
-				讓你成為我探索世界的勇氣。繆思課。 <br>
-				 <br>
-				— 嘉寶ChiaBow<br>
-			</p>
-		</div>
-	</main>
-</section>
 
 
 <!-- ====== 區塊間分隔設計 ======== -->
@@ -299,7 +285,7 @@
 	<main class="section-title">
 		<div>
 			<h2>
-				繆思課程
+				繆思課
 				<hr>
 			</h2>
 		</div>
@@ -309,11 +295,11 @@
 	<main class="section-twice-content"> <!-- 容器 -->
 		<!-- ##### 上層左邊照片 #####  -->
 		<div>
-			<img src="img/517032_1209x729_500.jpg" class="class-left-photo">
+			<img src="img/index/1.jpg" class="class-left-photo">
 		</div>
 		<!-- ##### 上層右邊照片 #####  -->
 		<div>
-			<img src="img/517057_1478x1108_500.jpg" class="class-right-photo">
+			<img src="img/index/2.jpg" class="class-right-photo">
 		</div>
 	</main>
 	<!-- >>>>> 下層區塊內容 <<<<<  -->
@@ -321,13 +307,13 @@
 		<!-- ##### 下層區塊文字簡介 #####  -->
 		<div>
 			<h2>
-				Orff 音樂遊戲課
+				Orff 奧福音樂遊戲課
 			</h2>
 
 			<div class="class-detail">
-				孩子隨著音樂律動身體，動手讓樂器發出聲音，音樂對孩子有著自然而然的吸引力，而每個階段的孩子需要的音樂刺激也有所不同。<br>
-				
-				orff奧福音樂遊戲課，透過遊戲、律動、樂器合奏等音樂活動，讓孩子被音樂帶動，不僅在孩子黃金的聽覺發展時期，開發聽覺對音樂的敏感度、音感能力，也在音樂遊戲中，建立社會互動、語言發展、自我表現等多元能力的刺激。
+				奧福是二十世紀的偉大音樂教育家，奧福教學法為當代五大音樂教學法之一，除了注重幼兒在音樂中的自我表現，還提倡孩子成為音樂中的參與與創造者，讓孩子動手用律動、歌唱和樂器曲表現音樂。<br>
+				『Orff 奧福音樂遊戲課』針對0-6歲孩子的特性，以及不同的學習需求與個體差異，將課程設計分成三階段，讓孩子透過遊戲、律動、樂器合奏等音樂活動，被音樂所觸動，不僅在孩童的黃金聽覺發展時期，開發聽覺對音樂的敏感度、音感能力，也在音樂遊戲中，建立社會互動、語言發展、自我表現等多元能力的刺激，進而建立習得樂器的能力。
+
 
 			</div>
 			<a href="class.html#WebTitleFrame">
@@ -351,11 +337,11 @@
 	<main class="section-twice-content"> <!-- 容器 -->
 		<!-- ##### 上層左邊照片 #####  -->
 		<div>
-			<img src="img/517047_1706x960_500.jpg" class="class-left-photo">
+			<img src="img/index/3.jpg" class="class-left-photo">
 		</div>
 		<!-- ##### 上層右邊照片 #####  -->
 		<div>
-			<img src="img/517037_1777x1769_500.jpg" class="class-right-photo">
+			<img src="img/index/4.jpg" class="class-right-photo">
 		</div>
 	</main>
 	<!-- >>>>> 下層區塊內容 <<<<<  -->
@@ -367,8 +353,7 @@
 			</h2>
 
 			<p class="class-detail">
-				結合國際奧福、高大宜、鈴木三大教學理念，自編ChiaBow教材，讓孩子在遊戲中玩著樂器，愛著音樂。<br>
-				『鋼琴 』、『小提琴』 — 個別、幼兒團體班（4歲半以上）
+				結合國際奧福、高大宜、鈴木三大教學理念，針對『小提琴』和『鋼琴』自編ChiaBow Music for Fun教材，包含視、聽、動多感官的音樂遊戲方式，透過故事性引導的情境教學，讓孩子在學習樂器過程中也能激發想像力，使樂器技巧的學習趨近生活、趣味化，並在遊戲中融入同儕與親子的社會性互動，增加多元能力的發展，讓孩子在遊戲中玩著樂器，愛著音樂。
 
 			</p>
 			<a href="class.html#chiabowInstrument">
@@ -385,6 +370,88 @@
 <div style="height:50px;" id="sectionDiv4"></div> <!-- 區塊間間隔50px -->
 <!-- ====== 區塊間分隔設計 ======== -->
 
+<!-- ====== 關於嘉寶老師區塊 ======== -->
+<section class="section-frame" id = "aboutMeFrame">
+	<!-- >>>>> 區塊標題 <<<<<  -->
+	<main class="section-title">
+		<div>
+			<h2>
+				ChiaBow的品牌故事
+				<hr>
+			</h2>
+		</div>
+	</main>
+	<!-- >>>>> 區塊內容 <<<<<  -->
+	<!-- 1. 關於嘉寶 -->
+	<!-- ##### 上方老師照片 #####  -->
+	<main class="section-single-content"> <!-- 容器 -->
+		
+		<div>
+			<img src="img/index/aboutMe.jpg" class="teacher-photo"> 
+			<!-- 如果有修改 photo 請確認css 尺寸設定-->
+		</div>
+	</main>
+		<!-- ##### 下方老師簡介 #####  -->
+	<main class="section-single-content">
+		<div>
+			<h3>嘉寶 Chiabow</h3>
+			<hr class = "grey">
+			<p>
+				Chia是嘉寶，Bow是琴弓，ChiaBow <br>是用小提琴弓分享音樂給孩子的嘉寶老師。<br>
+			</p>
+			<p>
+				台北市立大學 音樂系碩士<br>
+				國立台北教育大學幼兒與家庭教育系及音樂系學士<br>
+				奧福音樂藝術世界教師<br>
+				 藤苗才能教育小提琴教師<br>
+				星樂園音樂療育機構教師<br>
+				台北愛樂青年管弦樂團團員<br>
+			</p>
+			<p>
+				幼兒園及學前特幼雙教師證/家庭專業人員證照 <br>
+				2015台灣柯大宜音樂教育協會培訓教師<br>
+				2015-2018中華奧福協會國際音樂營認證<br>
+				2017 奧福音樂世界合格教師<br>
+				研發Chiabow music for fun 自創教材<br>
+
+			</p>
+		</div>
+	</main>
+
+	<!-- 2. 繆思課的故事 -->
+	<main class = "section-single-content">
+		<div>
+			<h3>繆思課的故事</h3>
+			<hr class = "grey">
+		</div>
+	</main>
+	<main class="section-triple-content">
+		<div>
+			<img src="img/index/classStory.jpg" class="teacher-photo">
+		</div>
+		<div style="text-align: left;">
+			<p>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp嘉寶老師從事幼兒音樂教學至今10多年，面對的學生從一般兒童到特殊兒童，從小嬰兒到學生家長，這一路走來感受到許許多多音樂給予小朋友及父母的成長和改變。
+				<br>
+    			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp媽媽和寶寶一起上課，陪著孩子用音樂建立了第一份師生關係；害羞的孩子在音樂遊戲中，敞開了心胸，融入群體且玩得很開心；習慣自我中心的孩子，願意在音樂遊戲中等待與分享。
+    			<br>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp練習樂器的孩子，在遇到學習困難時，能因為喜愛的心堅持下來，不輕言放棄。媽媽因陪伴孩子的學習，萌生了自己也參與學習的興趣，在學習樂器時，媽媽找回了屬於自己的時刻，更讓親子間充滿能量。語言與多感官障礙的星兒，能因為音樂的帶領，跟隨老師指令合奏並開口歌唱。
+			</p>
+		</div>
+		<div style="margin-left: 2%; text-align: left;">
+			<p>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp這些微妙的改變跟著音樂一起到來；當你越是親近音樂，它能給予你的就越多，音樂總是那個能夠鼓舞、撫慰人心的存在。
+				<br>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp嘉寶老師因為音樂而獲得很多快樂，也希望自己能用音樂，陪伴更多愛音樂的寶貝們，因此創立了『嘉寶的繆思課』，代表著嘉寶老師想要用音樂天馬行空繆思的特質，分享給更多繆思寶貝們，期待大家以一起來到『繆思課』成為嘉寶老師的『繆思客』。
+
+			</p>
+		</div>
+	</main>
+</section>
+
+<!-- ====== 區塊間分隔設計 ======== -->
+<div style="height:50px;" id="sectionDiv4"></div> <!-- 區塊間間隔50px -->
+<!-- ====== 區塊間分隔設計 ======== -->
 
 <!-- ====== 預約體驗課 + 過場效果 ======== -->
 <section class = "orderClass-frame" id = "orderClassFrame">
@@ -405,7 +472,7 @@
 	    			預約體驗課 
 	    			<br>
 	    			<span class = "orderClass-content-txt">
-	    				活動優惠期間單堂300元，額滿為止。 
+	    				活動優惠期間單堂400元，額滿為止。 
 	    			</span> 
 	    			<br>
 	    			<!-- 字與按鈕間，間隔40px高度。 -->
@@ -509,8 +576,12 @@
 		<!-- ##### 左邊表單 #####  -->
 		<div class = "contact-style" >
 			<div class="form-size">
+				有什麼『課程上的問題』或想知道『詳細交通方式』，歡迎聯絡我們！
+				<br>
+				<br>
 				<!-- 表單區 -->
-				<form action="https://formspree.io/ChiaBows@gmail.com"method="POST" style="margin-left: 0px;" target="_blank">
+				<form action="https://formspree.io/ChiaBows@gmail.com" method="POST" style="margin-left: 0px;" target="_blank">
+
 		              <div class ="label"> 姓名 </div> 
 		              <br>
 		              <input type="text" name="name" class="input-style" placeholder="請輸入您的大名！" required> 
@@ -525,7 +596,7 @@
 		              <br>
 		              <div class ="label">  想說的話 </div> 
 		              <br>
-		              <textarea rows="8" cols="50" name="_replyto" class="textarea-style" placeholder="如果您有任何建議或是疑問，請不吝告知我們！"></textarea>
+		              <textarea rows="8" cols="50" name="comment" class="textarea-style" placeholder="如果您有任何建議或是疑問，請不吝告知我們！"></textarea>
 		              <br>
 		              <!-- Submit -->
 		              <div class="label">
