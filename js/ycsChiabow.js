@@ -131,7 +131,7 @@ function newsOpen() {
     newsWindow.style.display = 'block';
     newsTitle.innerHTML = "歡迎加入ChiaBow's Music的官方Line帳號";
     newsTime.innerHTML = "2018-08-10";
-    newsArticle.innerHTML = "ChiaBow的官方Line即日起上線，<br>趕快掃描QRcode，或搜尋ID，<br>加入Line，來教室體驗課就送音樂小禮物唷!<br>ID：@ver2312s";
+    newsArticle.innerHTML = "ChiaBow的官方Line即日起上線，<br>趕快掃描QRcode，或搜尋ID，<br>加入Line，來教室體驗課就送音樂小禮物唷!<br>ID：@ver2312s <br> <img src='img/index/qrcode.png' style = 'width:80px; height:80px;'>";
   });
 
   // 註冊 按鈕二

@@ -306,7 +306,7 @@ a:active {
 	position: fixed;
 	z-index: 100;
 	display: block;
-	height: 7vh;
+	height: 14vh;
 	width: 100vw;
 	overflow: hidden;
 }
@@ -314,7 +314,7 @@ a:active {
 	float: left;
 	position: relative;
 	z-index: 1;
-	height: 7vh;
+	height: 14vh;
 	width: 100%;
 	background-color: #ffffff;
 	background-size: cover;
@@ -325,23 +325,23 @@ a:active {
 	z-index: 2;
 	position: relative;
 	top: 0vh;
-	height: 7vh;
+	height: 14vh;
 	width: 100%;
 	border: solid 0px black;
 	background-color: #ffffff;
 	opacity: 0.2;
-	top:-7vh;
+	top:-14vh;
 }
 .nav-section{
 	float: left;
 	z-index: 3;
 	position: relative;
 	top: 0vh;
-	height: 7vh;
+	height: 14vh;
 	width: 100%;
 	/*background-color: #333;*/
 	opacity: 1;
-	top:-14vh;
+	top:-28vh;
 	color: #333;
 	overflow: hidden;
 	
@@ -352,6 +352,7 @@ a:active {
 	
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	overflow: hidden;
 }
 	.nav-content>div.navbar-left{
@@ -371,13 +372,13 @@ a:active {
 	.nav-content>div.navbar-right{
 		display: flex;
 		justify-content: center;
-		align-items: flex-start; 
+		align-items: center; 
 		flex: none;
 		width: 100%;
 		margin-top: 10px;
 		color: #333;
 		font-size: 26px;
-		margin-left: 10px;
+		margin-left: -10px;
 		
 	}
 
