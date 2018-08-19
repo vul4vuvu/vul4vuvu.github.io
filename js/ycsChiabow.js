@@ -147,7 +147,7 @@ function newsOpen() {
     newsWindow.style.display = 'block';
     newsTitle.innerHTML = "歡迎下載『嘉寶的繆思課』最新課程簡章。";
     newsTime.innerHTML = "2018-08-01";
-    newsArticle.innerHTML = "歡迎下載『嘉寶的繆思課』最新課程簡章。";
+    newsArticle.innerHTML = "<a href='https://drive.google.com/open?id=1JIA3u4Cm4v-CMCcLZln7xhYm2Phn6sJ1'  target='_blank'> 歡迎下載『嘉寶的繆思課』最新課程簡章。</a>";
   });
   
 }
