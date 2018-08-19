@@ -139,7 +139,7 @@ function newsOpen() {
     newsWindow.style.display = 'block';
     newsTitle.innerHTML = "松山區『八德教室』招生中，開放體驗報名";
     newsTime.innerHTML = "2018-08-09";
-    newsArticle.innerHTML = "積累10多年的音樂教學經驗，嘉寶老師在松山區『八德教室』創立『繆思課品牌，將多年研究幼兒音樂教學的心得，研發出分齡化的課程，包括『Orff奧福音樂遊戲』親子班，以及結合各大音樂教學法的『ChiaBow嘉寶樂器課』小提琴及鋼琴班。<br>招生期間，開放單堂體驗課，優惠價NT$400。<br>快來預約，跟嘉寶老師一起開心的玩樂器。<br>預約→ <a href='https://goo.gl/forms/hNB0LnBAn3mfUEcS2' target='_blank'>https://goo.gl/forms/hNB0LnBAn3mfUEcS2</a><br>了解課程→http://chiabow.com/ <br> 了解嘉寶老師→http://chiabow.com/";
+    newsArticle.innerHTML = "積累10多年的音樂教學經驗，嘉寶老師在松山區『八德教室』創立『繆思課品牌，將多年研究幼兒音樂教學的心得，研發出分齡化的課程，包括『Orff奧福音樂遊戲』親子班，以及結合各大音樂教學法的『ChiaBow嘉寶樂器課』小提琴及鋼琴班。<br>招生期間，開放單堂體驗課，優惠價NT$400。<br>快來預約，跟嘉寶老師一起開心的玩樂器。<br>預約→ <a href='https://goo.gl/forms/hNB0LnBAn3mfUEcS2' target='_blank'>https://goo.gl/forms/hNB0LnBAn3mfUEcS2</a>";
   });
 
   // 註冊 按鈕三
@@ -147,7 +147,7 @@ function newsOpen() {
     newsWindow.style.display = 'block';
     newsTitle.innerHTML = "歡迎下載『嘉寶的繆思課』最新課程簡章。";
     newsTime.innerHTML = "2018-08-01";
-    newsArticle.innerHTML = "<a href='https://drive.google.com/open?id=1JIA3u4Cm4v-CMCcLZln7xhYm2Phn6sJ1'  target='_blank'> 歡迎下載『嘉寶的繆思課』最新課程簡章。</a>";
+    newsArticle.innerHTML = "歡迎下載『嘉寶的繆思課』最新課程簡章。<br> <a href='https://drive.google.com/open?id=1JIA3u4Cm4v-CMCcLZln7xhYm2Phn6sJ1'  target='_blank'>點我下載</a>";
   });
   
 }
