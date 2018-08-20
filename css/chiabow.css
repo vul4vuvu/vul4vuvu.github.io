@@ -13,6 +13,7 @@
 body{
 	margin: 0;
 	font-family: "Times New Roman", Times, serif;
+	line-height: 1.6;
 }
 hr{
 	width: 120px; 
@@ -538,8 +539,7 @@ a:active {
 .news-window{
 	width:100%; 
 	height:100vh; 
-	
-
+	line-height: normal;
 	display: none ; 
 	position: fixed; 
 	top: 0px; left: 0px; z-index: 101;
