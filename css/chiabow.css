@@ -1250,6 +1250,14 @@ ul.none {
 		text-align: center;
 		
 	}
+
+	/* 上層照片區 */
+	.class-left-photo{
+		width: 300px; height: 200px; margin:auto;
+	}
+	.class-right-photo{
+		width: 300px; height: 200px; margin:auto;
+	}
 	/* class.html個別區塊的個別設定 */
 
 
@@ -1276,6 +1284,7 @@ ul.none {
 		margin-left: 0;
 		text-align: left;
 	}
+
 
 	/*================網頁標題列================*/
 	.webTitleTxt{
