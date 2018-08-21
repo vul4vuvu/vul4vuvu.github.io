@@ -804,8 +804,8 @@ div.label{
 .input-style{
 	padding:8px;
 	display:block;
-	border:none;
-	border-bottom:2px solid #ccc;
+	border:2px solid #ccc;
+	/*border-bottom:2px solid #ccc;*/
 	width:100%;
 	height: 40px;
 	resize: none;
@@ -815,8 +815,8 @@ div.label{
 .textarea-style{
 	padding:8px;
 	display:block;
-	border:none;
-	border-bottom:2px solid #ccc;
+	border:2px solid #ccc;
+	/*border-bottom:2px solid #ccc;*/
 	width:100%;
 	height: 140px;
 	resize: none;
@@ -1017,6 +1017,10 @@ ul.none {
 
 /* 平板 */
 @media (max-width: 1360px){
+	/* 導航列 */
+	.phoneNav{ display: inline-block; }
+	.phoneNav-button{display: block;}
+	.nav-frame{display: none;}
 	.section-title>div{
 		flex: none;
 		width: 90%;
@@ -1026,7 +1030,6 @@ ul.none {
 	.section-single-content>div{
 		flex: none;
 		width: 100%;
-		
 		margin-top: 20px;
 		text-align: center;	
 	}
@@ -1039,12 +1042,11 @@ ul.none {
 	.section-triple-content>div{
 		flex: none;
 		width: 100%;
-		margin-top: 0;
-		margin-left: 0;
+		margin: 20px;
 		text-align: center;
 	
 	}
-
+	
 	/* class.html個別區塊的個別設定 */
 
 
@@ -1115,7 +1117,9 @@ ul.none {
 	.teacher-photo{
 		width: 150px; height: 150px; border-radius: 150px;
 	}
-	
+	.story{
+		width: 300px; margin: auto;
+	}
 	
 	/* ================課程資訊================ */
 	/* 下層文字說明區 */
@@ -1127,7 +1131,7 @@ ul.none {
 		width: 300px; height: 200px; margin:auto;
 	}
 	.class-right-photo{
-		width: 300px; height: 200px;
+		width: 300px; height: 200px; margin:auto;
 	}
 	/* class.html 兩區塊並排的照片配置這定 (待調整) */
 	.classPhoto {
@@ -1149,16 +1153,16 @@ ul.none {
 	.input-style{
 		padding:8px;
 		display:block;
-		border:none;
-		border-bottom:1px solid #ccc;
+		border:1px solid #ccc;
+		/*border-bottom:1px solid #ccc;*/
 		width:100%;
 		text-align: left;
 	}
 	.textarea-style{
 		padding:8px;
 		display:block;
-		border:none;
-		border-bottom:2px solid #ccc;
+		border:1px solid #ccc;
+		/*border-bottom:2px solid #ccc;*/
 		width:100%;
 		height: 140px;
 		resize: none;
@@ -1298,7 +1302,9 @@ ul.none {
 		font-size: 20px;
 	}
 	/*==== Header 字體 ====*/
-
+	.header-background{
+		background-attachment:  scroll;
+	}
 	.header-content>div{
 			flex: none;
 			text-align: center;
@@ -1346,16 +1352,16 @@ ul.none {
 	.input-style{
 		padding:8px;
 		display:block;
-		border:none;
-		border-bottom:1px solid #ccc;
+		border:1px solid #ccc;
+		/*border-bottom:1px solid #ccc;*/
 		width:100%;
 		text-align: left;
 	}
 	.textarea-style{
 		padding:8px;
 		display:block;
-		border:none;
-		border-bottom:2px solid #ccc;
+		border:1px solid #ccc;
+		/*border-bottom:2px solid #ccc;*/
 		width:100%;
 		height: 140px;
 		resize: none;
