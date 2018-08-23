@@ -72,7 +72,7 @@ function scrollDownToNewsFrame() {
 /*
 ===========================
 
-###     滑到『關於我』
+###     滑到『品牌故事』
 
 ===========================
 */
@@ -82,10 +82,17 @@ function startScrollToAbout() {
   let WebTitleFrameSize = document.getElementById('WebTitleFrame').getBoundingClientRect().height;
   let newsFrameSize = document.getElementById('newsFrame').getBoundingClientRect().height;  
   let sectionDiv1Size = document.getElementById('sectionDiv1').getBoundingClientRect().height;
+  let sectionDiv2Size = document.getElementById('sectionDiv2').getBoundingClientRect().height;
+  let sectionDiv3Size = document.getElementById('sectionDiv3').getBoundingClientRect().height;
+  let sectionDiv4Size = document.getElementById('sectionDiv4').getBoundingClientRect().height;
+
+  let OrffClassFrame = document.getElementById('OrffClassFrame').getBoundingClientRect().height;
+  let musicClassFrame = document.getElementById('musicClassFrame').getBoundingClientRect().height;
+
   let navFrameSize = document.getElementById('navFrame').getBoundingClientRect().height;
   let body = document.body; // For Safari
   let html = document.documentElement; // For Chrome, IE, and FireFox
-  let locationFrame = headerFrameSize+WebTitleFrameSize+newsFrameSize+sectionDiv1Size-navFrameSize;
+  let locationFrame = headerFrameSize+WebTitleFrameSize+newsFrameSize+sectionDiv1Size+sectionDiv2Size+sectionDiv3Size+sectionDiv4Size+OrffClassFrame+musicClassFrame-navFrameSize;
 
   if(body.scrollTop > locationFrame || html.scrollTop > locationFrame){
     intervalId = window.setInterval(scrollUpToAboutFrame, 4);
@@ -102,10 +109,16 @@ function scrollUpToAboutFrame() {
   let WebTitleFrameSize = document.getElementById('WebTitleFrame').getBoundingClientRect().height;
   let newsFrameSize = document.getElementById('newsFrame').getBoundingClientRect().height;  
   let sectionDiv1Size = document.getElementById('sectionDiv1').getBoundingClientRect().height;
+  let sectionDiv2Size = document.getElementById('sectionDiv2').getBoundingClientRect().height;
+  let sectionDiv3Size = document.getElementById('sectionDiv3').getBoundingClientRect().height;
+  let sectionDiv4Size = document.getElementById('sectionDiv4').getBoundingClientRect().height;
+  let OrffClassFrame = document.getElementById('OrffClassFrame').getBoundingClientRect().height;
+  let musicClassFrame = document.getElementById('musicClassFrame').getBoundingClientRect().height;
+
   let navFrameSize = document.getElementById('navFrame').getBoundingClientRect().height;
   let body = document.body; // For Safari
   let html = document.documentElement; // For Chrome, IE, and FireFox
-  let locationFrame = headerFrameSize+WebTitleFrameSize+newsFrameSize+sectionDiv1Size-navFrameSize;
+  let locationFrame = headerFrameSize+WebTitleFrameSize+newsFrameSize+sectionDiv1Size+sectionDiv2Size+sectionDiv3Size+sectionDiv4Size+OrffClassFrame+musicClassFrame-navFrameSize;
   
   if(body.scrollTop > locationFrame || html.scrollTop > locationFrame){
     body.scrollTop-=20;
@@ -122,10 +135,16 @@ function scrollDownToAboutFrame() {
   let WebTitleFrameSize = document.getElementById('WebTitleFrame').getBoundingClientRect().height;
   let newsFrameSize = document.getElementById('newsFrame').getBoundingClientRect().height;  
   let sectionDiv1Size = document.getElementById('sectionDiv1').getBoundingClientRect().height;
+  let sectionDiv2Size = document.getElementById('sectionDiv2').getBoundingClientRect().height;
+  let sectionDiv3Size = document.getElementById('sectionDiv3').getBoundingClientRect().height;
+  let sectionDiv4Size = document.getElementById('sectionDiv4').getBoundingClientRect().height;
+  let OrffClassFrame = document.getElementById('OrffClassFrame').getBoundingClientRect().height;
+  let musicClassFrame = document.getElementById('musicClassFrame').getBoundingClientRect().height;
+
   let navFrameSize = document.getElementById('navFrame').getBoundingClientRect().height;
   let body = document.body; // For Safari
   let html = document.documentElement; // For Chrome, IE, and FireFox
-  let locationFrame = headerFrameSize+WebTitleFrameSize+newsFrameSize+sectionDiv1Size-navFrameSize;
+  let locationFrame = headerFrameSize+WebTitleFrameSize+newsFrameSize+sectionDiv1Size+sectionDiv2Size+sectionDiv3Size+sectionDiv4Size+OrffClassFrame+musicClassFrame-navFrameSize;
   
   if(body.scrollTop < locationFrame && html.scrollTop < locationFrame){
     body.scrollTop+=20;
