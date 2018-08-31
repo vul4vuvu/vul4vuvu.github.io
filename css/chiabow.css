@@ -412,9 +412,15 @@ a:active {
 	height: 30vh;
 }
 
+
 .WebTitle-content>div{
 	flex:none;
-	margin-top: 4vh;
+	margin-top: 10vh;
+	width: 50%;
+
+}
+.title-img{
+	width: 100%; height:8vh;
 }
 .webTitleTxt{
 	font-size: 36px;
@@ -1261,6 +1267,12 @@ ul.none {
 		margin-left: 0;
 		text-align: center;
 		
+	}
+	.WebTitle-content>div{
+		flex:none;
+		margin-top: 10vh;
+		width: 100%;
+
 	}
 
 	/* 上層照片區 */
