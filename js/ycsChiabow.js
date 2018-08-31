@@ -20,6 +20,7 @@ function menuOn() {
   let nav = document.getElementById('nav');
   menuButton.addEventListener('click', function () {
     let menuBarWidth = nav.style.width;
+    console.log(menuBarWidth);
     let menuBarHeight = nav.style.height;
     if(menuBarWidth == 50+'px' && menuBarHeight == 50+'px'){
       
