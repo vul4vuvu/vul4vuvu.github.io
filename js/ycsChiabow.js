@@ -156,7 +156,7 @@ function newsOpen() {
       課程計畫：請私訊。<br>
       預約體驗：<a style="color:hotpink" href="https://docs.google.com/forms/d/e/1FAIpQLSfxrLvDNpWoeDFsv55O3JB85fmmxzg-hCHW9S0F1mVJT56dcA/viewform">連結</a>
     `
-    newsPic.innerHTML = '<img src="img/index/new2.png" style="width: 70%; height:90%; margin: auto;">';
+    newsPic.innerHTML = '<img src="img/index/cm.png" style="width: 70%; height:90%; margin: auto;">';
 
   });
 
