@@ -154,7 +154,7 @@ function newsOpen() {
       課程費用：一堂NT$650，一期12堂課，共三期。<br>
       課程特色：1. 精緻小團班2.遊戲中建立器樂能力 3. 培養那唱能視譜的基本功 4. ChiaBow music for fun設計深刻的圖像結合聲音教學方式 <br>
       課程計畫：請私訊。<br>
-
+      預約體驗：<a style="color:hotpink" href="https://docs.google.com/forms/d/e/1FAIpQLSfxrLvDNpWoeDFsv55O3JB85fmmxzg-hCHW9S0F1mVJT56dcA/viewform">連結</a>
     `
     newsPic.innerHTML = '<img src="img/index/new2.png" style="width: 70%; height:90%; margin: auto;">';
 
