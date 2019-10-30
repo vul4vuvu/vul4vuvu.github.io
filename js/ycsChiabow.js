@@ -130,10 +130,10 @@ function newsOpen() {
   // 註冊 按鈕一
   news1Button.addEventListener('click', function () {
     newsWindow.style.display = 'block';
-    newsTitle.innerHTML = "歡迎加入ChiaBow's Music的官方Line帳號";
-    newsTime.innerHTML = "2018-08-10";
-    newsArticle.innerHTML = "ChiaBow的官方Line即日起上線，<br>趕快掃描QRcode，或搜尋ID，<br>加入Line，來教室體驗課就送音樂小禮物唷!<br>ID：@ver2312s <br> <img src='img/index/qrcode.png' style = 'width:80px; height:80px;'>";
-    newsPic.innerHTML = '<img src="img/index/new1.png" style="width: 70%; height:90%; margin: auto;">';
+    newsTitle.innerHTML = "嘉寶的繆思課搬新家了！";
+    newsTime.innerHTML = "2019-10-30";
+    newsArticle.innerHTML = "為了更好的上課環境、<br>更大的上課空間、提高交通便利性，<br>嘉寶的繆思課搬家了！充滿綠意和童趣的上課空間🌱<br>期待家長和寶貝可以在此放鬆身心，投入音樂的懷抱， <br> 歡迎大家來繆思課的新窩玩唷！";
+    newsPic.innerHTML = '<img src="img/index/20191030.png" style="width: 70%; height:90%; margin: auto;">';
   });
 
   // 註冊 按鈕二
@@ -149,10 +149,10 @@ function newsOpen() {
   // 註冊 按鈕三
   news3Button.addEventListener('click', function () {
     newsWindow.style.display = 'block';
-    newsTitle.innerHTML = "歡迎下載『嘉寶的繆思課』最新課程簡章。";
-    newsTime.innerHTML = "2018-08-01";
-    newsArticle.innerHTML = "歡迎下載『嘉寶的繆思課』最新課程簡章。<br> <a href='https://drive.google.com/open?id=1JIA3u4Cm4v-CMCcLZln7xhYm2Phn6sJ1'  target='_blank'>點我下載</a>";
-    newsPic.innerHTML = '<img src="img/index/new3.jpg" style="width: 70%; height:90%; margin: auto;">';  
+    newsTitle.innerHTML = "歡迎加入ChiaBow's Music的官方Line帳號";
+    newsTime.innerHTML = "2018-08-10";
+    newsArticle.innerHTML = "ChiaBow的官方Line即日起上線，<br>趕快掃描QRcode，或搜尋ID，<br>加入Line，來教室體驗課就送音樂小禮物唷!<br>ID：@ver2312s <br> <img src='img/index/qrcode.png' style = 'width:80px; height:80px;'>";
+    newsPic.innerHTML = '<img src="img/index/new1.png" style="width: 70%; height:90%; margin: auto;">';
   });
   
 }
