@@ -424,6 +424,7 @@ a:active {
 }
 .webTitleTxt{
 	font-size: 36px;
+	font-family: 'OCRARegular';
 }
 
 /*
@@ -896,6 +897,7 @@ ul.none {
 	font-size:64px;
 	color:#92A8D1;
 	cursor: pointer;
+	transition: 0.4s;
 	/*
     text-shadow: 2px 2px 2px #999;
     */
